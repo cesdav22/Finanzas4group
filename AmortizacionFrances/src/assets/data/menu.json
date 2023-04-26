@@ -1,0 +1,15 @@
+[
+    {
+        "nombre":"Dashboard",
+        "redirect":"/dashboard"
+    },
+    {
+        "nombre":"amortizacion",
+        "redirect":"/dashboard/amortizacion"
+    },
+    {
+        "nombre":"reportes",
+        "redirect":"/dashboard/reportes"
+    }
+
+]
