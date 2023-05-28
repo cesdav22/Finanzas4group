@@ -1,11 +1,10 @@
-
-    <mat-toolbar color="primary">
-      <span> Aplicacion Finanzas</span>
-      <span class="examenple-spacer"></span>
-      <button mat-button *ngFor="let item of menu" [routerLink]="item.redirect">{{item.nombre}}</button>
-      <span class="examenple-spacer"></span>
-      <button routerLink="/logout" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+<mat-toolbar>
+      <h1> Aplicacion Finanzas</h1>
+        <div class="mat-spacer"></div>
+      <a mat-button *ngFor="let item of menu" [routerLink]="item.redirect">{{item.nombre}}</a>
+<!--        <div class="mat-spacer"></div>-->
+      <a routerLink="/logout" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
         <mat-icon>logout</mat-icon>
-      </button>
-    </mat-toolbar>
+      </a>
+</mat-toolbar>
 

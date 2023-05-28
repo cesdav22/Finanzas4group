@@ -26,11 +26,21 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./reportes.component.css']
 })
 export class ReportesComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  dataSource = ELEMENT_DATA;
+
+
+  //borrar
+
+
+
+
+
 
 }

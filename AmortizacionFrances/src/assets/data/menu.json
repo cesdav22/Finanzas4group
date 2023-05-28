@@ -5,11 +5,11 @@
     },
     {
         "nombre":"amortizacion",
-        "redirect":"/dashboard/amortizacion"
+        "redirect":"/amortizacion"
     },
     {
         "nombre":"reportes",
-        "redirect":"/dashboard/reportes"
+        "redirect":"/reportes"
     }
 
 ]

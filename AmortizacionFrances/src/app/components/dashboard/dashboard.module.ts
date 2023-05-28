@@ -8,6 +8,9 @@ import { InicioComponent } from './inicio/inicio.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AmortizacionComponent } from './amortizacion/amortizacion.component';
 import { ReportesComponent } from './reportes/reportes.component';
+import {MatGridListModule} from "@angular/material/grid-list";
+import {FormsModule} from "@angular/forms";
+import {SeparadorMilesPipe} from "./amortizacion/separador-miles-pipe.pipe";
 
 @NgModule({
   declarations: [
@@ -15,12 +18,15 @@ import { ReportesComponent } from './reportes/reportes.component';
     InicioComponent,
     NavbarComponent,
     AmortizacionComponent,
-    ReportesComponent
+    ReportesComponent,
+      SeparadorMilesPipe
   ],
-  imports: [
-    CommonModule,
-    DashboardRoutingModule,
-    SharedModule
-  ]
+    imports: [
+        CommonModule,
+        DashboardRoutingModule,
+        SharedModule,
+        MatGridListModule,
+        FormsModule
+    ]
 })
 export class DashboardModule { }
