@@ -1,11 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {MatSnackBar} from "@angular/material/snack-bar";
+import {Router} from "@angular/router";
+import {Report} from "../../../interfaces/report";
+import {AmortizacionService} from "../services/amortizacion.service";
+import {MatTableDataSource} from "@angular/material/table";
+// import * as jsPDF from "jspdf";
+// @ts-ignore
+import * as html2pdf from 'html2pdf.js';
 
 
 export interface cuota {
   numeroCuota?: number;
   amortizacion?: number;
   interes?: number;
+  desgravamen?: number;
   cuota?: number;
   saldo: number;
 }
@@ -17,7 +25,11 @@ export interface cuota {
 })
 export class AmortizacionComponent implements OnInit {
 
-  dataSource: cuota[] = [];
+  reportData: Report;
+  // dataSource: cuota[] = [];
+
+  dataSource: MatTableDataSource<any>;
+  displayedColumns: string[] = ['id', 'nroCuota', 'amortizacion', 'interes', 'saldo', 'cuota'];
 
   capital: string = '';
   plazo: number = 0;
@@ -31,18 +43,38 @@ export class AmortizacionComponent implements OnInit {
   totalCuotas: number = 0;
   saldo: number = 0;
 
+  desgravamen: number = 0.8;
+
   columnasTabla: string[] = [
     'numero-cuota',
     'amortizacion',
     'interes',
+    'desgravamen',
     'saldo',
     'cuota',
   ];
 
-  constructor(private _snackBar: MatSnackBar) {}
+  constructor(private _snackBar: MatSnackBar, private router: Router, private reportsService: AmortizacionService) {
+    this.reportData = {} as Report;
+    this.dataSource = new MatTableDataSource<any>();
+  }
 
   ngOnInit() {
     // this.calcular();
+    // this.addReport();
+    // this.getAllReports();
+  }
+
+
+  // enviarTabla() {
+  //   const tabla = [/* Aquí tienes tu tabla de datos */];
+  //   this.router.navigate(['/destino'], { state: { tabla: tabla } });
+  // }
+
+  migrarTabla() {
+    // const dataSource = this.dataSource; // Suponiendo que dataSource es el MatTableDataSource
+    // this.router.navigate(['/reportes'], { queryParams: { dataSource: JSON.stringify(dataSource) } });
+    this.router.navigate(['/reportes'])
   }
 
   procesar() {
@@ -50,9 +82,16 @@ export class AmortizacionComponent implements OnInit {
       return;
     } else {
       this.calcular();
+      this.addReport();
     }
   }
 
+  navigateTo() {
+    // Aquí puedes definir la ruta a la que deseas navegar
+    this.router.navigate(['/desgravamen']);
+  }
+
+  reportData2! :[];
   calcular() {
     this.cerearVariables();
 
@@ -84,6 +123,16 @@ export class AmortizacionComponent implements OnInit {
 
       cuota.cuota = this.cuotaMensual;
 
+      //desgravamen
+
+      // @ts-ignore
+      this.desgravamen = this.capital * ((Math.pow((1 + (0.044 / 100)),30)) - 1)
+
+      this.desgravamen = this.desgravamen - 0.01;
+      cuota.desgravamen = this.desgravamen;
+
+
+
       if (cuotaIndex == this.plazo) {
         cuota.amortizacion = this.saldo;
         cuota.cuota = cuota.amortizacion + cuota.interes;
@@ -99,9 +148,31 @@ export class AmortizacionComponent implements OnInit {
       this.cuotas.push(cuota);
 
       cuota.saldo = cuota.saldo - cuota.amortizacion;
+
+      // this.desgravamen = 0.2;
+
+      this.reportData.amortizacion = this.totalAmortizacion;
+      this.reportData.interes = this.interesMensual;
+      this.reportData.saldo = this.saldo;
+      this.reportData.cuota = this.cuotaMensual;
+      this.reportData.desgravamen = this.desgravamen;
+
+      console.log(this.reportData.amortizacion );
+      console.log(this.reportData.interes);
+      console.log(this.reportData.saldo )
+      console.log(this.reportData.cuota );
+
     }
 
-    this.dataSource = this.cuotas;
+    // this.reportData.nroCuota = this.cuotas;
+    this.reportData.amortizacion = this.totalAmortizacion;
+    this.reportData.interes = this.totalInteres;
+    this.reportData.saldo = this.saldo;
+    this.reportData.cuota = this.totalCuotas;
+    this.reportData.desgravamen = this.desgravamen;
+    console.log(this.reportData.amortizacion);
+    this.dataSource.data = this.cuotas;
+    // this.dataSource = this.totalAmortizacion, this.interesMensual, this.saldo, this.cuotaMensual;
   }
 
   cerearVariables() {
@@ -119,10 +190,10 @@ export class AmortizacionComponent implements OnInit {
   }
 
   parseSeparadorMiles(valor: any) {
-    // if (Number(valor).toString() == 'NaN') {
-    //   console.log('El valor ingresado no es un número.');
-    //   this.capital = '';
-    // }
+    if (Number(valor).toString() == 'NaN') {
+      console.log('El valor ingresado no es un número.');
+      this.capital = '';
+    }
 
     valor = valor.toString().replaceAll('.', '');
     this.capital = Number(valor).toLocaleString('es-AR');
@@ -141,7 +212,7 @@ export class AmortizacionComponent implements OnInit {
       this.openSnackBar('Monto no válido !');
       return true;
     }
-    if(capital<642000 && capital>4642000){
+    if(capital<64200 || capital> 464200){
       this.openSnackBar('Monto no válido !');
       return true;
     }
@@ -164,4 +235,59 @@ export class AmortizacionComponent implements OnInit {
       duration: 2000,
     });
   }
+
+
+  //service
+  addReport() {
+    this.reportData.id = 0;
+    this.reportsService.create(this.reportData).subscribe((response: any) => {
+      this.dataSource.data.push({...response});
+      this.dataSource.data = this.dataSource.data.map((o: any) => { return o});
+    });
+  }
+
+  getAllReports() {
+    this.reportsService.getAll().subscribe((response: any) => {
+      this.dataSource.data = response;
+    });
+  }
+
+
+
+  //download pdf
+  // @ts-ignore
+  @ViewChild('contentToExport') contentToExport: ElementRef;
+
+  public downloadAsPDF(): void {
+    const options = {
+      filename: 'archivo.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
+
+    html2pdf()
+        .from(this.contentToExport.nativeElement)
+        .set(options)
+        .save();
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

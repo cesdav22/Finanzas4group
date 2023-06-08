@@ -1,12 +1,15 @@
-<div class="container">
-    <mat-toolbar>
-        <span>Amortizacion</span>
-      </mat-toolbar>
-    </div>
+<!--<div class="container">-->
+<!--    <mat-toolbar>-->
+<!--        <span>Amortizacion</span>-->
+<!--      </mat-toolbar>-->
+<!--    </div>-->
 
 
-<style></style>
-<mat-toolbar class="toolbar">
+
+
+
+
+<mat-toolbar class="toolbar" style="background-color: #BC3687" color="primary">
     <div class="container-center">
         <span class="titulo-toolbar">Calculadora de cuotas - Sistema francés</span>
     </div>
@@ -27,9 +30,10 @@
                         name="capital"
                         matInput
                         [(ngModel)]="capital"
-                        (ngModelChange)="parseSeparadorMiles($event)" />
+                        />
             </mat-form-field>
         </div>
+<!--        (ngModelChange)="parseSeparadorMiles($event)"-->
         <!-- </mat-grid-tile> -->
         <!-- </mat-grid-list> -->
 
@@ -51,9 +55,13 @@
         </mat-grid-list>
 
         <div class="container-button">
-            <button mat-raised-button (click)="procesar()">Generar</button>
+            <button mat-raised-button (click)="procesar()" class = "my-button">Generar</button>
+            <button mat-raised-button  (click)="migrarTabla()" class = "my-button">Migrar tabla</button>
         </div>
+
     </form>
+<div #contentToExport>
+    <!-- Coloca aquí el contenido HTML que deseas exportar a PDF -->
     <div class="responsive">
         <table
                 mat-table
@@ -87,6 +95,14 @@
                 </td>
             </ng-container>
 
+            <ng-container matColumnDef="desgravamen">
+                <th mat-header-cell *matHeaderCellDef><b>Desgravamen</b></th>
+                <td mat-cell *matCellDef="let element">
+                    {{ element.desgravamen }}
+                </td>
+                <td mat-footer-cell *matFooterCellDef></td>
+            </ng-container>
+
             <ng-container matColumnDef="saldo">
                 <th mat-header-cell *matHeaderCellDef><b>Saldo</b></th>
                 <td mat-cell *matCellDef="let element">
@@ -105,6 +121,11 @@
                 </td>
             </ng-container>
 
+<!--            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>-->
+<!--            <tr mat-row *matRowDef="let row; columns: displayedColumns"-->
+<!--                [ngClass]="{'editable-row': reportData.id === row.id}"></tr>-->
+<!--            <tr mat-footer-row *matFooterRowDef="columnasTabla"></tr>-->
+
             <tr mat-header-row *matHeaderRowDef="columnasTabla"></tr>
             <tr mat-row *matRowDef="let row; columns: columnasTabla"></tr>
             <tr mat-footer-row *matFooterRowDef="columnasTabla"></tr>
@@ -116,14 +137,59 @@
     <br />
 </div>
 
+</div>
+
+
+
+
+<!--<table mat-table [dataSource]="dataSource" class="mat-elevation-z0">-->
+<!--    <ng-container matColumnDef="id">-->
+<!--        <th mat-header-cell *matHeaderCellDef >#Id</th>-->
+<!--        <td mat-cell *matCellDef="let element">{{ element.id }}</td>-->
+<!--    </ng-container>-->
+<!--    <ng-container matColumnDef="nroCuota">-->
+<!--        <th mat-header-cell *matHeaderCellDef>Nro Cuota</th>-->
+<!--        <td mat-cell *matCellDef="let element">{{ element.nroCuota }}</td>-->
+<!--    </ng-container>-->
+<!--    <ng-container matColumnDef="amortizacion">-->
+<!--        <th mat-header-cell *matHeaderCellDef >Amortizacion</th>-->
+<!--        <td mat-cell *matCellDef="let element">{{ element.amortizacion }}</td>-->
+<!--    </ng-container>-->
+<!--    <ng-container matColumnDef="interes">-->
+<!--        <th mat-header-cell *matHeaderCellDef>Interes</th>-->
+<!--        <td mat-cell *matCellDef="let element">{{ element.interes }}</td>-->
+<!--    </ng-container>-->
+<!--    <ng-container matColumnDef="saldo">-->
+<!--        <th mat-header-cell *matHeaderCellDef>Saldo</th>-->
+<!--        <td mat-cell *matCellDef="let element">{{ element.saldo}}</td>-->
+<!--    </ng-container>-->
+<!--    <ng-container matColumnDef="cuota">-->
+<!--        <th mat-header-cell *matHeaderCellDef>Cuota</th>-->
+<!--        <td mat-cell *matCellDef="let element">{{ element.cuota}}</td>-->
+<!--    </ng-container>-->
+<!--    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>-->
+<!--    <tr mat-row *matRowDef="let row; columns: displayedColumns"-->
+<!--        [ngClass]="{'editable-row': reportData.id === row.id}"></tr>-->
+<!--</table>-->
+
+
 <div class="footer">
-    <mat-toolbar>
+    <mat-toolbar style="background-color: #87BC28">
         <div class="container-center">
-            <a href="https://github.com/ArielAyala/calculador-cuotas-sistema-frances" target="_blank">
-                <img src="assets/logo-github.svg" alt="logo github" class="logo-github">
-            </a>
+            <!--            <a href="https://github.com/ArielAyala/calculador-cuotas-sistema-frances" target="_blank">-->
+            <!--                <img src="assets/logo-github.svg" alt="logo github" class="logo-github">-->
+            <!--            </a>-->
+
+            <div class="button-container">
+                <button mat-raised-button (click)="navigateTo()" class="my-button">Acceder al Seguro de desgravamen</button>
+                <button mat-raised-button (click)="downloadAsPDF()" class="my-button">Descargar como PDF</button>
+            </div>
+
+
+
         </div>
     </mat-toolbar>
 </div>
+
 
 <router-outlet></router-outlet>

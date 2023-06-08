@@ -1,15 +1,16 @@
 [
     {
-        "nombre":"Dashboard",
+        "nombre":"Home",
         "redirect":"/dashboard"
     },
     {
-        "nombre":"amortizacion",
+        "nombre":"Amortizacion",
         "redirect":"/amortizacion"
     },
     {
-        "nombre":"reportes",
+        "nombre":"Reportes",
         "redirect":"/reportes"
     }
+
 
 ]

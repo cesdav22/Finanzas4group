@@ -95,6 +95,19 @@ tr.mat-footer-row {
     width: 30px;
     height: 30px;
 }
+.table-wrapper {
+    width: 1024px;
+    margin: 50px auto;
+}
+
+table {
+    width: 100%;
+}
+
+tr.editable-row {
+    background-color: lightskyblue;
+}
+
 
 @media screen and (max-width: 700px) {
     .responsive {
@@ -106,4 +119,12 @@ tr.mat-footer-row {
     .titulo-toolbar {
         font-size: 17px;
     }
+}
+
+.my-button{
+    margin-right: 10px;
+}
+
+.button-container button {
+    margin-bottom: 10px;
 }

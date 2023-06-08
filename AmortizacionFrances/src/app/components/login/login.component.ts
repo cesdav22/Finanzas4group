@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms'
 import { MatSnackBar } from '@angular/material/snack-bar'
 import { Router } from '@angular/router';
+import {UsersService} from "../dashboard/services/users.service";
+import {User} from "../../interfaces/user";
+import {MatTableDataSource} from "@angular/material/table";
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,27 +13,65 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   form: FormGroup
   loading = false;
+  newUser!: User;
+  currentUser: User;
+  users: any[] = [];
+  dataSource: MatTableDataSource<any>;
 
-  constructor(private fb: FormBuilder, private _snackBar: MatSnackBar, private router: Router) {
+  constructor(private formBuilder: FormBuilder, private fb: FormBuilder, private _snackBar: MatSnackBar, private router: Router, private loginService : UsersService) {
     this.form = this.fb.group({
       usuario: ['', Validators.required],
       password: ['', Validators.required]
     })
+    this.newUser={}as User;
+    this.currentUser={}as User;
+
+    this.dataSource = new MatTableDataSource<any>();
   }
 
+
+  loginForm: FormGroup = this.formBuilder.group({
+    username: ['', { validators: [Validators.required], updateOn: 'change'}],
+    password: ['', {validators: [Validators.required ], updateOn: 'change'}]
+  })
+
   ngOnInit(): void {
+    this.getAllUsers()
+    // console.log(this.users.find(this.users) => users.id === usuario);
+
   }
   ingresar() {
     console.log(this.form);
-    const usuario = this.form.value.usuario;
+    const username = this.form.value.usuario;
     const password = this.form.value.password;
 
-    if (usuario == 'cesarFi' && password == 'admin123') {
+    // if (username == 'cesarFi' && password == 'admin123') {
+    //   this.fakeLoading();
+    // } else {
+    //   this.error();
+    //   this.form.reset();
+    // }
+  //test
+
+    // if (username == this.users.find((username) => this.newUser.username == username && password == this.users.find((password) => this.newUser.password == password))) {
+    //   this.fakeLoading();
+    // } else {
+    //   this.error();
+    //   this.form.reset();
+    // }
+
+    const user = this.users.find(
+        (u: User) => u.username === username && u.password === password
+    );
+
+    if (user) {
       this.fakeLoading();
+      console.log('Inicio de sesión exitoso');
     } else {
-      this.error();
+      console.log('Credenciales inválidas');
       this.form.reset();
     }
+
   }
   error() {
     this._snackBar.open('Usuario o contraseña son invalidos', '', {
@@ -47,5 +88,24 @@ export class LoginComponent implements OnInit {
     }, 1500);
 
   }
+
+  getUsers() {
+    this.loginService.getAll().subscribe((response: any) => {
+      this.newUser = response.find((a:any) => {
+        this.currentUser = a;
+        return a.username === this.form.value.username &&
+            a.password === this.form.value.password
+      })
+    });
+  }
+
+  getAllUsers() {
+    this.loginService.getAll().subscribe((response: any) => {
+      this.users = response;
+    });
+  }
+
+
+
 
 }

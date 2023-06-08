@@ -11,22 +11,28 @@ import { ReportesComponent } from './reportes/reportes.component';
 import {MatGridListModule} from "@angular/material/grid-list";
 import {FormsModule} from "@angular/forms";
 import {SeparadorMilesPipe} from "./amortizacion/separador-miles-pipe.pipe";
+import { DesgravamenComponent } from './desgravamen/desgravamen.component';
+import {MatCardModule} from "@angular/material/card";
+import {ObjToArrayPipe} from "./reportes/objToArray";
 
 @NgModule({
-  declarations: [
-    DashboardComponent,
-    InicioComponent,
-    NavbarComponent,
-    AmortizacionComponent,
-    ReportesComponent,
-      SeparadorMilesPipe
-  ],
+    declarations: [
+        DashboardComponent,
+        InicioComponent,
+        NavbarComponent,
+        AmortizacionComponent,
+        ReportesComponent,
+        SeparadorMilesPipe,
+        DesgravamenComponent,
+        ObjToArrayPipe
+    ],
     imports: [
         CommonModule,
         DashboardRoutingModule,
         SharedModule,
         MatGridListModule,
-        FormsModule
+        FormsModule,
+        MatCardModule
     ]
 })
 export class DashboardModule { }

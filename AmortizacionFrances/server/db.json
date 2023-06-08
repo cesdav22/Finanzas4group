@@ -1,0 +1,98 @@
+{
+  "reports": [
+    {
+      "amortizacion": 150000,
+      "interes": 91566,
+      "saldo": 0,
+      "cuota": 241566,
+      "desgravamen": 1992.6744314840153,
+      "id": 1
+    },
+    {
+      "amortizacion": 65200,
+      "interes": 26149,
+      "saldo": 0,
+      "cuota": 91349,
+      "desgravamen": 866.1434995517186,
+      "id": 2
+    },
+    {
+      "amortizacion": 251000,
+      "interes": 153216,
+      "saldo": 0,
+      "cuota": 404216,
+      "desgravamen": 3334.4152820165855,
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "leoxd",
+      "password": "admin213"
+    },
+    {
+      "id": 2,
+      "username": "diego",
+      "password": "123456789"
+    },
+    {
+      "id": 3,
+      "username": "elmascapo",
+      "password": "gatoman201"
+    },
+    {
+      "id": 4,
+      "username": "DiegoArru",
+      "password": "29o1997"
+    }
+  ],
+  "reports2": [
+    {
+      "amortizacion": 80000,
+      "interes": 86787,
+      "saldo": 0,
+      "cuota": 166787,
+      "desgravamen": 1062.7550301248082
+    },
+    {
+      "amortizacion": 80000,
+      "interes": 86787,
+      "saldo": 0,
+      "cuota": 166787,
+      "desgravamen": 1062.7550301248082
+    },
+    {
+      "amortizacion": 80000,
+      "interes": 86787,
+      "saldo": 0,
+      "cuota": 166787,
+      "desgravamen": 1062.7550301248082
+    },
+    {
+      "nombreColor": "cyan",
+      "valorHexadec": "#0ff"
+    },
+    {
+      "amortizacion": 80000,
+      "interes": 86787,
+      "saldo": 0,
+      "cuota": 166787,
+      "desgravamen": 1062.7550301248082
+    },
+    {
+      "amortizacion": 80000,
+      "interes": 86787,
+      "saldo": 0,
+      "cuota": 166787,
+      "desgravamen": 1062.7550301248082
+    },
+    {
+      "amortizacion": 80000,
+      "interes": 86787,
+      "saldo": 0,
+      "cuota": 166787,
+      "desgravamen": 1062.7550301248082
+    }
+  ]
+}
