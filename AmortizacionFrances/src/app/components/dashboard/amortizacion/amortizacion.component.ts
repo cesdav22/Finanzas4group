@@ -7,16 +7,20 @@ import {MatTableDataSource} from "@angular/material/table";
 // import * as jsPDF from "jspdf";
 // @ts-ignore
 import * as html2pdf from 'html2pdf.js';
+import * as fs from "fs";
+import {Cuota} from "../../../interfaces/cuota";
 
 
-export interface cuota {
-  numeroCuota?: number;
-  amortizacion?: number;
-  interes?: number;
-  desgravamen?: number;
-  cuota?: number;
-  saldo: number;
-}
+// export interface Cuota {
+//   id:number;
+//   numeroCuota?: number;
+//   amortizacion?: number;
+//   interes?: number;
+//   desgravamen?: number;
+//   cuota?: number;
+//   saldoInicial?: number;
+//   saldoFinal: number;
+// }
 
 @Component({
   selector: 'app-amortizacion',
@@ -25,10 +29,13 @@ export interface cuota {
 })
 export class AmortizacionComponent implements OnInit {
 
+
+  cuotaData: Cuota ;
   reportData: Report;
   // dataSource: cuota[] = [];
 
   dataSource: MatTableDataSource<any>;
+  dataSource2: MatTableDataSource<any> = new MatTableDataSource<any>([]);
   displayedColumns: string[] = ['id', 'nroCuota', 'amortizacion', 'interes', 'saldo', 'cuota'];
 
   capital: string = '';
@@ -37,32 +44,37 @@ export class AmortizacionComponent implements OnInit {
   tazaInteres: number = 0;
   interesMensual: number = 0;
   cuotaMensual: number = 0;
-  cuotas: cuota[] = [];
+  cuotas: Cuota[] = [];
   totalAmortizacion: number = 0;
   totalInteres: number = 0;
   totalCuotas: number = 0;
-  saldo: number = 0;
+  saldoInicial: number = 0;
+  saldoFinal: number = 0;
 
-  desgravamen: number = 0.8;
+  desgravamen: number = 0;
 
   columnasTabla: string[] = [
     'numero-cuota',
     'amortizacion',
     'interes',
     'desgravamen',
-    'saldo',
+    'saldo-inicial',
+    'saldo-final',
     'cuota',
   ];
 
   constructor(private _snackBar: MatSnackBar, private router: Router, private reportsService: AmortizacionService) {
     this.reportData = {} as Report;
+    this.cuotaData = {} as Cuota;
     this.dataSource = new MatTableDataSource<any>();
+    this.dataSource2.data = [];
   }
 
   ngOnInit() {
     // this.calcular();
     // this.addReport();
     // this.getAllReports();
+
   }
 
 
@@ -82,16 +94,38 @@ export class AmortizacionComponent implements OnInit {
       return;
     } else {
       this.calcular();
-      this.addReport();
+      this.mostrarTabla()
+      // this.addCuota()
     }
+    //
+    //
+    // this.calcular();
+    // this.mostrarTabla()
   }
+
+
+  mostrarBoton = false;
+
+  mostrarTabla() {
+    // Lógica para mostrar la tabla
+    this.mostrarBoton = true;
+  }
+
+
+
 
   navigateTo() {
     // Aquí puedes definir la ruta a la que deseas navegar
     this.router.navigate(['/desgravamen']);
   }
 
+
+
+  jsonData:any[] = [];
+
+
   reportData2! :[];
+  amortizacion!:number
   calcular() {
     this.cerearVariables();
 
@@ -102,82 +136,124 @@ export class AmortizacionComponent implements OnInit {
     //mensual
     // this.interesMensual = this.tazaInteres/12 ;
 
+    // this.cuotaMensual =
+    //     ((this.interesMensual / 100) * Number(this.capital)) /
+    //     (1 - Math.pow(1 / (1 + this.interesMensual / 100), this.plazo));
+
     this.cuotaMensual =
-        ((this.interesMensual / 100) * this.parsearAEntero(this.capital)) /
-        (1 - Math.pow(1 / (1 + this.interesMensual / 100), this.plazo));
+        (((this.interesMensual / 100) * Math.pow((1+ this.interesMensual/100), this.plazo))* Number(this.capital) /
+        (Math.pow((1 + this.interesMensual / 100) , this.plazo) - 1));
 
-    this.cuotaMensual = Math.round(this.cuotaMensual); // Redondeo
+    console.log(`plazo: ${this.plazo}`)
+    console.log(`cuota mensual xd: ${this.cuotaMensual}`)
 
-    this.saldo = this.parsearAEntero(this.capital);
+    // this.cuotaMensual = this.cuotaMensual; // Redondeo
+
+
+    this.saldoFinal = Number(this.capital);
+    this.saldoInicial = Number(this.capital);
+
+
+
+    console.log(`saldo: ${this.saldoFinal}`)
     for (let cuotaIndex = 1; cuotaIndex <= this.plazo; cuotaIndex++) {
-      let cuota: cuota = {
+
+      let cuota: Cuota = {
+        id:cuotaIndex,
         numeroCuota: cuotaIndex,
-        saldo: this.saldo,
+        saldoInicial: this.saldoInicial,
+        saldoFinal: this.saldoFinal,
+
+
       };
 
       // Interes de la cuota
-      cuota.interes = Math.round((cuota.saldo / 100) * this.interesMensual);
+      console.log(`cuota saldo: ${cuota.saldoFinal}`)
+      // cuota.interes = Math.round((cuota.saldo / 100) * this.interesMensual);
+      cuota.interes = cuota.saldoFinal * (this.interesMensual/100);
 
       // Amortizacion de la cuota
       cuota.amortizacion = this.cuotaMensual - cuota.interes;
 
       cuota.cuota = this.cuotaMensual;
 
-      //desgravamen
-
-      // @ts-ignore
-      this.desgravamen = this.capital * ((Math.pow((1 + (0.044 / 100)),30)) - 1)
-
-      this.desgravamen = this.desgravamen - 0.01;
-      cuota.desgravamen = this.desgravamen;
+      cuota.desgravamen = Math.round(cuota.saldoFinal * (0.044/100));
 
 
 
-      if (cuotaIndex == this.plazo) {
-        cuota.amortizacion = this.saldo;
-        cuota.cuota = cuota.amortizacion + cuota.interes;
-      }
-
+      // if (cuotaIndex == this.plazo) {
+      //   cuota.amortizacion = this.saldoFinal;
+      //   cuota.cuota = cuota.amortizacion + cuota.interes;
+      // }
+      // this.amortizacion = cuota.amortizacion;
       // Saldo de la cuota
-      this.saldo = this.saldo - cuota.amortizacion;
+      this.saldoFinal = this.saldoInicial - cuota.amortizacion;
+      this.saldoInicial = this.saldoFinal;
 
       this.totalAmortizacion = this.totalAmortizacion + cuota.amortizacion;
       this.totalInteres = this.totalInteres + cuota.interes;
       this.totalCuotas = this.totalAmortizacion + this.totalInteres;
 
-      this.cuotas.push(cuota);
 
-      cuota.saldo = cuota.saldo - cuota.amortizacion;
+
+      this.cuotas.push(cuota);
+      cuota.saldoFinal = cuota.saldoFinal - cuota.amortizacion;
+
+
 
       // this.desgravamen = 0.2;
 
-      this.reportData.amortizacion = this.totalAmortizacion;
-      this.reportData.interes = this.interesMensual;
-      this.reportData.saldo = this.saldo;
-      this.reportData.cuota = this.cuotaMensual;
-      this.reportData.desgravamen = this.desgravamen;
+      // this.reportData.amortizacion = this.totalAmortizacion;
+      // this.reportData.interes = this.interesMensual;
+      // this.reportData.saldo = this.saldo;
+      // this.reportData.cuota = this.cuotaMensual;
+      // this.reportData.desgravamen = this.desgravamen;
 
+      // @ts-ignore
+      this.jsonData.push(cuota);
+      // this.jsonData.push({ id: cuotaIndex, cuota });
       console.log(this.reportData.amortizacion );
       console.log(this.reportData.interes);
-      console.log(this.reportData.saldo )
+      console.log(this.reportData.saldo );
       console.log(this.reportData.cuota );
 
     }
 
+    // this.reportData = jsonData;
+    console.log(JSON.stringify(this.jsonData));
     // this.reportData.nroCuota = this.cuotas;
     this.reportData.amortizacion = this.totalAmortizacion;
     this.reportData.interes = this.totalInteres;
-    this.reportData.saldo = this.saldo;
+    this.reportData.saldo = this.saldoFinal;
     this.reportData.cuota = this.totalCuotas;
     this.reportData.desgravamen = this.desgravamen;
     console.log(this.reportData.amortizacion);
     this.dataSource.data = this.cuotas;
+    // this.dataSource2.data = this.cuotas;
+    // @ts-ignore
+    this.dataSource2 = JSON.stringify(this.jsonData);
+    console.log(this.dataSource2)
     // this.dataSource = this.totalAmortizacion, this.interesMensual, this.saldo, this.cuotaMensual;
+
+    // this.cuotaData.numeroCuota = 0;
+    // this.reportsService.create(this.cuotaData).subscribe((response: any) => {
+    //   this.dataSource2.data.push({...response});
+    //   this.dataSource2.data = this.dataSource2.data.map((o: any) => { return o});
+    // });
+    this.addCuota()
   }
+
+
+  // guardarEnDB() {
+  //   const jsonDataString = JSON.stringify(this.jsonData, null, 2);
+  //   fs.writeFileSync('db.json', jsonDataString, 'utf-8');
+  // }
+
+
 
   cerearVariables() {
     this.cuotaMensual = 0;
-    this.saldo = 0;
+    this.saldoFinal = 0;
     this.cuotas = [];
 
     this.totalAmortizacion = 0;
@@ -199,12 +275,12 @@ export class AmortizacionComponent implements OnInit {
     this.capital = Number(valor).toLocaleString('es-AR');
   }
 
-  parsearAEntero(numString: any) {
-    return parseInt(numString.replaceAll('.', ''));
-  }
+  // parsearAEntero(numString: any) {
+  //   return parseInt(numString.replaceAll('.', ''));
+  // }
 
   validaciones() {
-    const capital = this.parsearAEntero(this.capital);
+    const capital = Number(this.capital);
     var regExp = /[a-zA-Z]/g;
     var testString = capital.toString();
 
@@ -246,6 +322,19 @@ export class AmortizacionComponent implements OnInit {
     });
   }
 
+  //para el ultimo Id - si con create xD
+  // addCuota() {
+  //   this.cuotaData.id = 0;
+  //   this.reportsService.create(this.cuotaData).subscribe(response=> {});
+  // }
+  addCuota() {
+    // if (this.dataSource2.data?.push) {
+      this.cuotaData.id = 0;
+      this.reportsService.create(this.jsonData).subscribe(response => {});
+    // }
+  }
+
+
   getAllReports() {
     this.reportsService.getAll().subscribe((response: any) => {
       this.dataSource.data = response;
@@ -271,7 +360,6 @@ export class AmortizacionComponent implements OnInit {
         .set(options)
         .save();
   }
-
 
 
 

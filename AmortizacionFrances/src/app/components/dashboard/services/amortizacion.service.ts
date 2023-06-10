@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import {catchError, Observable, of, retry, throwError} from "rxjs";
 import {Report} from "../../../interfaces/report";
+import {Cuota} from "../../../interfaces/cuota";
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ import {Report} from "../../../interfaces/report";
 export class AmortizacionService {
 
   // Reports Endpoint
-  basePath = 'http://localhost:3000/api/v1/reports';
+  basePath = 'http://localhost:3000/api/v1/cuota';
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -31,8 +32,8 @@ export class AmortizacionService {
   }
 
   // Create Student
-  create(item: any): Observable<Report> {
-    return this.http.post<Report>(
+  create(item: any): Observable<Cuota> {
+    return this.http.post<Cuota>(
         this.basePath,
         JSON.stringify(item),
         this.httpOptions)
@@ -42,8 +43,8 @@ export class AmortizacionService {
   }
 
   // Get Student by id
-  getById(id: any): Observable<Report> {
-    return this.http.get<Report>(
+  getById(id: any): Observable<Cuota> {
+    return this.http.get<Cuota>(
         `${this.basePath}/${id}`,
         this.httpOptions)
         .pipe(
@@ -52,8 +53,8 @@ export class AmortizacionService {
   }
 
   // Get All Students
-  getAll(): Observable<Report> {
-    return this.http.get<Report>(this.basePath, this.httpOptions)
+  getAll(): Observable<Cuota> {
+    return this.http.get<Cuota>(this.basePath, this.httpOptions)
         .pipe(retry(2), catchError(this.handleError));
   }
 
@@ -64,8 +65,8 @@ export class AmortizacionService {
   }
 
   // Update Student
-  update(id: any, item: any): Observable<Report> {
-    return this.http.put<Report>(`${this.basePath}/${id}`,
+  update(id: any, item: any): Observable<Cuota> {
+    return this.http.put<Cuota>(`${this.basePath}/${id}`,
         JSON.stringify(item), this.httpOptions)
         .pipe(retry(2), catchError(this.handleError));
   }

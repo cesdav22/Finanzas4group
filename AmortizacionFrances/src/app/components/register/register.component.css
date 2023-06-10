@@ -1,23 +1,50 @@
-.body{
-    display: flex;
-    justify-content: center;
-    height: 100%;
+/*.body{*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    flex-wrap: wrap;*/
+/*    height: 100%;*/
+/*    align-items: center;*/
+/*    background-color: aliceblue;*/
+/*}*/
+
+/*.login{*/
+/*    width: 100%;*/
+/*    max-width: 330px;*/
+/*    text-align: center;*/
+/*}*/
+
+/*.ancho{*/
+/*    width: 80%;*/
+/*}*/
+.button{
+    margin-right: 50px;
+}
+/*.spinner{*/
+/*    margin: 0 auto;*/
+/*}*/
+
+
+.signup-form{
     align-items: center;
-    background-color: aliceblue;
 }
 
-.login{
-    width: 100%;
-    max-width: 330px;
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login {
     text-align: center;
 }
 
-.ancho{
-    width: 80%;
+.inputs {
+    display: flex;
+    flex-wrap: wrap;
 }
-.button{
-    height: 50px;
-}
-.spinner{
-    margin: 0 auto;
+.img{
+    width: 15%;
+
 }

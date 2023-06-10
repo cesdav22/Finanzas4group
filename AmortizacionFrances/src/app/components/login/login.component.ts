@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, private fb: FormBuilder, private _snackBar: MatSnackBar, private router: Router, private loginService : UsersService) {
     this.form = this.fb.group({
-      usuario: ['', Validators.required],
+      email: ['', Validators.required],
       password: ['', Validators.required]
     })
     this.newUser={}as User;
@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
 
 
   loginForm: FormGroup = this.formBuilder.group({
-    username: ['', { validators: [Validators.required], updateOn: 'change'}],
+    email: ['', { validators: [Validators.required], updateOn: 'change'}],
     password: ['', {validators: [Validators.required ], updateOn: 'change'}]
   })
 
@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
   }
   ingresar() {
     console.log(this.form);
-    const username = this.form.value.usuario;
+    const email = this.form.value.email;
     const password = this.form.value.password;
 
     // if (username == 'cesarFi' && password == 'admin123') {
@@ -61,7 +61,7 @@ export class LoginComponent implements OnInit {
     // }
 
     const user = this.users.find(
-        (u: User) => u.username === username && u.password === password
+        (u: User) => u.email === email && u.password === password
     );
 
     if (user) {
@@ -93,7 +93,7 @@ export class LoginComponent implements OnInit {
     this.loginService.getAll().subscribe((response: any) => {
       this.newUser = response.find((a:any) => {
         this.currentUser = a;
-        return a.username === this.form.value.username &&
+        return a.email === this.form.value.email &&
             a.password === this.form.value.password
       })
     });

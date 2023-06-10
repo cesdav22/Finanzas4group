@@ -16,8 +16,16 @@ export class RegisterComponent implements OnInit {
 
 
   registerForm: FormGroup = this.formBuilder.group({
-    username: ['', {validators: [Validators.required], updatedOn: 'change'}],
+    email: ['', {validators: [Validators.required], updatedOn: 'change'}],
     password: ['', {validators: [Validators.required], updatedOn: 'change'}],
+    name: ['', {validators: [Validators.required], updatedOn: 'change'}],
+    first_surname: ['', {validators: [Validators.required], updatedOn: 'change'}],
+    second_surname: ['', {validators: [Validators.required], updatedOn: 'change'}],
+    age: ['', {validators: [Validators.required], updatedOn: 'change'}],
+    address: ['', {validators: [Validators.required], updatedOn: 'change'}],
+    number_telephone: ['', {validators: [Validators.required], updatedOn: 'change'}],
+    nationality: ['', {validators: [Validators.required], updatedOn: 'change'}],
+    bonus_good_payer: ['', {validators: [Validators.required], updatedOn: 'change'}],
   })
 
 
@@ -33,8 +41,8 @@ export class RegisterComponent implements OnInit {
   }
 
 
-  get username() {
-    return this.registerForm.get('username');
+  get email() {
+    return this.registerForm.get('email');
   }
   get password() {
     return this.registerForm.get('password');
@@ -50,8 +58,20 @@ export class RegisterComponent implements OnInit {
 
   addUser(){
     this.newUser.id=0;
-    this.newUser.username = this.registerForm.value.username;
+    this.newUser.email = this.registerForm.value.email;
     this.newUser.password = this.registerForm.value.password;
+    this.newUser.name = this.registerForm.value.name;
+    this.newUser.first_surname = this.registerForm.value.first_surname;
+    this.newUser.second_surname = this.registerForm.value.second_surname;
+    this.newUser.age = this.registerForm.value.age;
+    this.newUser.address = this.registerForm.value.address;
+    this.newUser.number_telephone = this.registerForm.value.number_telephone;
+    this.newUser.nationality = this.registerForm.value.nationality;
+    this.newUser.bonus_good_payer = Boolean(this.registerForm.value.bonus_good_payer);
+
+    //data missing
+    // this.newUser.email = this.registerForm.value.email;
+    // this.newUser.password = this.registerForm.value.password;
 
     this.loginService.create(this.newUser).subscribe(response =>{})
 

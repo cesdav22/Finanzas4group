@@ -5,6 +5,7 @@
 mat-toolbar{
     height: 100px;
     background-color: rgba(45, 45, 45, 0);
+    /*color: #01ADE9;*/
 }
 
 h1{

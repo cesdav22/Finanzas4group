@@ -26,6 +26,9 @@ import {ObjToArrayPipe} from "./reportes/objToArray";
         DesgravamenComponent,
         ObjToArrayPipe
     ],
+    exports: [
+        NavbarComponent
+    ],
     imports: [
         CommonModule,
         DashboardRoutingModule,

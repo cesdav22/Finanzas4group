@@ -37,6 +37,8 @@ export class ReportesComponent implements OnInit {
   reportData: Report;
   a:any;
   b:any;
+  reportId:any;
+  array:any[] =[] ;
   constructor(private route: ActivatedRoute, private reportsService: AmortizacionService) {
     this.dataSource = new MatTableDataSource<any>();
     this.reportData = {} as Report;
@@ -59,7 +61,7 @@ export class ReportesComponent implements OnInit {
     //   this.dataSource = new MatTableDataSource<any>(dataSource);
     // });
 
-   this.getReport()
+   this.getReports()
    // this.getAllPatients()
   }
 
@@ -77,26 +79,55 @@ export class ReportesComponent implements OnInit {
   //   });
   // }
 
-  getReport() {
-    // this.reportsService.getAll().subscribe((response: any) => {
-    //   this.dataSource.data = response;
-    //   console.log(response);
-    // });
+
+  getReports() {
+   this.reportsService.getAll().subscribe((response: any) => {
+      this.b = response;
+      console.log(this.b);
+     this.getReportById2(2);
+    });
+
+    // this.array = Object.values(this.b);
+    // console.log(this.array);
+    // console.log(this.array.length - 1);
+    // this.reportId = this.array.length - 1;
+    // console.log(this.reportId);
+
+
+
 
     // this.reportData.nroCuota = 0;
-    this.reportsService.getById(1).subscribe((response:any)=> {
-      this.a = response;
+
+    // const dataArray = Object.keys(this.b).map((key) => ({ id: key, ...this.b[key] }));
+    // dataArray.sort((a, b) => b.id - a.id);
+    // const ultimoID = dataArray[0].id;
+    // console.log(ultimoID);
+
+    // const keys = Object.keys(this.b);
+    // const ultimoId = keys.pop();
+
+    // console.log(ultimoId)
+
+    // console.log(this.reportId);
+
+
+    // await this.reportsService.getById(4).subscribe((response: any) => {
+    //   this.a = response;
+
+
       // console.log(response);
       // this.router.navigate(['/infoPatientSpecific/${id}'],this.a)
       // console.log(this.a);
-      console.log(this.a);
+
+      // console.log(this.a);
+
       //   this.dataSource.data = this.a;
       // console.log(this.dataSource);
       // response.nroCuota = 0;
 
       // this.dataSource.data = this.a;
       // console.log(this.dataSource.data);
-    })
+    // });
 
     //
     // this.reportsService.getLastId(this.b).subscribe((lastId: number) => {
@@ -106,7 +137,12 @@ export class ReportesComponent implements OnInit {
     // });
 
 
+  }
 
+  getReportById2(reportIds: number) {
+    this.reportsService.getById(reportIds).subscribe((response: any) => {
+      this.a = response;
+    });
   }
 
 

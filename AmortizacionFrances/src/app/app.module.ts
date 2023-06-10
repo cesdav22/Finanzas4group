@@ -10,6 +10,7 @@ import { RegisterComponent } from './components/register/register.component';
 import {FormsModule} from "@angular/forms";
 import {UsersService} from "./components/dashboard/services/users.service";
 import {AmortizacionService} from "./components/dashboard/services/amortizacion.service";
+import {DashboardModule} from "./components/dashboard/dashboard.module";
 
 
 
@@ -25,7 +26,8 @@ import {AmortizacionService} from "./components/dashboard/services/amortizacion.
         AppRoutingModule,
         BrowserAnimationsModule,
         SharedModule,
-        FormsModule
+        FormsModule,
+        DashboardModule
     ],
   providers: [UsersService, AmortizacionService],
   bootstrap: [AppComponent]

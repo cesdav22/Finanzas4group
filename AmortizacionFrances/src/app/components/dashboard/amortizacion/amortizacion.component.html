@@ -5,15 +5,16 @@
 <!--    </div>-->
 
 
+<app-navbar></app-navbar>
+<div class="background-image" style="background-image: url(assets/img/FONDO_MIVIVIENDA.jpg)" role="img"
+     aria-label="Specialist doctor in dermatology"></div>
 
 
-
-
-<mat-toolbar class="toolbar" style="background-color: #BC3687" color="primary">
-    <div class="container-center">
-        <span class="titulo-toolbar">Calculadora de cuotas - Sistema francés</span>
-    </div>
-</mat-toolbar>
+<!--<mat-toolbar class="toolbar" style="background-color: #BC3687" color="warn">-->
+<!--    <div class="container-center">-->
+<!--        <span class="titulo-toolbar">Calculadora de cuotas - Sistema francés</span>-->
+<!--    </div>-->
+<!--</mat-toolbar>-->
 <div class="content" role="main">
     <h3 class="centrado-texto">Ingrese el monto, plazo (cuotas) y la tasa</h3>
 
@@ -25,12 +26,12 @@
                     class="example-full-width field-capital"
                     appearance="fill"
             >
-                <mat-label>Monto</mat-label>
+                <mat-label style="color: white;">Monto</mat-label>
                 <input
                         name="capital"
                         matInput
                         [(ngModel)]="capital"
-                        />
+                        style="color: white;" />
             </mat-form-field>
         </div>
 <!--        (ngModelChange)="parseSeparadorMiles($event)"-->
@@ -41,15 +42,15 @@
             <mat-grid-tile></mat-grid-tile>
             <mat-grid-tile>
                 <mat-form-field class="example-full-width" appearance="fill">
-                    <mat-label>Cuotas</mat-label>
-                    <input name="plazo" matInput maxlength="5" [(ngModel)]="plazo" />
+                    <mat-label style="color: white;">Cuotas</mat-label>
+                    <input name="plazo" matInput maxlength="5" [(ngModel)]="plazo" style="color: white;" />
                 </mat-form-field>
             </mat-grid-tile>
             <mat-grid-tile></mat-grid-tile>
             <mat-grid-tile>
                 <mat-form-field class="example-full-width" appearance="fill">
-                    <mat-label>Tasa</mat-label>
-                    <input name="tasa" matInput maxlength="5" [(ngModel)]="tazaInteres" />
+                    <mat-label style="color: white;">Tasa</mat-label>
+                    <input name="tasa" matInput maxlength="50" [(ngModel)]="tazaInteres"style="color: white;" />
                 </mat-form-field>
             </mat-grid-tile>
         </mat-grid-list>
@@ -63,6 +64,7 @@
 <div #contentToExport>
     <!-- Coloca aquí el contenido HTML que deseas exportar a PDF -->
     <div class="responsive">
+        <h1 style="color: #00A59E" *ngIf="mostrarBoton">Su plan de pagos es: </h1>
         <table
                 mat-table
                 [dataSource]="dataSource"
@@ -78,35 +80,43 @@
             <ng-container matColumnDef="amortizacion">
                 <th mat-header-cell *matHeaderCellDef><b>Amortizacion</b></th>
                 <td mat-cell *matCellDef="let element">
-                    {{ element.amortizacion | separadorMiles }}
+                    {{ element.amortizacion  | number: '1.2-2'   }}
                 </td>
                 <td mat-footer-cell *matFooterCellDef>
-                    {{ totalAmortizacion | separadorMiles }}
+                    {{ totalAmortizacion  }}
                 </td>
             </ng-container>
 
             <ng-container matColumnDef="interes">
                 <th mat-header-cell *matHeaderCellDef><b>Interés</b></th>
                 <td mat-cell *matCellDef="let element">
-                    {{ element.interes | separadorMiles }}
+                    {{ element.interes | number: '1.2-2'  }}
                 </td>
                 <td mat-footer-cell *matFooterCellDef>
-                    {{ totalInteres | separadorMiles }}
+                    {{ totalInteres  }}
                 </td>
             </ng-container>
 
             <ng-container matColumnDef="desgravamen">
                 <th mat-header-cell *matHeaderCellDef><b>Desgravamen</b></th>
                 <td mat-cell *matCellDef="let element">
-                    {{ element.desgravamen }}
+                    {{ element.desgravamen | number: '1.2-2' }}
                 </td>
                 <td mat-footer-cell *matFooterCellDef></td>
             </ng-container>
 
-            <ng-container matColumnDef="saldo">
-                <th mat-header-cell *matHeaderCellDef><b>Saldo</b></th>
+            <ng-container matColumnDef="saldo-inicial">
+                <th mat-header-cell *matHeaderCellDef><b>Saldo Inicial</b></th>
                 <td mat-cell *matCellDef="let element">
-                    {{ element.saldo | separadorMiles }}
+                    {{ element.saldoInicial  | number: '1.2-2' }}
+                </td>
+                <td mat-footer-cell *matFooterCellDef></td>
+            </ng-container>
+
+            <ng-container matColumnDef="saldo-final">
+                <th mat-header-cell *matHeaderCellDef><b>Saldo Final</b></th>
+                <td mat-cell *matCellDef="let element">
+                    {{ element.saldoFinal | number: '1.2-2'  }}
                 </td>
                 <td mat-footer-cell *matFooterCellDef></td>
             </ng-container>
@@ -114,10 +124,10 @@
             <ng-container matColumnDef="cuota">
                 <th mat-header-cell *matHeaderCellDef><b>Cuota</b></th>
                 <td mat-cell *matCellDef="let element">
-                    {{ element.cuota | separadorMiles }}
+                    {{ element.cuota | number: '1.2-2'  }}
                 </td>
                 <td mat-footer-cell *matFooterCellDef>
-                    {{ totalCuotas | separadorMiles }}
+                    {{ totalCuotas  }}
                 </td>
             </ng-container>
 
@@ -128,7 +138,7 @@
 
             <tr mat-header-row *matHeaderRowDef="columnasTabla"></tr>
             <tr mat-row *matRowDef="let row; columns: columnasTabla"></tr>
-            <tr mat-footer-row *matFooterRowDef="columnasTabla"></tr>
+<!--            <tr mat-footer-row *matFooterRowDef="columnasTabla"></tr>-->
         </table>
     </div>
 
@@ -174,15 +184,15 @@
 
 
 <div class="footer">
-    <mat-toolbar style="background-color: #87BC28">
+    <mat-toolbar class="transparent-toolbar">
         <div class="container-center">
             <!--            <a href="https://github.com/ArielAyala/calculador-cuotas-sistema-frances" target="_blank">-->
             <!--                <img src="assets/logo-github.svg" alt="logo github" class="logo-github">-->
             <!--            </a>-->
 
             <div class="button-container">
-                <button mat-raised-button (click)="navigateTo()" class="my-button">Acceder al Seguro de desgravamen</button>
-                <button mat-raised-button (click)="downloadAsPDF()" class="my-button">Descargar como PDF</button>
+<!--                <button mat-raised-button (click)="navigateTo()" class="my-button">Acceder al Seguro de desgravamen</button>-->
+                <button mat-raised-button *ngIf="mostrarBoton"  (click)="downloadAsPDF()" class="my-button">Descargar como PDF</button>
             </div>
 
 
