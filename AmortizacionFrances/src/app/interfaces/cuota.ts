@@ -5,7 +5,7 @@ export interface Cuota {
     interes?: number;
     desgravamen?: number;
     cuota?: number;
-    saldoInicial?: number;
+    saldoInicial: number;
     saldoFinal: number;
 
     plazoGracia:string;

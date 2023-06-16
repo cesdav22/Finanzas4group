@@ -38,10 +38,18 @@ export class AmortizacionComponent implements OnInit {
   dataSource2: MatTableDataSource<any> = new MatTableDataSource<any>([]);
   displayedColumns: string[] = ['id', 'nroCuota', 'amortizacion', 'interes', 'saldo', 'cuota'];
 
-  capital: string = '';
+  exponente : number = 0 ;
+
+  // capital: string = '';
+  capital: number = 0;
+  capital2: number = 0;
   plazo: number = 0;
 
+  cuotaInicial: number = 0;
+  frecuencia: string = '';
+
   tazaInteres: number = 0;
+  tazaInteres2: number = 0;
 
   plazoGraciaPeriodo:number = 0;
 
@@ -60,13 +68,16 @@ export class AmortizacionComponent implements OnInit {
 
   columnasTabla: string[] = [
     'numero-cuota',
-    'amortizacion',
+    'TEA',
+    'TES',
     'plazo-gracia',
-    'interes',
-    'desgravamen',
     'saldo-inicial',
-    'saldo-final',
+    'interes',
     'cuota',
+    'amortizacion',
+    'saldo-final',
+    'desgravamen',
+
   ];
 
   constructor(private _snackBar: MatSnackBar, private router: Router, private reportsService: AmortizacionService) {
@@ -96,16 +107,16 @@ export class AmortizacionComponent implements OnInit {
   }
 
   procesar() {
-    if (this.validaciones()) {
-      return;
-    } else {
-      this.calcular();
-      this.mostrarTabla()
-      // this.addCuota()
-    }
+    // if (this.validaciones()) {
+    //   return;
+    // } else {
+    //   this.calcular();
+    //   this.mostrarTabla()
+    //   // this.addCuota()
+    // }
     //
     //
-    // this.calcular();
+    this.calcular();
     // this.mostrarTabla()
   }
 
@@ -135,10 +146,21 @@ export class AmortizacionComponent implements OnInit {
   calcular() {
     this.cerearVariables();
 
-    this.tazaInteres = this.verificarDecimal(this.tazaInteres);
 
+
+    // this.capital2 = Number(this.capital)*((100-(this.cuotaInicial))/100);
+    this.cuotaInicial = (this.cuotaInicial/100) * Number(this.capital);
+    console.log(`CUOTA INICIAL: ${this.cuotaInicial}`)
+    this.capital2 = this.capital - this.cuotaInicial;
+
+    console.log(`CAPITAL 2: ${this.capital2}`)
+
+    // this.tazaInteres = this.verificarDecimal(this.tazaInteres);
+
+    this.tazaInteres2 = ((Math.pow((1 + (this.tazaInteres)/100), 0.5)) - 1) * 100 ;
+    console.log(`TASA DE INTERES: ${this.tazaInteres}`)
     //anual
-    this.interesMensual = this.tazaInteres ;
+    this.interesMensual = this.tazaInteres2 ;
     //mensual
     // this.interesMensual = this.tazaInteres/12 ;
 
@@ -146,18 +168,21 @@ export class AmortizacionComponent implements OnInit {
     //     ((this.interesMensual / 100) * Number(this.capital)) /
     //     (1 - Math.pow(1 / (1 + this.interesMensual / 100), this.plazo));
 
+    this.exponente = 360/180;
+    this.plazo = 2*this.plazo;
+
     this.cuotaMensual =
-        (((this.interesMensual / 100) * Math.pow((1+ this.interesMensual/100), this.plazo))* Number(this.capital) /
+        (((this.interesMensual / 100) * Math.pow((1+ this.interesMensual/100), this.plazo))* this.capital2 /
         (Math.pow((1 + this.interesMensual / 100) , this.plazo) - 1));
 
     console.log(`plazo: ${this.plazo}`)
-    console.log(`cuota mensual xd: ${this.cuotaMensual}`)
+    console.log(`CUOTA MENSUAL xd: ${this.cuotaMensual}`)
 
     // this.cuotaMensual = this.cuotaMensual; // Redondeo
 
 
-    this.saldoFinal = Number(this.capital);
-    this.saldoInicial = Number(this.capital);
+    this.saldoFinal = this.capital2;
+    this.saldoInicial = this.capital2;
 
 
 
@@ -177,10 +202,11 @@ export class AmortizacionComponent implements OnInit {
       // Interes de la cuota
       console.log(`cuota saldo: ${cuota.saldoFinal}`)
       // cuota.interes = Math.round((cuota.saldo / 100) * this.interesMensual);
-      cuota.interes = cuota.saldoFinal * (this.interesMensual/100);
-
+      cuota.interes = cuota.saldoInicial * (this.interesMensual/100);
+      console.log(`interes: ${cuota.interes}`)
       // Amortizacion de la cuota
       cuota.amortizacion = this.cuotaMensual - cuota.interes;
+      console.log(`AMORTIZACION: ${cuota.amortizacion}`)
 
       cuota.cuota = this.cuotaMensual;
 
@@ -206,15 +232,17 @@ export class AmortizacionComponent implements OnInit {
 //TODO prueba
 
 
-      if(this.plazoGraciaPeriodo == cuotaIndex){
-        cuota.plazoGracia ='T';
-        cuota.cuota = 0;
-        cuota.amortizacion = 0;
-      }
-      else{
-        cuota.plazoGracia = 'S';
-      }
+      // if(this.plazoGraciaPeriodo == cuotaIndex){
+      //   cuota.plazoGracia ='T';
+      //   cuota.cuota = 0;
+      //   cuota.amortizacion = 0;
+      //   cuota.saldoFinal= cuota.saldoInicial + cuota.interes;
+      // }
+      // else{
+      //   cuota.plazoGracia = 'S';
+      // }
 
+      cuota.plazoGracia = 'S';
       // if(cuotaIndex==2 || cuotaIndex == 3){
       //   this.plazoGracia ='P';
       // }
@@ -318,15 +346,15 @@ export class AmortizacionComponent implements OnInit {
     return parseFloat(num.toString().replaceAll(',', '.'));
   }
 
-  parseSeparadorMiles(valor: any) {
-    if (Number(valor).toString() == 'NaN') {
-      console.log('El valor ingresado no es un número.');
-      this.capital = '';
-    }
-
-    valor = valor.toString().replaceAll('.', '');
-    this.capital = Number(valor).toLocaleString('es-AR');
-  }
+  // parseSeparadorMiles(valor: any) {
+  //   if (Number(valor).toString() == 'NaN') {
+  //     console.log('El valor ingresado no es un número.');
+  //     this.capital = '';
+  //   }
+  //
+  //   valor = valor.toString().replaceAll('.', '');
+  //   this.capital = Number(valor).toLocaleString('es-AR');
+  // }
 
   // parsearAEntero(numString: any) {
   //   return parseInt(numString.replaceAll('.', ''));
