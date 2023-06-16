@@ -428,6 +428,32 @@
       "number_telephone": "944614279",
       "nationality": "Peru",
       "bonus_good_payer": true
+    },
+    {
+      "id": 3,
+      "email": "diego@email.com",
+      "password": "12345678",
+      "name": "Diego",
+      "first_surname": "Arrieta",
+      "second_surname": "Huaman",
+      "age": "25",
+      "address": "Ate",
+      "number_telephone": "912617845",
+      "nationality": "Peruano",
+      "bonus_good_payer": true
+    },
+    {
+      "id": 4,
+      "email": "garrieta@concyssa.com",
+      "password": "12345678",
+      "name": "Gabriel",
+      "first_surname": "Arrieta",
+      "second_surname": "Yllatopa",
+      "age": "36",
+      "address": "Los Angeles",
+      "number_telephone": "998324689",
+      "nationality": "Peruano",
+      "bonus_good_payer": true
     }
   ],
   "reports2": [
@@ -481,1664 +507,97 @@
   "cuota": [
     [
       {
+        "plazoGracia": "S",
         "id": 1,
         "numeroCuota": 1,
-        "saldoInicial": 100000,
-        "saldoFinal": 79076.55636943104,
-        "interes": 12000,
-        "amortizacion": 20923.44363056896,
-        "cuota": 32923.44363056896,
-        "desgravamen": 44
+        "saldoInicial": 65200,
+        "saldoFinal": 59899.05474224567,
+        "interes": 7824,
+        "amortizacion": 5300.945257754331,
+        "cuota": 13124.94525775433,
+        "desgravamen": 29
       },
       {
+        "plazoGracia": "T",
         "id": 2,
         "numeroCuota": 2,
-        "saldoInicial": 79076.55636943104,
-        "saldoFinal": 55642.299503193804,
-        "interes": 9489.186764331724,
-        "amortizacion": 23434.256866237236,
-        "cuota": 32923.44363056896,
-        "desgravamen": 35
-      },
-      {
-        "id": 3,
-        "numeroCuota": 3,
-        "saldoInicial": 55642.299503193804,
-        "saldoFinal": 29395.9318130081,
-        "interes": 6677.075940383256,
-        "amortizacion": 26246.367690185703,
-        "cuota": 32923.44363056896,
-        "desgravamen": 24
-      },
-      {
-        "id": 4,
-        "numeroCuota": 4,
-        "saldoInicial": 29395.9318130081,
-        "saldoFinal": 1.127773430198431e-10,
-        "interes": 3527.511817560972,
-        "amortizacion": 29395.93181300799,
-        "cuota": 32923.44363056896,
-        "desgravamen": 13
-      }
-    ],
-    [
-      {
-        "id": 1,
-        "numeroCuota": 1,
-        "saldoInicial": 100000,
-        "saldoFinal": 79076.55636943104,
-        "interes": 12000,
-        "amortizacion": 20923.44363056896,
-        "cuota": 32923.44363056896,
-        "desgravamen": 44
-      },
-      {
-        "id": 2,
-        "numeroCuota": 2,
-        "saldoInicial": 79076.55636943104,
-        "saldoFinal": 55642.299503193804,
-        "interes": 9489.186764331724,
-        "amortizacion": 23434.256866237236,
-        "cuota": 32923.44363056896,
-        "desgravamen": 35
-      },
-      {
-        "id": 3,
-        "numeroCuota": 3,
-        "saldoInicial": 55642.299503193804,
-        "saldoFinal": 29395.9318130081,
-        "interes": 6677.075940383256,
-        "amortizacion": 26246.367690185703,
-        "cuota": 32923.44363056896,
-        "desgravamen": 24
-      },
-      {
-        "id": 4,
-        "numeroCuota": 4,
-        "saldoInicial": 29395.9318130081,
-        "saldoFinal": 1.127773430198431e-10,
-        "interes": 3527.511817560972,
-        "amortizacion": 29395.93181300799,
-        "cuota": 32923.44363056896,
-        "desgravamen": 13
-      },
-      {
-        "id": 1,
-        "numeroCuota": 1,
-        "saldoInicial": 100000,
-        "saldoFinal": 91505.27571677006,
-        "interes": 17000,
-        "amortizacion": 8494.724283229945,
-        "cuota": 25494.724283229945,
-        "desgravamen": 44
-      },
-      {
-        "id": 2,
-        "numeroCuota": 2,
-        "saldoInicial": 91505.27571677006,
-        "saldoFinal": 81566.44830539102,
-        "interes": 15555.896871850911,
-        "amortizacion": 9938.827411379034,
-        "cuota": 25494.724283229945,
-        "desgravamen": 40
-      },
-      {
-        "id": 3,
-        "numeroCuota": 3,
-        "saldoInicial": 81566.44830539102,
-        "saldoFinal": 69938.02023407756,
-        "interes": 13866.296211916475,
-        "amortizacion": 11628.42807131347,
-        "cuota": 25494.724283229945,
-        "desgravamen": 36
-      },
-      {
-        "id": 4,
-        "numeroCuota": 4,
-        "saldoInicial": 69938.02023407756,
-        "saldoFinal": 56332.7593906408,
-        "interes": 11889.463439793186,
-        "amortizacion": 13605.26084343676,
-        "cuota": 25494.724283229945,
-        "desgravamen": 31
-      },
-      {
-        "id": 5,
-        "numeroCuota": 5,
-        "saldoInicial": 56332.7593906408,
-        "saldoFinal": 40414.60420381979,
-        "interes": 9576.569096408937,
-        "amortizacion": 15918.155186821008,
-        "cuota": 25494.724283229945,
-        "desgravamen": 25
-      },
-      {
-        "id": 6,
-        "numeroCuota": 6,
-        "saldoInicial": 40414.60420381979,
-        "saldoFinal": 21790.362635239213,
-        "interes": 6870.482714649365,
-        "amortizacion": 18624.24156858058,
-        "cuota": 25494.724283229945,
-        "desgravamen": 18
-      },
-      {
-        "id": 7,
-        "numeroCuota": 7,
-        "saldoInicial": 21790.362635239213,
-        "saldoFinal": -6.548361852765083e-11,
-        "interes": 3704.3616479906664,
-        "amortizacion": 21790.36263523928,
-        "cuota": 25494.724283229945,
-        "desgravamen": 10
-      }
-    ],
-    [
-      {
-        "id": 1,
-        "numeroCuota": 1,
-        "saldoInicial": 100000,
-        "saldoFinal": 79076.55636943104,
-        "interes": 12000,
-        "amortizacion": 20923.44363056896,
-        "cuota": 32923.44363056896,
-        "desgravamen": 44
-      },
-      {
-        "id": 2,
-        "numeroCuota": 2,
-        "saldoInicial": 79076.55636943104,
-        "saldoFinal": 55642.299503193804,
-        "interes": 9489.186764331724,
-        "amortizacion": 23434.256866237236,
-        "cuota": 32923.44363056896,
-        "desgravamen": 35
-      },
-      {
-        "id": 3,
-        "numeroCuota": 3,
-        "saldoInicial": 55642.299503193804,
-        "saldoFinal": 29395.9318130081,
-        "interes": 6677.075940383256,
-        "amortizacion": 26246.367690185703,
-        "cuota": 32923.44363056896,
-        "desgravamen": 24
-      },
-      {
-        "id": 4,
-        "numeroCuota": 4,
-        "saldoInicial": 29395.9318130081,
-        "saldoFinal": 1.127773430198431e-10,
-        "interes": 3527.511817560972,
-        "amortizacion": 29395.93181300799,
-        "cuota": 32923.44363056896,
-        "desgravamen": 13
-      },
-      {
-        "id": 1,
-        "numeroCuota": 1,
-        "saldoInicial": 100000,
-        "saldoFinal": 91505.27571677006,
-        "interes": 17000,
-        "amortizacion": 8494.724283229945,
-        "cuota": 25494.724283229945,
-        "desgravamen": 44
-      },
-      {
-        "id": 2,
-        "numeroCuota": 2,
-        "saldoInicial": 91505.27571677006,
-        "saldoFinal": 81566.44830539102,
-        "interes": 15555.896871850911,
-        "amortizacion": 9938.827411379034,
-        "cuota": 25494.724283229945,
-        "desgravamen": 40
-      },
-      {
-        "id": 3,
-        "numeroCuota": 3,
-        "saldoInicial": 81566.44830539102,
-        "saldoFinal": 69938.02023407756,
-        "interes": 13866.296211916475,
-        "amortizacion": 11628.42807131347,
-        "cuota": 25494.724283229945,
-        "desgravamen": 36
-      },
-      {
-        "id": 4,
-        "numeroCuota": 4,
-        "saldoInicial": 69938.02023407756,
-        "saldoFinal": 56332.7593906408,
-        "interes": 11889.463439793186,
-        "amortizacion": 13605.26084343676,
-        "cuota": 25494.724283229945,
-        "desgravamen": 31
-      },
-      {
-        "id": 5,
-        "numeroCuota": 5,
-        "saldoInicial": 56332.7593906408,
-        "saldoFinal": 40414.60420381979,
-        "interes": 9576.569096408937,
-        "amortizacion": 15918.155186821008,
-        "cuota": 25494.724283229945,
-        "desgravamen": 25
-      },
-      {
-        "id": 6,
-        "numeroCuota": 6,
-        "saldoInicial": 40414.60420381979,
-        "saldoFinal": 21790.362635239213,
-        "interes": 6870.482714649365,
-        "amortizacion": 18624.24156858058,
-        "cuota": 25494.724283229945,
-        "desgravamen": 18
-      },
-      {
-        "id": 7,
-        "numeroCuota": 7,
-        "saldoInicial": 21790.362635239213,
-        "saldoFinal": -6.548361852765083e-11,
-        "interes": 3704.3616479906664,
-        "amortizacion": 21790.36263523928,
-        "cuota": 25494.724283229945,
-        "desgravamen": 10
-      },
-      {
-        "id": 1,
-        "numeroCuota": 1,
-        "saldoInicial": 245065,
-        "saldoFinal": 245000.18949872884,
-        "interes": 29407.8,
-        "amortizacion": 64.81050127114577,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 2,
-        "numeroCuota": 2,
-        "saldoInicial": 245000.18949872884,
-        "saldoFinal": 244927.60173730514,
-        "interes": 29400.02273984746,
-        "amortizacion": 72.58776142368515,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 3,
-        "numeroCuota": 3,
-        "saldoInicial": 244927.60173730514,
-        "saldoFinal": 244846.30344451062,
-        "interes": 29391.312208476615,
-        "amortizacion": 81.29829279453043,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 4,
-        "numeroCuota": 4,
-        "saldoInicial": 244846.30344451062,
-        "saldoFinal": 244755.24935658075,
-        "interes": 29381.556413341274,
-        "amortizacion": 91.05408792987146,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 5,
-        "numeroCuota": 5,
-        "saldoInicial": 244755.24935658075,
-        "saldoFinal": 244653.2687780993,
-        "interes": 29370.62992278969,
-        "amortizacion": 101.98057848145618,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 6,
-        "numeroCuota": 6,
-        "saldoInicial": 244653.2687780993,
-        "saldoFinal": 244539.05053020007,
-        "interes": 29358.392253371916,
-        "amortizacion": 114.21824789922903,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 7,
-        "numeroCuota": 7,
-        "saldoInicial": 244539.05053020007,
-        "saldoFinal": 244411.12609255294,
-        "interes": 29344.686063624005,
-        "amortizacion": 127.92443764713971,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 8,
-        "numeroCuota": 8,
-        "saldoInicial": 244411.12609255294,
-        "saldoFinal": 244267.85072238813,
-        "interes": 29329.335131106352,
-        "amortizacion": 143.27537016479255,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 9,
-        "numeroCuota": 9,
-        "saldoInicial": 244267.85072238813,
-        "saldoFinal": 244107.38230780355,
-        "interes": 29312.142086686574,
-        "amortizacion": 160.4684145845713,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 10,
-        "numeroCuota": 10,
-        "saldoInicial": 244107.38230780355,
-        "saldoFinal": 243927.65768346883,
-        "interes": 29292.885876936423,
-        "amortizacion": 179.72462433472174,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 11,
-        "numeroCuota": 11,
-        "saldoInicial": 243927.65768346883,
-        "saldoFinal": 243726.36610421396,
-        "interes": 29271.31892201626,
-        "amortizacion": 201.2915792548847,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 12,
-        "numeroCuota": 12,
-        "saldoInicial": 243726.36610421396,
-        "saldoFinal": 243500.91953544848,
-        "interes": 29247.163932505675,
-        "amortizacion": 225.44656876547015,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 13,
-        "numeroCuota": 13,
-        "saldoInicial": 243500.91953544848,
-        "saldoFinal": 243248.41937843116,
-        "interes": 29220.11034425382,
-        "amortizacion": 252.50015701732627,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 14,
-        "numeroCuota": 14,
-        "saldoInicial": 243248.41937843116,
-        "saldoFinal": 242965.61920257175,
-        "interes": 29189.810325411738,
-        "amortizacion": 282.8001758594073,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 15,
-        "numeroCuota": 15,
-        "saldoInicial": 242965.61920257175,
-        "saldoFinal": 242648.8830056092,
-        "interes": 29155.874304308607,
-        "amortizacion": 316.7361969625381,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 16,
-        "numeroCuota": 16,
-        "saldoInicial": 242648.8830056092,
-        "saldoFinal": 242294.13846501117,
-        "interes": 29117.865960673105,
-        "amortizacion": 354.74454059803975,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 17,
-        "numeroCuota": 17,
-        "saldoInicial": 242294.13846501117,
-        "saldoFinal": 241896.82457954137,
-        "interes": 29075.29661580134,
-        "amortizacion": 397.3138854698045,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 18,
-        "numeroCuota": 18,
-        "saldoInicial": 241896.82457954137,
-        "saldoFinal": 241451.83302781518,
-        "interes": 29027.61894954496,
-        "amortizacion": 444.9915517261834,
-        "cuota": 29472.610501271145,
-        "desgravamen": 106
-      },
-      {
-        "id": 19,
-        "numeroCuota": 19,
-        "saldoInicial": 241451.83302781518,
-        "saldoFinal": 240953.44248988185,
-        "interes": 28974.219963337822,
-        "amortizacion": 498.3905379333228,
-        "cuota": 29472.610501271145,
-        "desgravamen": 106
-      },
-      {
-        "id": 20,
-        "numeroCuota": 20,
-        "saldoInicial": 240953.44248988185,
-        "saldoFinal": 240395.24508739653,
-        "interes": 28914.413098785823,
-        "amortizacion": 558.1974024853225,
-        "cuota": 29472.610501271145,
-        "desgravamen": 106
-      },
-      {
-        "id": 21,
-        "numeroCuota": 21,
-        "saldoInicial": 240395.24508739653,
-        "saldoFinal": 239770.06399661297,
-        "interes": 28847.42941048758,
-        "amortizacion": 625.1810907835643,
-        "cuota": 29472.610501271145,
-        "desgravamen": 106
-      },
-      {
-        "id": 22,
-        "numeroCuota": 22,
-        "saldoInicial": 239770.06399661297,
-        "saldoFinal": 239069.8611749354,
-        "interes": 28772.407679593554,
-        "amortizacion": 700.2028216775907,
-        "cuota": 29472.610501271145,
-        "desgravamen": 105
-      },
-      {
-        "id": 23,
-        "numeroCuota": 23,
-        "saldoInicial": 239069.8611749354,
-        "saldoFinal": 238285.63401465648,
-        "interes": 28688.383340992244,
-        "amortizacion": 784.2271602789006,
-        "cuota": 29472.610501271145,
-        "desgravamen": 105
-      },
-      {
-        "id": 24,
-        "numeroCuota": 24,
-        "saldoInicial": 238285.63401465648,
-        "saldoFinal": 237407.2995951441,
-        "interes": 28594.276081758777,
-        "amortizacion": 878.3344195123682,
-        "cuota": 29472.610501271145,
-        "desgravamen": 105
-      },
-      {
-        "id": 25,
-        "numeroCuota": 25,
-        "saldoInicial": 237407.2995951441,
-        "saldoFinal": 236423.56504529025,
-        "interes": 28488.875951417293,
-        "amortizacion": 983.7345498538525,
-        "cuota": 29472.610501271145,
-        "desgravamen": 104
-      },
-      {
-        "id": 26,
-        "numeroCuota": 26,
-        "saldoInicial": 236423.56504529025,
-        "saldoFinal": 235321.78234945395,
-        "interes": 28370.82780543483,
-        "amortizacion": 1101.7826958363148,
-        "cuota": 29472.610501271145,
-        "desgravamen": 104
-      },
-      {
-        "id": 27,
-        "numeroCuota": 27,
-        "saldoInicial": 235321.78234945395,
-        "saldoFinal": 234087.7857301173,
-        "interes": 28238.613881934474,
-        "amortizacion": 1233.9966193366708,
-        "cuota": 29472.610501271145,
-        "desgravamen": 104
-      },
-      {
-        "id": 28,
-        "numeroCuota": 28,
-        "saldoInicial": 234087.7857301173,
-        "saldoFinal": 232705.70951646022,
-        "interes": 28090.534287614075,
-        "amortizacion": 1382.0762136570702,
-        "cuota": 29472.610501271145,
-        "desgravamen": 103
-      },
-      {
-        "id": 29,
-        "numeroCuota": 29,
-        "saldoInicial": 232705.70951646022,
-        "saldoFinal": 231157.7841571643,
-        "interes": 27924.685141975224,
-        "amortizacion": 1547.9253592959212,
-        "cuota": 29472.610501271145,
-        "desgravamen": 102
-      },
-      {
-        "id": 30,
-        "numeroCuota": 30,
-        "saldoInicial": 231157.7841571643,
-        "saldoFinal": 229424.10775475288,
-        "interes": 27738.934098859714,
-        "amortizacion": 1733.676402411431,
-        "cuota": 29472.610501271145,
-        "desgravamen": 102
-      },
-      {
-        "id": 31,
-        "numeroCuota": 31,
-        "saldoInicial": 229424.10775475288,
-        "saldoFinal": 227482.39018405208,
-        "interes": 27530.892930570346,
-        "amortizacion": 1941.7175707007991,
-        "cuota": 29472.610501271145,
-        "desgravamen": 101
-      },
-      {
-        "id": 32,
-        "numeroCuota": 32,
-        "saldoInicial": 227482.39018405208,
-        "saldoFinal": 225307.6665048672,
-        "interes": 27297.88682208625,
-        "amortizacion": 2174.7236791848954,
-        "cuota": 29472.610501271145,
-        "desgravamen": 100
-      },
-      {
-        "id": 33,
-        "numeroCuota": 33,
-        "saldoInicial": 225307.6665048672,
-        "saldoFinal": 222871.9759841801,
-        "interes": 27036.91998058406,
-        "amortizacion": 2435.6905206870833,
-        "cuota": 29472.610501271145,
-        "desgravamen": 99
-      },
-      {
-        "id": 34,
-        "numeroCuota": 34,
-        "saldoInicial": 222871.9759841801,
-        "saldoFinal": 220144.00260101058,
-        "interes": 26744.63711810161,
-        "amortizacion": 2727.973383169534,
-        "cuota": 29472.610501271145,
-        "desgravamen": 98
-      },
-      {
-        "id": 35,
-        "numeroCuota": 35,
-        "saldoInicial": 220144.00260101058,
-        "saldoFinal": 217088.6724118607,
-        "interes": 26417.280312121267,
-        "amortizacion": 3055.3301891498777,
-        "cuota": 29472.610501271145,
-        "desgravamen": 97
-      },
-      {
-        "id": 36,
-        "numeroCuota": 36,
-        "saldoInicial": 217088.6724118607,
-        "saldoFinal": 213666.70260001282,
-        "interes": 26050.640689423282,
-        "amortizacion": 3421.9698118478627,
-        "cuota": 29472.610501271145,
-        "desgravamen": 96
-      },
-      {
-        "id": 37,
-        "numeroCuota": 37,
-        "saldoInicial": 213666.70260001282,
-        "saldoFinal": 209834.09641074322,
-        "interes": 25640.004312001536,
-        "amortizacion": 3832.606189269609,
-        "cuota": 29472.610501271145,
-        "desgravamen": 94
-      },
-      {
-        "id": 38,
-        "numeroCuota": 38,
-        "saldoInicial": 209834.09641074322,
-        "saldoFinal": 205541.57747876126,
-        "interes": 25180.091569289187,
-        "amortizacion": 4292.518931981958,
-        "cuota": 29472.610501271145,
-        "desgravamen": 92
-      },
-      {
-        "id": 39,
-        "numeroCuota": 39,
-        "saldoInicial": 205541.57747876126,
-        "saldoFinal": 200733.95627494148,
-        "interes": 24664.98929745135,
-        "amortizacion": 4807.6212038197955,
-        "cuota": 29472.610501271145,
-        "desgravamen": 90
-      },
-      {
-        "id": 40,
-        "numeroCuota": 40,
-        "saldoInicial": 200733.95627494148,
-        "saldoFinal": 195349.4205266633,
-        "interes": 24088.074752992976,
-        "amortizacion": 5384.535748278169,
-        "cuota": 29472.610501271145,
-        "desgravamen": 88
-      },
-      {
-        "id": 41,
-        "numeroCuota": 41,
-        "saldoInicial": 195349.4205266633,
-        "saldoFinal": 189318.74048859175,
-        "interes": 23441.930463199595,
-        "amortizacion": 6030.68003807155,
-        "cuota": 29472.610501271145,
-        "desgravamen": 86
-      },
-      {
-        "id": 42,
-        "numeroCuota": 42,
-        "saldoInicial": 189318.74048859175,
-        "saldoFinal": 182564.3788459516,
-        "interes": 22718.24885863101,
-        "amortizacion": 6754.361642640135,
-        "cuota": 29472.610501271145,
-        "desgravamen": 83
-      },
-      {
-        "id": 43,
-        "numeroCuota": 43,
-        "saldoInicial": 182564.3788459516,
-        "saldoFinal": 174999.49380619466,
-        "interes": 21907.725461514194,
-        "amortizacion": 7564.885039756951,
-        "cuota": 29472.610501271145,
-        "desgravamen": 80
-      },
-      {
-        "id": 44,
-        "numeroCuota": 44,
-        "saldoInicial": 174999.49380619466,
-        "saldoFinal": 166526.82256166686,
-        "interes": 20999.939256743357,
-        "amortizacion": 8472.671244527788,
-        "cuota": 29472.610501271145,
-        "desgravamen": 77
-      },
-      {
-        "id": 45,
-        "numeroCuota": 45,
-        "saldoInicial": 166526.82256166686,
-        "saldoFinal": 157037.43076779574,
-        "interes": 19983.21870740002,
-        "amortizacion": 9489.391793871124,
-        "cuota": 29472.610501271145,
-        "desgravamen": 73
-      },
-      {
-        "id": 46,
-        "numeroCuota": 46,
-        "saldoInicial": 157037.43076779574,
-        "saldoFinal": 146409.31195866008,
-        "interes": 18844.49169213549,
-        "amortizacion": 10628.118809135656,
-        "cuota": 29472.610501271145,
-        "desgravamen": 69
-      },
-      {
-        "id": 47,
-        "numeroCuota": 47,
-        "saldoInicial": 146409.31195866008,
-        "saldoFinal": 134505.81889242816,
-        "interes": 17569.11743503921,
-        "amortizacion": 11903.493066231935,
-        "cuota": 29472.610501271145,
-        "desgravamen": 64
-      },
-      {
-        "id": 48,
-        "numeroCuota": 48,
-        "saldoInicial": 134505.81889242816,
-        "saldoFinal": 121173.9066582484,
-        "interes": 16140.698267091379,
-        "amortizacion": 13331.912234179767,
-        "cuota": 29472.610501271145,
-        "desgravamen": 59
-      },
-      {
-        "id": 49,
-        "numeroCuota": 49,
-        "saldoInicial": 121173.9066582484,
-        "saldoFinal": 106242.16495596705,
-        "interes": 14540.868798989806,
-        "amortizacion": 14931.741702281339,
-        "cuota": 29472.610501271145,
-        "desgravamen": 53
-      },
-      {
-        "id": 50,
-        "numeroCuota": 50,
-        "saldoInicial": 106242.16495596705,
-        "saldoFinal": 89518.61424941194,
-        "interes": 12749.059794716046,
-        "amortizacion": 16723.5507065551,
-        "cuota": 29472.610501271145,
-        "desgravamen": 47
-      },
-      {
-        "id": 51,
-        "numeroCuota": 51,
-        "saldoInicial": 89518.61424941194,
-        "saldoFinal": 70788.23745807023,
-        "interes": 10742.233709929433,
-        "amortizacion": 18730.37679134171,
-        "cuota": 29472.610501271145,
-        "desgravamen": 39
-      },
-      {
-        "id": 52,
-        "numeroCuota": 52,
-        "saldoInicial": 70788.23745807023,
-        "saldoFinal": 49810.215451767515,
-        "interes": 8494.588494968428,
-        "amortizacion": 20978.022006302715,
-        "cuota": 29472.610501271145,
-        "desgravamen": 31
-      },
-      {
-        "id": 53,
-        "numeroCuota": 53,
-        "saldoInicial": 49810.215451767515,
-        "saldoFinal": 26314.830804708472,
-        "interes": 5977.225854212102,
-        "amortizacion": 23495.384647059043,
-        "cuota": 29472.610501271145,
-        "desgravamen": 22
-      },
-      {
-        "id": 54,
-        "numeroCuota": 54,
-        "saldoInicial": 26314.830804708472,
-        "saldoFinal": 2.342858351767063e-9,
-        "interes": 3157.7796965650164,
-        "amortizacion": 26314.83080470613,
-        "cuota": 29472.610501271145,
-        "desgravamen": 12
-      }
-    ],
-    [
-      {
-        "id": 1,
-        "numeroCuota": 1,
-        "saldoInicial": 100000,
-        "saldoFinal": 79076.55636943104,
-        "interes": 12000,
-        "amortizacion": 20923.44363056896,
-        "cuota": 32923.44363056896,
-        "desgravamen": 44
-      },
-      {
-        "id": 2,
-        "numeroCuota": 2,
-        "saldoInicial": 79076.55636943104,
-        "saldoFinal": 55642.299503193804,
-        "interes": 9489.186764331724,
-        "amortizacion": 23434.256866237236,
-        "cuota": 32923.44363056896,
-        "desgravamen": 35
-      },
-      {
-        "id": 3,
-        "numeroCuota": 3,
-        "saldoInicial": 55642.299503193804,
-        "saldoFinal": 29395.9318130081,
-        "interes": 6677.075940383256,
-        "amortizacion": 26246.367690185703,
-        "cuota": 32923.44363056896,
-        "desgravamen": 24
-      },
-      {
-        "id": 4,
-        "numeroCuota": 4,
-        "saldoInicial": 29395.9318130081,
-        "saldoFinal": 1.127773430198431e-10,
-        "interes": 3527.511817560972,
-        "amortizacion": 29395.93181300799,
-        "cuota": 32923.44363056896,
-        "desgravamen": 13
-      },
-      {
-        "id": 1,
-        "numeroCuota": 1,
-        "saldoInicial": 100000,
-        "saldoFinal": 91505.27571677006,
-        "interes": 17000,
-        "amortizacion": 8494.724283229945,
-        "cuota": 25494.724283229945,
-        "desgravamen": 44
-      },
-      {
-        "id": 2,
-        "numeroCuota": 2,
-        "saldoInicial": 91505.27571677006,
-        "saldoFinal": 81566.44830539102,
-        "interes": 15555.896871850911,
-        "amortizacion": 9938.827411379034,
-        "cuota": 25494.724283229945,
-        "desgravamen": 40
-      },
-      {
-        "id": 3,
-        "numeroCuota": 3,
-        "saldoInicial": 81566.44830539102,
-        "saldoFinal": 69938.02023407756,
-        "interes": 13866.296211916475,
-        "amortizacion": 11628.42807131347,
-        "cuota": 25494.724283229945,
-        "desgravamen": 36
-      },
-      {
-        "id": 4,
-        "numeroCuota": 4,
-        "saldoInicial": 69938.02023407756,
-        "saldoFinal": 56332.7593906408,
-        "interes": 11889.463439793186,
-        "amortizacion": 13605.26084343676,
-        "cuota": 25494.724283229945,
-        "desgravamen": 31
-      },
-      {
-        "id": 5,
-        "numeroCuota": 5,
-        "saldoInicial": 56332.7593906408,
-        "saldoFinal": 40414.60420381979,
-        "interes": 9576.569096408937,
-        "amortizacion": 15918.155186821008,
-        "cuota": 25494.724283229945,
-        "desgravamen": 25
-      },
-      {
-        "id": 6,
-        "numeroCuota": 6,
-        "saldoInicial": 40414.60420381979,
-        "saldoFinal": 21790.362635239213,
-        "interes": 6870.482714649365,
-        "amortizacion": 18624.24156858058,
-        "cuota": 25494.724283229945,
-        "desgravamen": 18
-      },
-      {
-        "id": 7,
-        "numeroCuota": 7,
-        "saldoInicial": 21790.362635239213,
-        "saldoFinal": -6.548361852765083e-11,
-        "interes": 3704.3616479906664,
-        "amortizacion": 21790.36263523928,
-        "cuota": 25494.724283229945,
-        "desgravamen": 10
-      },
-      {
-        "id": 1,
-        "numeroCuota": 1,
-        "saldoInicial": 245065,
-        "saldoFinal": 245000.18949872884,
-        "interes": 29407.8,
-        "amortizacion": 64.81050127114577,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 2,
-        "numeroCuota": 2,
-        "saldoInicial": 245000.18949872884,
-        "saldoFinal": 244927.60173730514,
-        "interes": 29400.02273984746,
-        "amortizacion": 72.58776142368515,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 3,
-        "numeroCuota": 3,
-        "saldoInicial": 244927.60173730514,
-        "saldoFinal": 244846.30344451062,
-        "interes": 29391.312208476615,
-        "amortizacion": 81.29829279453043,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 4,
-        "numeroCuota": 4,
-        "saldoInicial": 244846.30344451062,
-        "saldoFinal": 244755.24935658075,
-        "interes": 29381.556413341274,
-        "amortizacion": 91.05408792987146,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 5,
-        "numeroCuota": 5,
-        "saldoInicial": 244755.24935658075,
-        "saldoFinal": 244653.2687780993,
-        "interes": 29370.62992278969,
-        "amortizacion": 101.98057848145618,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 6,
-        "numeroCuota": 6,
-        "saldoInicial": 244653.2687780993,
-        "saldoFinal": 244539.05053020007,
-        "interes": 29358.392253371916,
-        "amortizacion": 114.21824789922903,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 7,
-        "numeroCuota": 7,
-        "saldoInicial": 244539.05053020007,
-        "saldoFinal": 244411.12609255294,
-        "interes": 29344.686063624005,
-        "amortizacion": 127.92443764713971,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 8,
-        "numeroCuota": 8,
-        "saldoInicial": 244411.12609255294,
-        "saldoFinal": 244267.85072238813,
-        "interes": 29329.335131106352,
-        "amortizacion": 143.27537016479255,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 9,
-        "numeroCuota": 9,
-        "saldoInicial": 244267.85072238813,
-        "saldoFinal": 244107.38230780355,
-        "interes": 29312.142086686574,
-        "amortizacion": 160.4684145845713,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 10,
-        "numeroCuota": 10,
-        "saldoInicial": 244107.38230780355,
-        "saldoFinal": 243927.65768346883,
-        "interes": 29292.885876936423,
-        "amortizacion": 179.72462433472174,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 11,
-        "numeroCuota": 11,
-        "saldoInicial": 243927.65768346883,
-        "saldoFinal": 243726.36610421396,
-        "interes": 29271.31892201626,
-        "amortizacion": 201.2915792548847,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 12,
-        "numeroCuota": 12,
-        "saldoInicial": 243726.36610421396,
-        "saldoFinal": 243500.91953544848,
-        "interes": 29247.163932505675,
-        "amortizacion": 225.44656876547015,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 13,
-        "numeroCuota": 13,
-        "saldoInicial": 243500.91953544848,
-        "saldoFinal": 243248.41937843116,
-        "interes": 29220.11034425382,
-        "amortizacion": 252.50015701732627,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 14,
-        "numeroCuota": 14,
-        "saldoInicial": 243248.41937843116,
-        "saldoFinal": 242965.61920257175,
-        "interes": 29189.810325411738,
-        "amortizacion": 282.8001758594073,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 15,
-        "numeroCuota": 15,
-        "saldoInicial": 242965.61920257175,
-        "saldoFinal": 242648.8830056092,
-        "interes": 29155.874304308607,
-        "amortizacion": 316.7361969625381,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 16,
-        "numeroCuota": 16,
-        "saldoInicial": 242648.8830056092,
-        "saldoFinal": 242294.13846501117,
-        "interes": 29117.865960673105,
-        "amortizacion": 354.74454059803975,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 17,
-        "numeroCuota": 17,
-        "saldoInicial": 242294.13846501117,
-        "saldoFinal": 241896.82457954137,
-        "interes": 29075.29661580134,
-        "amortizacion": 397.3138854698045,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 18,
-        "numeroCuota": 18,
-        "saldoInicial": 241896.82457954137,
-        "saldoFinal": 241451.83302781518,
-        "interes": 29027.61894954496,
-        "amortizacion": 444.9915517261834,
-        "cuota": 29472.610501271145,
-        "desgravamen": 106
-      },
-      {
-        "id": 19,
-        "numeroCuota": 19,
-        "saldoInicial": 241451.83302781518,
-        "saldoFinal": 240953.44248988185,
-        "interes": 28974.219963337822,
-        "amortizacion": 498.3905379333228,
-        "cuota": 29472.610501271145,
-        "desgravamen": 106
-      },
-      {
-        "id": 20,
-        "numeroCuota": 20,
-        "saldoInicial": 240953.44248988185,
-        "saldoFinal": 240395.24508739653,
-        "interes": 28914.413098785823,
-        "amortizacion": 558.1974024853225,
-        "cuota": 29472.610501271145,
-        "desgravamen": 106
-      },
-      {
-        "id": 21,
-        "numeroCuota": 21,
-        "saldoInicial": 240395.24508739653,
-        "saldoFinal": 239770.06399661297,
-        "interes": 28847.42941048758,
-        "amortizacion": 625.1810907835643,
-        "cuota": 29472.610501271145,
-        "desgravamen": 106
-      },
-      {
-        "id": 22,
-        "numeroCuota": 22,
-        "saldoInicial": 239770.06399661297,
-        "saldoFinal": 239069.8611749354,
-        "interes": 28772.407679593554,
-        "amortizacion": 700.2028216775907,
-        "cuota": 29472.610501271145,
-        "desgravamen": 105
-      },
-      {
-        "id": 23,
-        "numeroCuota": 23,
-        "saldoInicial": 239069.8611749354,
-        "saldoFinal": 238285.63401465648,
-        "interes": 28688.383340992244,
-        "amortizacion": 784.2271602789006,
-        "cuota": 29472.610501271145,
-        "desgravamen": 105
-      },
-      {
-        "id": 24,
-        "numeroCuota": 24,
-        "saldoInicial": 238285.63401465648,
-        "saldoFinal": 237407.2995951441,
-        "interes": 28594.276081758777,
-        "amortizacion": 878.3344195123682,
-        "cuota": 29472.610501271145,
-        "desgravamen": 105
-      },
-      {
-        "id": 25,
-        "numeroCuota": 25,
-        "saldoInicial": 237407.2995951441,
-        "saldoFinal": 236423.56504529025,
-        "interes": 28488.875951417293,
-        "amortizacion": 983.7345498538525,
-        "cuota": 29472.610501271145,
-        "desgravamen": 104
-      },
-      {
-        "id": 26,
-        "numeroCuota": 26,
-        "saldoInicial": 236423.56504529025,
-        "saldoFinal": 235321.78234945395,
-        "interes": 28370.82780543483,
-        "amortizacion": 1101.7826958363148,
-        "cuota": 29472.610501271145,
-        "desgravamen": 104
-      },
-      {
-        "id": 27,
-        "numeroCuota": 27,
-        "saldoInicial": 235321.78234945395,
-        "saldoFinal": 234087.7857301173,
-        "interes": 28238.613881934474,
-        "amortizacion": 1233.9966193366708,
-        "cuota": 29472.610501271145,
-        "desgravamen": 104
-      },
-      {
-        "id": 28,
-        "numeroCuota": 28,
-        "saldoInicial": 234087.7857301173,
-        "saldoFinal": 232705.70951646022,
-        "interes": 28090.534287614075,
-        "amortizacion": 1382.0762136570702,
-        "cuota": 29472.610501271145,
-        "desgravamen": 103
-      },
-      {
-        "id": 29,
-        "numeroCuota": 29,
-        "saldoInicial": 232705.70951646022,
-        "saldoFinal": 231157.7841571643,
-        "interes": 27924.685141975224,
-        "amortizacion": 1547.9253592959212,
-        "cuota": 29472.610501271145,
-        "desgravamen": 102
-      },
-      {
-        "id": 30,
-        "numeroCuota": 30,
-        "saldoInicial": 231157.7841571643,
-        "saldoFinal": 229424.10775475288,
-        "interes": 27738.934098859714,
-        "amortizacion": 1733.676402411431,
-        "cuota": 29472.610501271145,
-        "desgravamen": 102
-      },
-      {
-        "id": 31,
-        "numeroCuota": 31,
-        "saldoInicial": 229424.10775475288,
-        "saldoFinal": 227482.39018405208,
-        "interes": 27530.892930570346,
-        "amortizacion": 1941.7175707007991,
-        "cuota": 29472.610501271145,
-        "desgravamen": 101
-      },
-      {
-        "id": 32,
-        "numeroCuota": 32,
-        "saldoInicial": 227482.39018405208,
-        "saldoFinal": 225307.6665048672,
-        "interes": 27297.88682208625,
-        "amortizacion": 2174.7236791848954,
-        "cuota": 29472.610501271145,
-        "desgravamen": 100
-      },
-      {
-        "id": 33,
-        "numeroCuota": 33,
-        "saldoInicial": 225307.6665048672,
-        "saldoFinal": 222871.9759841801,
-        "interes": 27036.91998058406,
-        "amortizacion": 2435.6905206870833,
-        "cuota": 29472.610501271145,
-        "desgravamen": 99
-      },
-      {
-        "id": 34,
-        "numeroCuota": 34,
-        "saldoInicial": 222871.9759841801,
-        "saldoFinal": 220144.00260101058,
-        "interes": 26744.63711810161,
-        "amortizacion": 2727.973383169534,
-        "cuota": 29472.610501271145,
-        "desgravamen": 98
-      },
-      {
-        "id": 35,
-        "numeroCuota": 35,
-        "saldoInicial": 220144.00260101058,
-        "saldoFinal": 217088.6724118607,
-        "interes": 26417.280312121267,
-        "amortizacion": 3055.3301891498777,
-        "cuota": 29472.610501271145,
-        "desgravamen": 97
-      },
-      {
-        "id": 36,
-        "numeroCuota": 36,
-        "saldoInicial": 217088.6724118607,
-        "saldoFinal": 213666.70260001282,
-        "interes": 26050.640689423282,
-        "amortizacion": 3421.9698118478627,
-        "cuota": 29472.610501271145,
-        "desgravamen": 96
-      },
-      {
-        "id": 37,
-        "numeroCuota": 37,
-        "saldoInicial": 213666.70260001282,
-        "saldoFinal": 209834.09641074322,
-        "interes": 25640.004312001536,
-        "amortizacion": 3832.606189269609,
-        "cuota": 29472.610501271145,
-        "desgravamen": 94
-      },
-      {
-        "id": 38,
-        "numeroCuota": 38,
-        "saldoInicial": 209834.09641074322,
-        "saldoFinal": 205541.57747876126,
-        "interes": 25180.091569289187,
-        "amortizacion": 4292.518931981958,
-        "cuota": 29472.610501271145,
-        "desgravamen": 92
-      },
-      {
-        "id": 39,
-        "numeroCuota": 39,
-        "saldoInicial": 205541.57747876126,
-        "saldoFinal": 200733.95627494148,
-        "interes": 24664.98929745135,
-        "amortizacion": 4807.6212038197955,
-        "cuota": 29472.610501271145,
-        "desgravamen": 90
-      },
-      {
-        "id": 40,
-        "numeroCuota": 40,
-        "saldoInicial": 200733.95627494148,
-        "saldoFinal": 195349.4205266633,
-        "interes": 24088.074752992976,
-        "amortizacion": 5384.535748278169,
-        "cuota": 29472.610501271145,
-        "desgravamen": 88
-      },
-      {
-        "id": 41,
-        "numeroCuota": 41,
-        "saldoInicial": 195349.4205266633,
-        "saldoFinal": 189318.74048859175,
-        "interes": 23441.930463199595,
-        "amortizacion": 6030.68003807155,
-        "cuota": 29472.610501271145,
-        "desgravamen": 86
-      },
-      {
-        "id": 42,
-        "numeroCuota": 42,
-        "saldoInicial": 189318.74048859175,
-        "saldoFinal": 182564.3788459516,
-        "interes": 22718.24885863101,
-        "amortizacion": 6754.361642640135,
-        "cuota": 29472.610501271145,
-        "desgravamen": 83
-      },
-      {
-        "id": 43,
-        "numeroCuota": 43,
-        "saldoInicial": 182564.3788459516,
-        "saldoFinal": 174999.49380619466,
-        "interes": 21907.725461514194,
-        "amortizacion": 7564.885039756951,
-        "cuota": 29472.610501271145,
-        "desgravamen": 80
-      },
-      {
-        "id": 44,
-        "numeroCuota": 44,
-        "saldoInicial": 174999.49380619466,
-        "saldoFinal": 166526.82256166686,
-        "interes": 20999.939256743357,
-        "amortizacion": 8472.671244527788,
-        "cuota": 29472.610501271145,
-        "desgravamen": 77
-      },
-      {
-        "id": 45,
-        "numeroCuota": 45,
-        "saldoInicial": 166526.82256166686,
-        "saldoFinal": 157037.43076779574,
-        "interes": 19983.21870740002,
-        "amortizacion": 9489.391793871124,
-        "cuota": 29472.610501271145,
-        "desgravamen": 73
-      },
-      {
-        "id": 46,
-        "numeroCuota": 46,
-        "saldoInicial": 157037.43076779574,
-        "saldoFinal": 146409.31195866008,
-        "interes": 18844.49169213549,
-        "amortizacion": 10628.118809135656,
-        "cuota": 29472.610501271145,
-        "desgravamen": 69
-      },
-      {
-        "id": 47,
-        "numeroCuota": 47,
-        "saldoInicial": 146409.31195866008,
-        "saldoFinal": 134505.81889242816,
-        "interes": 17569.11743503921,
-        "amortizacion": 11903.493066231935,
-        "cuota": 29472.610501271145,
-        "desgravamen": 64
-      },
-      {
-        "id": 48,
-        "numeroCuota": 48,
-        "saldoInicial": 134505.81889242816,
-        "saldoFinal": 121173.9066582484,
-        "interes": 16140.698267091379,
-        "amortizacion": 13331.912234179767,
-        "cuota": 29472.610501271145,
-        "desgravamen": 59
-      },
-      {
-        "id": 49,
-        "numeroCuota": 49,
-        "saldoInicial": 121173.9066582484,
-        "saldoFinal": 106242.16495596705,
-        "interes": 14540.868798989806,
-        "amortizacion": 14931.741702281339,
-        "cuota": 29472.610501271145,
-        "desgravamen": 53
-      },
-      {
-        "id": 50,
-        "numeroCuota": 50,
-        "saldoInicial": 106242.16495596705,
-        "saldoFinal": 89518.61424941194,
-        "interes": 12749.059794716046,
-        "amortizacion": 16723.5507065551,
-        "cuota": 29472.610501271145,
-        "desgravamen": 47
-      },
-      {
-        "id": 51,
-        "numeroCuota": 51,
-        "saldoInicial": 89518.61424941194,
-        "saldoFinal": 70788.23745807023,
-        "interes": 10742.233709929433,
-        "amortizacion": 18730.37679134171,
-        "cuota": 29472.610501271145,
-        "desgravamen": 39
-      },
-      {
-        "id": 52,
-        "numeroCuota": 52,
-        "saldoInicial": 70788.23745807023,
-        "saldoFinal": 49810.215451767515,
-        "interes": 8494.588494968428,
-        "amortizacion": 20978.022006302715,
-        "cuota": 29472.610501271145,
-        "desgravamen": 31
-      },
-      {
-        "id": 53,
-        "numeroCuota": 53,
-        "saldoInicial": 49810.215451767515,
-        "saldoFinal": 26314.830804708472,
-        "interes": 5977.225854212102,
-        "amortizacion": 23495.384647059043,
-        "cuota": 29472.610501271145,
-        "desgravamen": 22
-      },
-      {
-        "id": 54,
-        "numeroCuota": 54,
-        "saldoInicial": 26314.830804708472,
-        "saldoFinal": 2.342858351767063e-9,
-        "interes": 3157.7796965650164,
-        "amortizacion": 26314.83080470613,
-        "cuota": 29472.610501271145,
-        "desgravamen": 12
-      },
-      {
-        "id": 1,
-        "numeroCuota": 1,
-        "saldoInicial": 145665,
-        "saldoFinal": 143643.34750552283,
-        "interes": 17479.8,
-        "amortizacion": 2021.6524944771627,
-        "cuota": 19501.452494477162,
-        "desgravamen": 64
-      },
-      {
-        "id": 2,
-        "numeroCuota": 2,
-        "saldoInicial": 143643.34750552283,
-        "saldoFinal": 141379.0967117084,
-        "interes": 17237.20170066274,
-        "amortizacion": 2264.2507938144227,
-        "cuota": 19501.452494477162,
-        "desgravamen": 63
-      },
-      {
-        "id": 3,
-        "numeroCuota": 3,
-        "saldoInicial": 141379.0967117084,
-        "saldoFinal": 138843.13582263625,
-        "interes": 16965.491605405008,
-        "amortizacion": 2535.960889072154,
-        "cuota": 19501.452494477162,
-        "desgravamen": 62
-      },
-      {
-        "id": 4,
-        "numeroCuota": 4,
-        "saldoInicial": 138843.13582263625,
-        "saldoFinal": 136002.85962687543,
-        "interes": 16661.17629871635,
-        "amortizacion": 2840.2761957608127,
-        "cuota": 19501.452494477162,
-        "desgravamen": 61
-      },
-      {
-        "id": 5,
-        "numeroCuota": 5,
-        "saldoInicial": 136002.85962687543,
-        "saldoFinal": 132821.75028762332,
-        "interes": 16320.343155225051,
-        "amortizacion": 3181.1093392521107,
-        "cuota": 19501.452494477162,
-        "desgravamen": 60
-      },
-      {
-        "id": 6,
-        "numeroCuota": 6,
-        "saldoInicial": 132821.75028762332,
-        "saldoFinal": 129258.90782766095,
-        "interes": 15938.610034514797,
-        "amortizacion": 3562.842459962365,
-        "cuota": 19501.452494477162,
-        "desgravamen": 58
-      },
-      {
-        "id": 7,
-        "numeroCuota": 7,
-        "saldoInicial": 129258.90782766095,
-        "saldoFinal": 125268.5242725031,
-        "interes": 15511.068939319313,
-        "amortizacion": 3990.3835551578486,
-        "cuota": 19501.452494477162,
-        "desgravamen": 57
-      },
-      {
-        "id": 8,
-        "numeroCuota": 8,
-        "saldoInicial": 125268.5242725031,
-        "saldoFinal": 120799.29469072631,
-        "interes": 15032.222912700372,
-        "amortizacion": 4469.22958177679,
-        "cuota": 19501.452494477162,
-        "desgravamen": 55
-      },
-      {
-        "id": 9,
-        "numeroCuota": 9,
-        "saldoInicial": 120799.29469072631,
-        "saldoFinal": 115793.75755913631,
-        "interes": 14495.915362887157,
-        "amortizacion": 5005.537131590005,
-        "cuota": 19501.452494477162,
-        "desgravamen": 53
-      },
-      {
-        "id": 10,
-        "numeroCuota": 10,
-        "saldoInicial": 115793.75755913631,
-        "saldoFinal": 110187.5559717555,
-        "interes": 13895.250907096357,
-        "amortizacion": 5606.201587380805,
-        "cuota": 19501.452494477162,
-        "desgravamen": 51
-      },
-      {
-        "id": 11,
-        "numeroCuota": 11,
-        "saldoInicial": 110187.5559717555,
-        "saldoFinal": 103908.610193889,
-        "interes": 13222.50671661066,
-        "amortizacion": 6278.945777866502,
-        "cuota": 19501.452494477162,
-        "desgravamen": 48
-      },
-      {
-        "id": 12,
-        "numeroCuota": 12,
-        "saldoInicial": 103908.610193889,
-        "saldoFinal": 96876.19092267852,
-        "interes": 12469.03322326668,
-        "amortizacion": 7032.419271210481,
-        "cuota": 19501.452494477162,
-        "desgravamen": 46
-      },
-      {
-        "id": 13,
-        "numeroCuota": 13,
-        "saldoInicial": 96876.19092267852,
-        "saldoFinal": 88999.88133892279,
-        "interes": 11625.142910721423,
-        "amortizacion": 7876.309583755739,
-        "cuota": 19501.452494477162,
-        "desgravamen": 43
-      },
-      {
-        "id": 14,
-        "numeroCuota": 14,
-        "saldoInicial": 88999.88133892279,
-        "saldoFinal": 80178.41460511636,
-        "interes": 10679.985760670734,
-        "amortizacion": 8821.466733806428,
-        "cuota": 19501.452494477162,
-        "desgravamen": 39
-      },
-      {
-        "id": 15,
-        "numeroCuota": 15,
-        "saldoInicial": 80178.41460511636,
-        "saldoFinal": 70298.37186325315,
-        "interes": 9621.409752613963,
-        "amortizacion": 9880.042741863199,
-        "cuota": 19501.452494477162,
-        "desgravamen": 35
-      },
-      {
-        "id": 16,
-        "numeroCuota": 16,
-        "saldoInicial": 70298.37186325315,
-        "saldoFinal": 59232.72399236637,
-        "interes": 8435.804623590378,
-        "amortizacion": 11065.647870886783,
-        "cuota": 19501.452494477162,
-        "desgravamen": 31
-      },
-      {
-        "id": 17,
-        "numeroCuota": 17,
-        "saldoInicial": 59232.72399236637,
-        "saldoFinal": 46839.198376973174,
-        "interes": 7107.926879083964,
-        "amortizacion": 12393.525615393199,
-        "cuota": 19501.452494477162,
+        "saldoInicial": 59899.05474224567,
+        "saldoFinal": 59899.05474224567,
+        "interes": 7187.88656906948,
+        "amortizacion": 0,
+        "cuota": 0,
         "desgravamen": 26
       },
       {
-        "id": 18,
-        "numeroCuota": 18,
-        "saldoInicial": 46839.198376973174,
-        "saldoFinal": 32958.44968773279,
-        "interes": 5620.703805236781,
-        "amortizacion": 13880.748689240381,
-        "cuota": 19501.452494477162,
+        "plazoGracia": "S",
+        "id": 3,
+        "numeroCuota": 3,
+        "saldoInicial": 53961.996053560826,
+        "saldoFinal": 47312.490322233796,
+        "interes": 6475.439526427299,
+        "amortizacion": 6649.505731327032,
+        "cuota": 13124.94525775433,
+        "desgravamen": 24
+      },
+      {
+        "plazoGracia": "S",
+        "id": 4,
+        "numeroCuota": 4,
+        "saldoInicial": 47312.490322233796,
+        "saldoFinal": 39865.04390314752,
+        "interes": 5677.498838668055,
+        "amortizacion": 7447.4464190862755,
+        "cuota": 13124.94525775433,
         "desgravamen": 21
       },
       {
-        "id": 19,
-        "numeroCuota": 19,
-        "saldoInicial": 32958.44968773279,
-        "saldoFinal": 17412.011155783563,
-        "interes": 3955.013962527935,
-        "amortizacion": 15546.438531949227,
-        "cuota": 19501.452494477162,
-        "desgravamen": 15
+        "plazoGracia": "S",
+        "id": 5,
+        "numeroCuota": 5,
+        "saldoInicial": 39865.04390314752,
+        "saldoFinal": 31523.90391377089,
+        "interes": 4783.805268377702,
+        "amortizacion": 8341.139989376628,
+        "cuota": 13124.94525775433,
+        "desgravamen": 18
       },
       {
-        "id": 20,
-        "numeroCuota": 20,
-        "saldoInicial": 17412.011155783563,
-        "saldoFinal": 4.2928149923682213e-10,
-        "interes": 2089.4413386940273,
-        "amortizacion": 17412.011155783133,
-        "cuota": 19501.452494477162,
-        "desgravamen": 8
+        "plazoGracia": "S",
+        "id": 6,
+        "numeroCuota": 6,
+        "saldoInicial": 31523.90391377089,
+        "saldoFinal": 22181.827125669064,
+        "interes": 3782.8684696525065,
+        "amortizacion": 9342.076788101824,
+        "cuota": 13124.94525775433,
+        "desgravamen": 14
+      },
+      {
+        "plazoGracia": "S",
+        "id": 7,
+        "numeroCuota": 7,
+        "saldoInicial": 22181.827125669064,
+        "saldoFinal": 11718.701122995022,
+        "interes": 2661.819255080288,
+        "amortizacion": 10463.126002674042,
+        "cuota": 13124.94525775433,
+        "desgravamen": 10
+      },
+      {
+        "plazoGracia": "S",
+        "id": 8,
+        "numeroCuota": 8,
+        "saldoInicial": 11718.701122995022,
+        "saldoFinal": 9.458744898438454e-11,
+        "interes": 1406.2441347594026,
+        "amortizacion": 11718.701122994928,
+        "cuota": 13124.94525775433,
+        "desgravamen": 5
       }
     ],
     [
       {
+        "plazoGracia": "S",
         "id": 1,
         "numeroCuota": 1,
         "saldoInicial": 100000,
@@ -2149,6 +608,7 @@
         "desgravamen": 44
       },
       {
+        "plazoGracia": "S",
         "id": 2,
         "numeroCuota": 2,
         "saldoInicial": 79076.55636943104,
@@ -2159,6 +619,7 @@
         "desgravamen": 35
       },
       {
+        "plazoGracia": "S",
         "id": 3,
         "numeroCuota": 3,
         "saldoInicial": 55642.299503193804,
@@ -2169,6 +630,7 @@
         "desgravamen": 24
       },
       {
+        "plazoGracia": "S",
         "id": 4,
         "numeroCuota": 4,
         "saldoInicial": 29395.9318130081,
@@ -2177,1020 +639,11 @@
         "amortizacion": 29395.93181300799,
         "cuota": 32923.44363056896,
         "desgravamen": 13
-      },
-      {
-        "id": 1,
-        "numeroCuota": 1,
-        "saldoInicial": 100000,
-        "saldoFinal": 91505.27571677006,
-        "interes": 17000,
-        "amortizacion": 8494.724283229945,
-        "cuota": 25494.724283229945,
-        "desgravamen": 44
-      },
-      {
-        "id": 2,
-        "numeroCuota": 2,
-        "saldoInicial": 91505.27571677006,
-        "saldoFinal": 81566.44830539102,
-        "interes": 15555.896871850911,
-        "amortizacion": 9938.827411379034,
-        "cuota": 25494.724283229945,
-        "desgravamen": 40
-      },
-      {
-        "id": 3,
-        "numeroCuota": 3,
-        "saldoInicial": 81566.44830539102,
-        "saldoFinal": 69938.02023407756,
-        "interes": 13866.296211916475,
-        "amortizacion": 11628.42807131347,
-        "cuota": 25494.724283229945,
-        "desgravamen": 36
-      },
-      {
-        "id": 4,
-        "numeroCuota": 4,
-        "saldoInicial": 69938.02023407756,
-        "saldoFinal": 56332.7593906408,
-        "interes": 11889.463439793186,
-        "amortizacion": 13605.26084343676,
-        "cuota": 25494.724283229945,
-        "desgravamen": 31
-      },
-      {
-        "id": 5,
-        "numeroCuota": 5,
-        "saldoInicial": 56332.7593906408,
-        "saldoFinal": 40414.60420381979,
-        "interes": 9576.569096408937,
-        "amortizacion": 15918.155186821008,
-        "cuota": 25494.724283229945,
-        "desgravamen": 25
-      },
-      {
-        "id": 6,
-        "numeroCuota": 6,
-        "saldoInicial": 40414.60420381979,
-        "saldoFinal": 21790.362635239213,
-        "interes": 6870.482714649365,
-        "amortizacion": 18624.24156858058,
-        "cuota": 25494.724283229945,
-        "desgravamen": 18
-      },
-      {
-        "id": 7,
-        "numeroCuota": 7,
-        "saldoInicial": 21790.362635239213,
-        "saldoFinal": -6.548361852765083e-11,
-        "interes": 3704.3616479906664,
-        "amortizacion": 21790.36263523928,
-        "cuota": 25494.724283229945,
-        "desgravamen": 10
-      },
-      {
-        "id": 1,
-        "numeroCuota": 1,
-        "saldoInicial": 245065,
-        "saldoFinal": 245000.18949872884,
-        "interes": 29407.8,
-        "amortizacion": 64.81050127114577,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 2,
-        "numeroCuota": 2,
-        "saldoInicial": 245000.18949872884,
-        "saldoFinal": 244927.60173730514,
-        "interes": 29400.02273984746,
-        "amortizacion": 72.58776142368515,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 3,
-        "numeroCuota": 3,
-        "saldoInicial": 244927.60173730514,
-        "saldoFinal": 244846.30344451062,
-        "interes": 29391.312208476615,
-        "amortizacion": 81.29829279453043,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 4,
-        "numeroCuota": 4,
-        "saldoInicial": 244846.30344451062,
-        "saldoFinal": 244755.24935658075,
-        "interes": 29381.556413341274,
-        "amortizacion": 91.05408792987146,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 5,
-        "numeroCuota": 5,
-        "saldoInicial": 244755.24935658075,
-        "saldoFinal": 244653.2687780993,
-        "interes": 29370.62992278969,
-        "amortizacion": 101.98057848145618,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 6,
-        "numeroCuota": 6,
-        "saldoInicial": 244653.2687780993,
-        "saldoFinal": 244539.05053020007,
-        "interes": 29358.392253371916,
-        "amortizacion": 114.21824789922903,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 7,
-        "numeroCuota": 7,
-        "saldoInicial": 244539.05053020007,
-        "saldoFinal": 244411.12609255294,
-        "interes": 29344.686063624005,
-        "amortizacion": 127.92443764713971,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 8,
-        "numeroCuota": 8,
-        "saldoInicial": 244411.12609255294,
-        "saldoFinal": 244267.85072238813,
-        "interes": 29329.335131106352,
-        "amortizacion": 143.27537016479255,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 9,
-        "numeroCuota": 9,
-        "saldoInicial": 244267.85072238813,
-        "saldoFinal": 244107.38230780355,
-        "interes": 29312.142086686574,
-        "amortizacion": 160.4684145845713,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 10,
-        "numeroCuota": 10,
-        "saldoInicial": 244107.38230780355,
-        "saldoFinal": 243927.65768346883,
-        "interes": 29292.885876936423,
-        "amortizacion": 179.72462433472174,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 11,
-        "numeroCuota": 11,
-        "saldoInicial": 243927.65768346883,
-        "saldoFinal": 243726.36610421396,
-        "interes": 29271.31892201626,
-        "amortizacion": 201.2915792548847,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 12,
-        "numeroCuota": 12,
-        "saldoInicial": 243726.36610421396,
-        "saldoFinal": 243500.91953544848,
-        "interes": 29247.163932505675,
-        "amortizacion": 225.44656876547015,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 13,
-        "numeroCuota": 13,
-        "saldoInicial": 243500.91953544848,
-        "saldoFinal": 243248.41937843116,
-        "interes": 29220.11034425382,
-        "amortizacion": 252.50015701732627,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 14,
-        "numeroCuota": 14,
-        "saldoInicial": 243248.41937843116,
-        "saldoFinal": 242965.61920257175,
-        "interes": 29189.810325411738,
-        "amortizacion": 282.8001758594073,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 15,
-        "numeroCuota": 15,
-        "saldoInicial": 242965.61920257175,
-        "saldoFinal": 242648.8830056092,
-        "interes": 29155.874304308607,
-        "amortizacion": 316.7361969625381,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 16,
-        "numeroCuota": 16,
-        "saldoInicial": 242648.8830056092,
-        "saldoFinal": 242294.13846501117,
-        "interes": 29117.865960673105,
-        "amortizacion": 354.74454059803975,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 17,
-        "numeroCuota": 17,
-        "saldoInicial": 242294.13846501117,
-        "saldoFinal": 241896.82457954137,
-        "interes": 29075.29661580134,
-        "amortizacion": 397.3138854698045,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 18,
-        "numeroCuota": 18,
-        "saldoInicial": 241896.82457954137,
-        "saldoFinal": 241451.83302781518,
-        "interes": 29027.61894954496,
-        "amortizacion": 444.9915517261834,
-        "cuota": 29472.610501271145,
-        "desgravamen": 106
-      },
-      {
-        "id": 19,
-        "numeroCuota": 19,
-        "saldoInicial": 241451.83302781518,
-        "saldoFinal": 240953.44248988185,
-        "interes": 28974.219963337822,
-        "amortizacion": 498.3905379333228,
-        "cuota": 29472.610501271145,
-        "desgravamen": 106
-      },
-      {
-        "id": 20,
-        "numeroCuota": 20,
-        "saldoInicial": 240953.44248988185,
-        "saldoFinal": 240395.24508739653,
-        "interes": 28914.413098785823,
-        "amortizacion": 558.1974024853225,
-        "cuota": 29472.610501271145,
-        "desgravamen": 106
-      },
-      {
-        "id": 21,
-        "numeroCuota": 21,
-        "saldoInicial": 240395.24508739653,
-        "saldoFinal": 239770.06399661297,
-        "interes": 28847.42941048758,
-        "amortizacion": 625.1810907835643,
-        "cuota": 29472.610501271145,
-        "desgravamen": 106
-      },
-      {
-        "id": 22,
-        "numeroCuota": 22,
-        "saldoInicial": 239770.06399661297,
-        "saldoFinal": 239069.8611749354,
-        "interes": 28772.407679593554,
-        "amortizacion": 700.2028216775907,
-        "cuota": 29472.610501271145,
-        "desgravamen": 105
-      },
-      {
-        "id": 23,
-        "numeroCuota": 23,
-        "saldoInicial": 239069.8611749354,
-        "saldoFinal": 238285.63401465648,
-        "interes": 28688.383340992244,
-        "amortizacion": 784.2271602789006,
-        "cuota": 29472.610501271145,
-        "desgravamen": 105
-      },
-      {
-        "id": 24,
-        "numeroCuota": 24,
-        "saldoInicial": 238285.63401465648,
-        "saldoFinal": 237407.2995951441,
-        "interes": 28594.276081758777,
-        "amortizacion": 878.3344195123682,
-        "cuota": 29472.610501271145,
-        "desgravamen": 105
-      },
-      {
-        "id": 25,
-        "numeroCuota": 25,
-        "saldoInicial": 237407.2995951441,
-        "saldoFinal": 236423.56504529025,
-        "interes": 28488.875951417293,
-        "amortizacion": 983.7345498538525,
-        "cuota": 29472.610501271145,
-        "desgravamen": 104
-      },
-      {
-        "id": 26,
-        "numeroCuota": 26,
-        "saldoInicial": 236423.56504529025,
-        "saldoFinal": 235321.78234945395,
-        "interes": 28370.82780543483,
-        "amortizacion": 1101.7826958363148,
-        "cuota": 29472.610501271145,
-        "desgravamen": 104
-      },
-      {
-        "id": 27,
-        "numeroCuota": 27,
-        "saldoInicial": 235321.78234945395,
-        "saldoFinal": 234087.7857301173,
-        "interes": 28238.613881934474,
-        "amortizacion": 1233.9966193366708,
-        "cuota": 29472.610501271145,
-        "desgravamen": 104
-      },
-      {
-        "id": 28,
-        "numeroCuota": 28,
-        "saldoInicial": 234087.7857301173,
-        "saldoFinal": 232705.70951646022,
-        "interes": 28090.534287614075,
-        "amortizacion": 1382.0762136570702,
-        "cuota": 29472.610501271145,
-        "desgravamen": 103
-      },
-      {
-        "id": 29,
-        "numeroCuota": 29,
-        "saldoInicial": 232705.70951646022,
-        "saldoFinal": 231157.7841571643,
-        "interes": 27924.685141975224,
-        "amortizacion": 1547.9253592959212,
-        "cuota": 29472.610501271145,
-        "desgravamen": 102
-      },
-      {
-        "id": 30,
-        "numeroCuota": 30,
-        "saldoInicial": 231157.7841571643,
-        "saldoFinal": 229424.10775475288,
-        "interes": 27738.934098859714,
-        "amortizacion": 1733.676402411431,
-        "cuota": 29472.610501271145,
-        "desgravamen": 102
-      },
-      {
-        "id": 31,
-        "numeroCuota": 31,
-        "saldoInicial": 229424.10775475288,
-        "saldoFinal": 227482.39018405208,
-        "interes": 27530.892930570346,
-        "amortizacion": 1941.7175707007991,
-        "cuota": 29472.610501271145,
-        "desgravamen": 101
-      },
-      {
-        "id": 32,
-        "numeroCuota": 32,
-        "saldoInicial": 227482.39018405208,
-        "saldoFinal": 225307.6665048672,
-        "interes": 27297.88682208625,
-        "amortizacion": 2174.7236791848954,
-        "cuota": 29472.610501271145,
-        "desgravamen": 100
-      },
-      {
-        "id": 33,
-        "numeroCuota": 33,
-        "saldoInicial": 225307.6665048672,
-        "saldoFinal": 222871.9759841801,
-        "interes": 27036.91998058406,
-        "amortizacion": 2435.6905206870833,
-        "cuota": 29472.610501271145,
-        "desgravamen": 99
-      },
-      {
-        "id": 34,
-        "numeroCuota": 34,
-        "saldoInicial": 222871.9759841801,
-        "saldoFinal": 220144.00260101058,
-        "interes": 26744.63711810161,
-        "amortizacion": 2727.973383169534,
-        "cuota": 29472.610501271145,
-        "desgravamen": 98
-      },
-      {
-        "id": 35,
-        "numeroCuota": 35,
-        "saldoInicial": 220144.00260101058,
-        "saldoFinal": 217088.6724118607,
-        "interes": 26417.280312121267,
-        "amortizacion": 3055.3301891498777,
-        "cuota": 29472.610501271145,
-        "desgravamen": 97
-      },
-      {
-        "id": 36,
-        "numeroCuota": 36,
-        "saldoInicial": 217088.6724118607,
-        "saldoFinal": 213666.70260001282,
-        "interes": 26050.640689423282,
-        "amortizacion": 3421.9698118478627,
-        "cuota": 29472.610501271145,
-        "desgravamen": 96
-      },
-      {
-        "id": 37,
-        "numeroCuota": 37,
-        "saldoInicial": 213666.70260001282,
-        "saldoFinal": 209834.09641074322,
-        "interes": 25640.004312001536,
-        "amortizacion": 3832.606189269609,
-        "cuota": 29472.610501271145,
-        "desgravamen": 94
-      },
-      {
-        "id": 38,
-        "numeroCuota": 38,
-        "saldoInicial": 209834.09641074322,
-        "saldoFinal": 205541.57747876126,
-        "interes": 25180.091569289187,
-        "amortizacion": 4292.518931981958,
-        "cuota": 29472.610501271145,
-        "desgravamen": 92
-      },
-      {
-        "id": 39,
-        "numeroCuota": 39,
-        "saldoInicial": 205541.57747876126,
-        "saldoFinal": 200733.95627494148,
-        "interes": 24664.98929745135,
-        "amortizacion": 4807.6212038197955,
-        "cuota": 29472.610501271145,
-        "desgravamen": 90
-      },
-      {
-        "id": 40,
-        "numeroCuota": 40,
-        "saldoInicial": 200733.95627494148,
-        "saldoFinal": 195349.4205266633,
-        "interes": 24088.074752992976,
-        "amortizacion": 5384.535748278169,
-        "cuota": 29472.610501271145,
-        "desgravamen": 88
-      },
-      {
-        "id": 41,
-        "numeroCuota": 41,
-        "saldoInicial": 195349.4205266633,
-        "saldoFinal": 189318.74048859175,
-        "interes": 23441.930463199595,
-        "amortizacion": 6030.68003807155,
-        "cuota": 29472.610501271145,
-        "desgravamen": 86
-      },
-      {
-        "id": 42,
-        "numeroCuota": 42,
-        "saldoInicial": 189318.74048859175,
-        "saldoFinal": 182564.3788459516,
-        "interes": 22718.24885863101,
-        "amortizacion": 6754.361642640135,
-        "cuota": 29472.610501271145,
-        "desgravamen": 83
-      },
-      {
-        "id": 43,
-        "numeroCuota": 43,
-        "saldoInicial": 182564.3788459516,
-        "saldoFinal": 174999.49380619466,
-        "interes": 21907.725461514194,
-        "amortizacion": 7564.885039756951,
-        "cuota": 29472.610501271145,
-        "desgravamen": 80
-      },
-      {
-        "id": 44,
-        "numeroCuota": 44,
-        "saldoInicial": 174999.49380619466,
-        "saldoFinal": 166526.82256166686,
-        "interes": 20999.939256743357,
-        "amortizacion": 8472.671244527788,
-        "cuota": 29472.610501271145,
-        "desgravamen": 77
-      },
-      {
-        "id": 45,
-        "numeroCuota": 45,
-        "saldoInicial": 166526.82256166686,
-        "saldoFinal": 157037.43076779574,
-        "interes": 19983.21870740002,
-        "amortizacion": 9489.391793871124,
-        "cuota": 29472.610501271145,
-        "desgravamen": 73
-      },
-      {
-        "id": 46,
-        "numeroCuota": 46,
-        "saldoInicial": 157037.43076779574,
-        "saldoFinal": 146409.31195866008,
-        "interes": 18844.49169213549,
-        "amortizacion": 10628.118809135656,
-        "cuota": 29472.610501271145,
-        "desgravamen": 69
-      },
-      {
-        "id": 47,
-        "numeroCuota": 47,
-        "saldoInicial": 146409.31195866008,
-        "saldoFinal": 134505.81889242816,
-        "interes": 17569.11743503921,
-        "amortizacion": 11903.493066231935,
-        "cuota": 29472.610501271145,
-        "desgravamen": 64
-      },
-      {
-        "id": 48,
-        "numeroCuota": 48,
-        "saldoInicial": 134505.81889242816,
-        "saldoFinal": 121173.9066582484,
-        "interes": 16140.698267091379,
-        "amortizacion": 13331.912234179767,
-        "cuota": 29472.610501271145,
-        "desgravamen": 59
-      },
-      {
-        "id": 49,
-        "numeroCuota": 49,
-        "saldoInicial": 121173.9066582484,
-        "saldoFinal": 106242.16495596705,
-        "interes": 14540.868798989806,
-        "amortizacion": 14931.741702281339,
-        "cuota": 29472.610501271145,
-        "desgravamen": 53
-      },
-      {
-        "id": 50,
-        "numeroCuota": 50,
-        "saldoInicial": 106242.16495596705,
-        "saldoFinal": 89518.61424941194,
-        "interes": 12749.059794716046,
-        "amortizacion": 16723.5507065551,
-        "cuota": 29472.610501271145,
-        "desgravamen": 47
-      },
-      {
-        "id": 51,
-        "numeroCuota": 51,
-        "saldoInicial": 89518.61424941194,
-        "saldoFinal": 70788.23745807023,
-        "interes": 10742.233709929433,
-        "amortizacion": 18730.37679134171,
-        "cuota": 29472.610501271145,
-        "desgravamen": 39
-      },
-      {
-        "id": 52,
-        "numeroCuota": 52,
-        "saldoInicial": 70788.23745807023,
-        "saldoFinal": 49810.215451767515,
-        "interes": 8494.588494968428,
-        "amortizacion": 20978.022006302715,
-        "cuota": 29472.610501271145,
-        "desgravamen": 31
-      },
-      {
-        "id": 53,
-        "numeroCuota": 53,
-        "saldoInicial": 49810.215451767515,
-        "saldoFinal": 26314.830804708472,
-        "interes": 5977.225854212102,
-        "amortizacion": 23495.384647059043,
-        "cuota": 29472.610501271145,
-        "desgravamen": 22
-      },
-      {
-        "id": 54,
-        "numeroCuota": 54,
-        "saldoInicial": 26314.830804708472,
-        "saldoFinal": 2.342858351767063e-9,
-        "interes": 3157.7796965650164,
-        "amortizacion": 26314.83080470613,
-        "cuota": 29472.610501271145,
-        "desgravamen": 12
-      },
-      {
-        "id": 1,
-        "numeroCuota": 1,
-        "saldoInicial": 145665,
-        "saldoFinal": 143643.34750552283,
-        "interes": 17479.8,
-        "amortizacion": 2021.6524944771627,
-        "cuota": 19501.452494477162,
-        "desgravamen": 64
-      },
-      {
-        "id": 2,
-        "numeroCuota": 2,
-        "saldoInicial": 143643.34750552283,
-        "saldoFinal": 141379.0967117084,
-        "interes": 17237.20170066274,
-        "amortizacion": 2264.2507938144227,
-        "cuota": 19501.452494477162,
-        "desgravamen": 63
-      },
-      {
-        "id": 3,
-        "numeroCuota": 3,
-        "saldoInicial": 141379.0967117084,
-        "saldoFinal": 138843.13582263625,
-        "interes": 16965.491605405008,
-        "amortizacion": 2535.960889072154,
-        "cuota": 19501.452494477162,
-        "desgravamen": 62
-      },
-      {
-        "id": 4,
-        "numeroCuota": 4,
-        "saldoInicial": 138843.13582263625,
-        "saldoFinal": 136002.85962687543,
-        "interes": 16661.17629871635,
-        "amortizacion": 2840.2761957608127,
-        "cuota": 19501.452494477162,
-        "desgravamen": 61
-      },
-      {
-        "id": 5,
-        "numeroCuota": 5,
-        "saldoInicial": 136002.85962687543,
-        "saldoFinal": 132821.75028762332,
-        "interes": 16320.343155225051,
-        "amortizacion": 3181.1093392521107,
-        "cuota": 19501.452494477162,
-        "desgravamen": 60
-      },
-      {
-        "id": 6,
-        "numeroCuota": 6,
-        "saldoInicial": 132821.75028762332,
-        "saldoFinal": 129258.90782766095,
-        "interes": 15938.610034514797,
-        "amortizacion": 3562.842459962365,
-        "cuota": 19501.452494477162,
-        "desgravamen": 58
-      },
-      {
-        "id": 7,
-        "numeroCuota": 7,
-        "saldoInicial": 129258.90782766095,
-        "saldoFinal": 125268.5242725031,
-        "interes": 15511.068939319313,
-        "amortizacion": 3990.3835551578486,
-        "cuota": 19501.452494477162,
-        "desgravamen": 57
-      },
-      {
-        "id": 8,
-        "numeroCuota": 8,
-        "saldoInicial": 125268.5242725031,
-        "saldoFinal": 120799.29469072631,
-        "interes": 15032.222912700372,
-        "amortizacion": 4469.22958177679,
-        "cuota": 19501.452494477162,
-        "desgravamen": 55
-      },
-      {
-        "id": 9,
-        "numeroCuota": 9,
-        "saldoInicial": 120799.29469072631,
-        "saldoFinal": 115793.75755913631,
-        "interes": 14495.915362887157,
-        "amortizacion": 5005.537131590005,
-        "cuota": 19501.452494477162,
-        "desgravamen": 53
-      },
-      {
-        "id": 10,
-        "numeroCuota": 10,
-        "saldoInicial": 115793.75755913631,
-        "saldoFinal": 110187.5559717555,
-        "interes": 13895.250907096357,
-        "amortizacion": 5606.201587380805,
-        "cuota": 19501.452494477162,
-        "desgravamen": 51
-      },
-      {
-        "id": 11,
-        "numeroCuota": 11,
-        "saldoInicial": 110187.5559717555,
-        "saldoFinal": 103908.610193889,
-        "interes": 13222.50671661066,
-        "amortizacion": 6278.945777866502,
-        "cuota": 19501.452494477162,
-        "desgravamen": 48
-      },
-      {
-        "id": 12,
-        "numeroCuota": 12,
-        "saldoInicial": 103908.610193889,
-        "saldoFinal": 96876.19092267852,
-        "interes": 12469.03322326668,
-        "amortizacion": 7032.419271210481,
-        "cuota": 19501.452494477162,
-        "desgravamen": 46
-      },
-      {
-        "id": 13,
-        "numeroCuota": 13,
-        "saldoInicial": 96876.19092267852,
-        "saldoFinal": 88999.88133892279,
-        "interes": 11625.142910721423,
-        "amortizacion": 7876.309583755739,
-        "cuota": 19501.452494477162,
-        "desgravamen": 43
-      },
-      {
-        "id": 14,
-        "numeroCuota": 14,
-        "saldoInicial": 88999.88133892279,
-        "saldoFinal": 80178.41460511636,
-        "interes": 10679.985760670734,
-        "amortizacion": 8821.466733806428,
-        "cuota": 19501.452494477162,
-        "desgravamen": 39
-      },
-      {
-        "id": 15,
-        "numeroCuota": 15,
-        "saldoInicial": 80178.41460511636,
-        "saldoFinal": 70298.37186325315,
-        "interes": 9621.409752613963,
-        "amortizacion": 9880.042741863199,
-        "cuota": 19501.452494477162,
-        "desgravamen": 35
-      },
-      {
-        "id": 16,
-        "numeroCuota": 16,
-        "saldoInicial": 70298.37186325315,
-        "saldoFinal": 59232.72399236637,
-        "interes": 8435.804623590378,
-        "amortizacion": 11065.647870886783,
-        "cuota": 19501.452494477162,
-        "desgravamen": 31
-      },
-      {
-        "id": 17,
-        "numeroCuota": 17,
-        "saldoInicial": 59232.72399236637,
-        "saldoFinal": 46839.198376973174,
-        "interes": 7107.926879083964,
-        "amortizacion": 12393.525615393199,
-        "cuota": 19501.452494477162,
-        "desgravamen": 26
-      },
-      {
-        "id": 18,
-        "numeroCuota": 18,
-        "saldoInicial": 46839.198376973174,
-        "saldoFinal": 32958.44968773279,
-        "interes": 5620.703805236781,
-        "amortizacion": 13880.748689240381,
-        "cuota": 19501.452494477162,
-        "desgravamen": 21
-      },
-      {
-        "id": 19,
-        "numeroCuota": 19,
-        "saldoInicial": 32958.44968773279,
-        "saldoFinal": 17412.011155783563,
-        "interes": 3955.013962527935,
-        "amortizacion": 15546.438531949227,
-        "cuota": 19501.452494477162,
-        "desgravamen": 15
-      },
-      {
-        "id": 20,
-        "numeroCuota": 20,
-        "saldoInicial": 17412.011155783563,
-        "saldoFinal": 4.2928149923682213e-10,
-        "interes": 2089.4413386940273,
-        "amortizacion": 17412.011155783133,
-        "cuota": 19501.452494477162,
-        "desgravamen": 8
-      },
-      {
-        "id": 1,
-        "numeroCuota": 1,
-        "saldoInicial": 145665,
-        "saldoFinal": 144064.72407832806,
-        "interes": 20393.100000000002,
-        "amortizacion": 1600.275921671957,
-        "cuota": 21993.37592167196,
-        "desgravamen": 64
-      },
-      {
-        "id": 2,
-        "numeroCuota": 2,
-        "saldoInicial": 144064.72407832806,
-        "saldoFinal": 142240.40952762202,
-        "interes": 20169.06137096593,
-        "amortizacion": 1824.314550706029,
-        "cuota": 21993.37592167196,
-        "desgravamen": 63
-      },
-      {
-        "id": 3,
-        "numeroCuota": 3,
-        "saldoInicial": 142240.40952762202,
-        "saldoFinal": 140160.69093981714,
-        "interes": 19913.657333867086,
-        "amortizacion": 2079.718587804873,
-        "cuota": 21993.37592167196,
-        "desgravamen": 63
-      },
-      {
-        "id": 4,
-        "numeroCuota": 4,
-        "saldoInicial": 140160.69093981714,
-        "saldoFinal": 137789.81174971958,
-        "interes": 19622.496731574403,
-        "amortizacion": 2370.8791900975557,
-        "cuota": 21993.37592167196,
-        "desgravamen": 62
-      },
-      {
-        "id": 5,
-        "numeroCuota": 5,
-        "saldoInicial": 137789.81174971958,
-        "saldoFinal": 135087.00947300837,
-        "interes": 19290.573644960743,
-        "amortizacion": 2702.802276711216,
-        "cuota": 21993.37592167196,
-        "desgravamen": 61
-      },
-      {
-        "id": 6,
-        "numeroCuota": 6,
-        "saldoInicial": 135087.00947300837,
-        "saldoFinal": 132005.81487755757,
-        "interes": 18912.181326221173,
-        "amortizacion": 3081.1945954507864,
-        "cuota": 21993.37592167196,
-        "desgravamen": 59
-      },
-      {
-        "id": 7,
-        "numeroCuota": 7,
-        "saldoInicial": 132005.81487755757,
-        "saldoFinal": 128493.25303874367,
-        "interes": 18480.81408285806,
-        "amortizacion": 3512.5618388138973,
-        "cuota": 21993.37592167196,
-        "desgravamen": 58
-      },
-      {
-        "id": 8,
-        "numeroCuota": 8,
-        "saldoInicial": 128493.25303874367,
-        "saldoFinal": 124488.93254249582,
-        "interes": 17989.055425424114,
-        "amortizacion": 4004.320496247845,
-        "cuota": 21993.37592167196,
-        "desgravamen": 57
-      },
-      {
-        "id": 9,
-        "numeroCuota": 9,
-        "saldoInicial": 124488.93254249582,
-        "saldoFinal": 119924.00717677327,
-        "interes": 17428.450555949417,
-        "amortizacion": 4564.925365722542,
-        "cuota": 21993.37592167196,
-        "desgravamen": 55
-      },
-      {
-        "id": 10,
-        "numeroCuota": 10,
-        "saldoInicial": 119924.00717677327,
-        "saldoFinal": 114719.99225984958,
-        "interes": 16789.36100474826,
-        "amortizacion": 5204.0149169236975,
-        "cuota": 21993.37592167196,
-        "desgravamen": 53
-      },
-      {
-        "id": 11,
-        "numeroCuota": 11,
-        "saldoInicial": 114719.99225984958,
-        "saldoFinal": 108787.41525455656,
-        "interes": 16060.798916378943,
-        "amortizacion": 5932.577005293017,
-        "cuota": 21993.37592167196,
-        "desgravamen": 50
-      },
-      {
-        "id": 12,
-        "numeroCuota": 12,
-        "saldoInicial": 108787.41525455656,
-        "saldoFinal": 102024.27746852252,
-        "interes": 15230.23813563792,
-        "amortizacion": 6763.13778603404,
-        "cuota": 21993.37592167196,
-        "desgravamen": 48
-      },
-      {
-        "id": 13,
-        "numeroCuota": 13,
-        "saldoInicial": 102024.27746852252,
-        "saldoFinal": 94314.3003924437,
-        "interes": 14283.398845593154,
-        "amortizacion": 7709.977076078805,
-        "cuota": 21993.37592167196,
-        "desgravamen": 45
-      },
-      {
-        "id": 14,
-        "numeroCuota": 14,
-        "saldoInicial": 94314.3003924437,
-        "saldoFinal": 85524.92652571388,
-        "interes": 13204.00205494212,
-        "amortizacion": 8789.373866729838,
-        "cuota": 21993.37592167196,
-        "desgravamen": 41
-      },
-      {
-        "id": 15,
-        "numeroCuota": 15,
-        "saldoInicial": 85524.92652571388,
-        "saldoFinal": 75505.04031764186,
-        "interes": 11973.489713599944,
-        "amortizacion": 10019.886208072016,
-        "cuota": 21993.37592167196,
-        "desgravamen": 38
-      },
-      {
-        "id": 16,
-        "numeroCuota": 16,
-        "saldoInicial": 75505.04031764186,
-        "saldoFinal": 64082.37004043977,
-        "interes": 10570.705644469861,
-        "amortizacion": 11422.670277202098,
-        "cuota": 21993.37592167196,
-        "desgravamen": 33
-      },
-      {
-        "id": 17,
-        "numeroCuota": 17,
-        "saldoInicial": 64082.37004043977,
-        "saldoFinal": 51060.52592442938,
-        "interes": 8971.531805661569,
-        "amortizacion": 13021.84411601039,
-        "cuota": 21993.37592167196,
-        "desgravamen": 28
-      },
-      {
-        "id": 18,
-        "numeroCuota": 18,
-        "saldoInicial": 51060.52592442938,
-        "saldoFinal": 36215.623632177536,
-        "interes": 7148.473629420114,
-        "amortizacion": 14844.902292251845,
-        "cuota": 21993.37592167196,
-        "desgravamen": 22
-      },
-      {
-        "id": 19,
-        "numeroCuota": 19,
-        "saldoInicial": 36215.623632177536,
-        "saldoFinal": 19292.43501901043,
-        "interes": 5070.1873085048555,
-        "amortizacion": 16923.188613167105,
-        "cuota": 21993.37592167196,
-        "desgravamen": 16
-      },
-      {
-        "id": 20,
-        "numeroCuota": 20,
-        "saldoInicial": 19292.43501901043,
-        "saldoFinal": -6.912159733474255e-11,
-        "interes": 2700.9409026614603,
-        "amortizacion": 19292.4350190105,
-        "cuota": 21993.37592167196,
-        "desgravamen": 8
       }
     ],
     [
       {
+        "plazoGracia": "S",
         "id": 1,
         "numeroCuota": 1,
         "saldoInicial": 100000,
@@ -3201,6 +654,7 @@
         "desgravamen": 44
       },
       {
+        "plazoGracia": "S",
         "id": 2,
         "numeroCuota": 2,
         "saldoInicial": 79076.55636943104,
@@ -3211,6 +665,7 @@
         "desgravamen": 35
       },
       {
+        "plazoGracia": "S",
         "id": 3,
         "numeroCuota": 3,
         "saldoInicial": 55642.299503193804,
@@ -3221,6 +676,7 @@
         "desgravamen": 24
       },
       {
+        "plazoGracia": "S",
         "id": 4,
         "numeroCuota": 4,
         "saldoInicial": 29395.9318130081,
@@ -3231,1174 +687,582 @@
         "desgravamen": 13
       },
       {
+        "plazoGracia": "S",
         "id": 1,
         "numeroCuota": 1,
         "saldoInicial": 100000,
-        "saldoFinal": 91505.27571677006,
-        "interes": 17000,
-        "amortizacion": 8494.724283229945,
-        "cuota": 25494.724283229945,
+        "saldoFinal": 79076.55636943104,
+        "interes": 12000,
+        "amortizacion": 20923.44363056896,
+        "cuota": 32923.44363056896,
         "desgravamen": 44
       },
       {
+        "plazoGracia": "T",
         "id": 2,
         "numeroCuota": 2,
-        "saldoInicial": 91505.27571677006,
-        "saldoFinal": 81566.44830539102,
-        "interes": 15555.896871850911,
-        "amortizacion": 9938.827411379034,
-        "cuota": 25494.724283229945,
-        "desgravamen": 40
-      },
-      {
-        "id": 3,
-        "numeroCuota": 3,
-        "saldoInicial": 81566.44830539102,
-        "saldoFinal": 69938.02023407756,
-        "interes": 13866.296211916475,
-        "amortizacion": 11628.42807131347,
-        "cuota": 25494.724283229945,
-        "desgravamen": 36
-      },
-      {
-        "id": 4,
-        "numeroCuota": 4,
-        "saldoInicial": 69938.02023407756,
-        "saldoFinal": 56332.7593906408,
-        "interes": 11889.463439793186,
-        "amortizacion": 13605.26084343676,
-        "cuota": 25494.724283229945,
-        "desgravamen": 31
-      },
-      {
-        "id": 5,
-        "numeroCuota": 5,
-        "saldoInicial": 56332.7593906408,
-        "saldoFinal": 40414.60420381979,
-        "interes": 9576.569096408937,
-        "amortizacion": 15918.155186821008,
-        "cuota": 25494.724283229945,
-        "desgravamen": 25
-      },
-      {
-        "id": 6,
-        "numeroCuota": 6,
-        "saldoInicial": 40414.60420381979,
-        "saldoFinal": 21790.362635239213,
-        "interes": 6870.482714649365,
-        "amortizacion": 18624.24156858058,
-        "cuota": 25494.724283229945,
-        "desgravamen": 18
-      },
-      {
-        "id": 7,
-        "numeroCuota": 7,
-        "saldoInicial": 21790.362635239213,
-        "saldoFinal": -6.548361852765083e-11,
-        "interes": 3704.3616479906664,
-        "amortizacion": 21790.36263523928,
-        "cuota": 25494.724283229945,
-        "desgravamen": 10
-      },
-      {
-        "id": 1,
-        "numeroCuota": 1,
-        "saldoInicial": 245065,
-        "saldoFinal": 245000.18949872884,
-        "interes": 29407.8,
-        "amortizacion": 64.81050127114577,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 2,
-        "numeroCuota": 2,
-        "saldoInicial": 245000.18949872884,
-        "saldoFinal": 244927.60173730514,
-        "interes": 29400.02273984746,
-        "amortizacion": 72.58776142368515,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 3,
-        "numeroCuota": 3,
-        "saldoInicial": 244927.60173730514,
-        "saldoFinal": 244846.30344451062,
-        "interes": 29391.312208476615,
-        "amortizacion": 81.29829279453043,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 4,
-        "numeroCuota": 4,
-        "saldoInicial": 244846.30344451062,
-        "saldoFinal": 244755.24935658075,
-        "interes": 29381.556413341274,
-        "amortizacion": 91.05408792987146,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 5,
-        "numeroCuota": 5,
-        "saldoInicial": 244755.24935658075,
-        "saldoFinal": 244653.2687780993,
-        "interes": 29370.62992278969,
-        "amortizacion": 101.98057848145618,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 6,
-        "numeroCuota": 6,
-        "saldoInicial": 244653.2687780993,
-        "saldoFinal": 244539.05053020007,
-        "interes": 29358.392253371916,
-        "amortizacion": 114.21824789922903,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 7,
-        "numeroCuota": 7,
-        "saldoInicial": 244539.05053020007,
-        "saldoFinal": 244411.12609255294,
-        "interes": 29344.686063624005,
-        "amortizacion": 127.92443764713971,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 8,
-        "numeroCuota": 8,
-        "saldoInicial": 244411.12609255294,
-        "saldoFinal": 244267.85072238813,
-        "interes": 29329.335131106352,
-        "amortizacion": 143.27537016479255,
-        "cuota": 29472.610501271145,
-        "desgravamen": 108
-      },
-      {
-        "id": 9,
-        "numeroCuota": 9,
-        "saldoInicial": 244267.85072238813,
-        "saldoFinal": 244107.38230780355,
-        "interes": 29312.142086686574,
-        "amortizacion": 160.4684145845713,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 10,
-        "numeroCuota": 10,
-        "saldoInicial": 244107.38230780355,
-        "saldoFinal": 243927.65768346883,
-        "interes": 29292.885876936423,
-        "amortizacion": 179.72462433472174,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 11,
-        "numeroCuota": 11,
-        "saldoInicial": 243927.65768346883,
-        "saldoFinal": 243726.36610421396,
-        "interes": 29271.31892201626,
-        "amortizacion": 201.2915792548847,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 12,
-        "numeroCuota": 12,
-        "saldoInicial": 243726.36610421396,
-        "saldoFinal": 243500.91953544848,
-        "interes": 29247.163932505675,
-        "amortizacion": 225.44656876547015,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 13,
-        "numeroCuota": 13,
-        "saldoInicial": 243500.91953544848,
-        "saldoFinal": 243248.41937843116,
-        "interes": 29220.11034425382,
-        "amortizacion": 252.50015701732627,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 14,
-        "numeroCuota": 14,
-        "saldoInicial": 243248.41937843116,
-        "saldoFinal": 242965.61920257175,
-        "interes": 29189.810325411738,
-        "amortizacion": 282.8001758594073,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 15,
-        "numeroCuota": 15,
-        "saldoInicial": 242965.61920257175,
-        "saldoFinal": 242648.8830056092,
-        "interes": 29155.874304308607,
-        "amortizacion": 316.7361969625381,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 16,
-        "numeroCuota": 16,
-        "saldoInicial": 242648.8830056092,
-        "saldoFinal": 242294.13846501117,
-        "interes": 29117.865960673105,
-        "amortizacion": 354.74454059803975,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 17,
-        "numeroCuota": 17,
-        "saldoInicial": 242294.13846501117,
-        "saldoFinal": 241896.82457954137,
-        "interes": 29075.29661580134,
-        "amortizacion": 397.3138854698045,
-        "cuota": 29472.610501271145,
-        "desgravamen": 107
-      },
-      {
-        "id": 18,
-        "numeroCuota": 18,
-        "saldoInicial": 241896.82457954137,
-        "saldoFinal": 241451.83302781518,
-        "interes": 29027.61894954496,
-        "amortizacion": 444.9915517261834,
-        "cuota": 29472.610501271145,
-        "desgravamen": 106
-      },
-      {
-        "id": 19,
-        "numeroCuota": 19,
-        "saldoInicial": 241451.83302781518,
-        "saldoFinal": 240953.44248988185,
-        "interes": 28974.219963337822,
-        "amortizacion": 498.3905379333228,
-        "cuota": 29472.610501271145,
-        "desgravamen": 106
-      },
-      {
-        "id": 20,
-        "numeroCuota": 20,
-        "saldoInicial": 240953.44248988185,
-        "saldoFinal": 240395.24508739653,
-        "interes": 28914.413098785823,
-        "amortizacion": 558.1974024853225,
-        "cuota": 29472.610501271145,
-        "desgravamen": 106
-      },
-      {
-        "id": 21,
-        "numeroCuota": 21,
-        "saldoInicial": 240395.24508739653,
-        "saldoFinal": 239770.06399661297,
-        "interes": 28847.42941048758,
-        "amortizacion": 625.1810907835643,
-        "cuota": 29472.610501271145,
-        "desgravamen": 106
-      },
-      {
-        "id": 22,
-        "numeroCuota": 22,
-        "saldoInicial": 239770.06399661297,
-        "saldoFinal": 239069.8611749354,
-        "interes": 28772.407679593554,
-        "amortizacion": 700.2028216775907,
-        "cuota": 29472.610501271145,
-        "desgravamen": 105
-      },
-      {
-        "id": 23,
-        "numeroCuota": 23,
-        "saldoInicial": 239069.8611749354,
-        "saldoFinal": 238285.63401465648,
-        "interes": 28688.383340992244,
-        "amortizacion": 784.2271602789006,
-        "cuota": 29472.610501271145,
-        "desgravamen": 105
-      },
-      {
-        "id": 24,
-        "numeroCuota": 24,
-        "saldoInicial": 238285.63401465648,
-        "saldoFinal": 237407.2995951441,
-        "interes": 28594.276081758777,
-        "amortizacion": 878.3344195123682,
-        "cuota": 29472.610501271145,
-        "desgravamen": 105
-      },
-      {
-        "id": 25,
-        "numeroCuota": 25,
-        "saldoInicial": 237407.2995951441,
-        "saldoFinal": 236423.56504529025,
-        "interes": 28488.875951417293,
-        "amortizacion": 983.7345498538525,
-        "cuota": 29472.610501271145,
-        "desgravamen": 104
-      },
-      {
-        "id": 26,
-        "numeroCuota": 26,
-        "saldoInicial": 236423.56504529025,
-        "saldoFinal": 235321.78234945395,
-        "interes": 28370.82780543483,
-        "amortizacion": 1101.7826958363148,
-        "cuota": 29472.610501271145,
-        "desgravamen": 104
-      },
-      {
-        "id": 27,
-        "numeroCuota": 27,
-        "saldoInicial": 235321.78234945395,
-        "saldoFinal": 234087.7857301173,
-        "interes": 28238.613881934474,
-        "amortizacion": 1233.9966193366708,
-        "cuota": 29472.610501271145,
-        "desgravamen": 104
-      },
-      {
-        "id": 28,
-        "numeroCuota": 28,
-        "saldoInicial": 234087.7857301173,
-        "saldoFinal": 232705.70951646022,
-        "interes": 28090.534287614075,
-        "amortizacion": 1382.0762136570702,
-        "cuota": 29472.610501271145,
-        "desgravamen": 103
-      },
-      {
-        "id": 29,
-        "numeroCuota": 29,
-        "saldoInicial": 232705.70951646022,
-        "saldoFinal": 231157.7841571643,
-        "interes": 27924.685141975224,
-        "amortizacion": 1547.9253592959212,
-        "cuota": 29472.610501271145,
-        "desgravamen": 102
-      },
-      {
-        "id": 30,
-        "numeroCuota": 30,
-        "saldoInicial": 231157.7841571643,
-        "saldoFinal": 229424.10775475288,
-        "interes": 27738.934098859714,
-        "amortizacion": 1733.676402411431,
-        "cuota": 29472.610501271145,
-        "desgravamen": 102
-      },
-      {
-        "id": 31,
-        "numeroCuota": 31,
-        "saldoInicial": 229424.10775475288,
-        "saldoFinal": 227482.39018405208,
-        "interes": 27530.892930570346,
-        "amortizacion": 1941.7175707007991,
-        "cuota": 29472.610501271145,
-        "desgravamen": 101
-      },
-      {
-        "id": 32,
-        "numeroCuota": 32,
-        "saldoInicial": 227482.39018405208,
-        "saldoFinal": 225307.6665048672,
-        "interes": 27297.88682208625,
-        "amortizacion": 2174.7236791848954,
-        "cuota": 29472.610501271145,
-        "desgravamen": 100
-      },
-      {
-        "id": 33,
-        "numeroCuota": 33,
-        "saldoInicial": 225307.6665048672,
-        "saldoFinal": 222871.9759841801,
-        "interes": 27036.91998058406,
-        "amortizacion": 2435.6905206870833,
-        "cuota": 29472.610501271145,
-        "desgravamen": 99
-      },
-      {
-        "id": 34,
-        "numeroCuota": 34,
-        "saldoInicial": 222871.9759841801,
-        "saldoFinal": 220144.00260101058,
-        "interes": 26744.63711810161,
-        "amortizacion": 2727.973383169534,
-        "cuota": 29472.610501271145,
-        "desgravamen": 98
-      },
-      {
-        "id": 35,
-        "numeroCuota": 35,
-        "saldoInicial": 220144.00260101058,
-        "saldoFinal": 217088.6724118607,
-        "interes": 26417.280312121267,
-        "amortizacion": 3055.3301891498777,
-        "cuota": 29472.610501271145,
-        "desgravamen": 97
-      },
-      {
-        "id": 36,
-        "numeroCuota": 36,
-        "saldoInicial": 217088.6724118607,
-        "saldoFinal": 213666.70260001282,
-        "interes": 26050.640689423282,
-        "amortizacion": 3421.9698118478627,
-        "cuota": 29472.610501271145,
-        "desgravamen": 96
-      },
-      {
-        "id": 37,
-        "numeroCuota": 37,
-        "saldoInicial": 213666.70260001282,
-        "saldoFinal": 209834.09641074322,
-        "interes": 25640.004312001536,
-        "amortizacion": 3832.606189269609,
-        "cuota": 29472.610501271145,
-        "desgravamen": 94
-      },
-      {
-        "id": 38,
-        "numeroCuota": 38,
-        "saldoInicial": 209834.09641074322,
-        "saldoFinal": 205541.57747876126,
-        "interes": 25180.091569289187,
-        "amortizacion": 4292.518931981958,
-        "cuota": 29472.610501271145,
-        "desgravamen": 92
-      },
-      {
-        "id": 39,
-        "numeroCuota": 39,
-        "saldoInicial": 205541.57747876126,
-        "saldoFinal": 200733.95627494148,
-        "interes": 24664.98929745135,
-        "amortizacion": 4807.6212038197955,
-        "cuota": 29472.610501271145,
-        "desgravamen": 90
-      },
-      {
-        "id": 40,
-        "numeroCuota": 40,
-        "saldoInicial": 200733.95627494148,
-        "saldoFinal": 195349.4205266633,
-        "interes": 24088.074752992976,
-        "amortizacion": 5384.535748278169,
-        "cuota": 29472.610501271145,
-        "desgravamen": 88
-      },
-      {
-        "id": 41,
-        "numeroCuota": 41,
-        "saldoInicial": 195349.4205266633,
-        "saldoFinal": 189318.74048859175,
-        "interes": 23441.930463199595,
-        "amortizacion": 6030.68003807155,
-        "cuota": 29472.610501271145,
-        "desgravamen": 86
-      },
-      {
-        "id": 42,
-        "numeroCuota": 42,
-        "saldoInicial": 189318.74048859175,
-        "saldoFinal": 182564.3788459516,
-        "interes": 22718.24885863101,
-        "amortizacion": 6754.361642640135,
-        "cuota": 29472.610501271145,
-        "desgravamen": 83
-      },
-      {
-        "id": 43,
-        "numeroCuota": 43,
-        "saldoInicial": 182564.3788459516,
-        "saldoFinal": 174999.49380619466,
-        "interes": 21907.725461514194,
-        "amortizacion": 7564.885039756951,
-        "cuota": 29472.610501271145,
-        "desgravamen": 80
-      },
-      {
-        "id": 44,
-        "numeroCuota": 44,
-        "saldoInicial": 174999.49380619466,
-        "saldoFinal": 166526.82256166686,
-        "interes": 20999.939256743357,
-        "amortizacion": 8472.671244527788,
-        "cuota": 29472.610501271145,
-        "desgravamen": 77
-      },
-      {
-        "id": 45,
-        "numeroCuota": 45,
-        "saldoInicial": 166526.82256166686,
-        "saldoFinal": 157037.43076779574,
-        "interes": 19983.21870740002,
-        "amortizacion": 9489.391793871124,
-        "cuota": 29472.610501271145,
-        "desgravamen": 73
-      },
-      {
-        "id": 46,
-        "numeroCuota": 46,
-        "saldoInicial": 157037.43076779574,
-        "saldoFinal": 146409.31195866008,
-        "interes": 18844.49169213549,
-        "amortizacion": 10628.118809135656,
-        "cuota": 29472.610501271145,
-        "desgravamen": 69
-      },
-      {
-        "id": 47,
-        "numeroCuota": 47,
-        "saldoInicial": 146409.31195866008,
-        "saldoFinal": 134505.81889242816,
-        "interes": 17569.11743503921,
-        "amortizacion": 11903.493066231935,
-        "cuota": 29472.610501271145,
-        "desgravamen": 64
-      },
-      {
-        "id": 48,
-        "numeroCuota": 48,
-        "saldoInicial": 134505.81889242816,
-        "saldoFinal": 121173.9066582484,
-        "interes": 16140.698267091379,
-        "amortizacion": 13331.912234179767,
-        "cuota": 29472.610501271145,
-        "desgravamen": 59
-      },
-      {
-        "id": 49,
-        "numeroCuota": 49,
-        "saldoInicial": 121173.9066582484,
-        "saldoFinal": 106242.16495596705,
-        "interes": 14540.868798989806,
-        "amortizacion": 14931.741702281339,
-        "cuota": 29472.610501271145,
-        "desgravamen": 53
-      },
-      {
-        "id": 50,
-        "numeroCuota": 50,
-        "saldoInicial": 106242.16495596705,
-        "saldoFinal": 89518.61424941194,
-        "interes": 12749.059794716046,
-        "amortizacion": 16723.5507065551,
-        "cuota": 29472.610501271145,
-        "desgravamen": 47
-      },
-      {
-        "id": 51,
-        "numeroCuota": 51,
-        "saldoInicial": 89518.61424941194,
-        "saldoFinal": 70788.23745807023,
-        "interes": 10742.233709929433,
-        "amortizacion": 18730.37679134171,
-        "cuota": 29472.610501271145,
-        "desgravamen": 39
-      },
-      {
-        "id": 52,
-        "numeroCuota": 52,
-        "saldoInicial": 70788.23745807023,
-        "saldoFinal": 49810.215451767515,
-        "interes": 8494.588494968428,
-        "amortizacion": 20978.022006302715,
-        "cuota": 29472.610501271145,
-        "desgravamen": 31
-      },
-      {
-        "id": 53,
-        "numeroCuota": 53,
-        "saldoInicial": 49810.215451767515,
-        "saldoFinal": 26314.830804708472,
-        "interes": 5977.225854212102,
-        "amortizacion": 23495.384647059043,
-        "cuota": 29472.610501271145,
-        "desgravamen": 22
-      },
-      {
-        "id": 54,
-        "numeroCuota": 54,
-        "saldoInicial": 26314.830804708472,
-        "saldoFinal": 2.342858351767063e-9,
-        "interes": 3157.7796965650164,
-        "amortizacion": 26314.83080470613,
-        "cuota": 29472.610501271145,
-        "desgravamen": 12
-      },
-      {
-        "id": 1,
-        "numeroCuota": 1,
-        "saldoInicial": 145665,
-        "saldoFinal": 143643.34750552283,
-        "interes": 17479.8,
-        "amortizacion": 2021.6524944771627,
-        "cuota": 19501.452494477162,
-        "desgravamen": 64
-      },
-      {
-        "id": 2,
-        "numeroCuota": 2,
-        "saldoInicial": 143643.34750552283,
-        "saldoFinal": 141379.0967117084,
-        "interes": 17237.20170066274,
-        "amortizacion": 2264.2507938144227,
-        "cuota": 19501.452494477162,
-        "desgravamen": 63
-      },
-      {
-        "id": 3,
-        "numeroCuota": 3,
-        "saldoInicial": 141379.0967117084,
-        "saldoFinal": 138843.13582263625,
-        "interes": 16965.491605405008,
-        "amortizacion": 2535.960889072154,
-        "cuota": 19501.452494477162,
-        "desgravamen": 62
-      },
-      {
-        "id": 4,
-        "numeroCuota": 4,
-        "saldoInicial": 138843.13582263625,
-        "saldoFinal": 136002.85962687543,
-        "interes": 16661.17629871635,
-        "amortizacion": 2840.2761957608127,
-        "cuota": 19501.452494477162,
-        "desgravamen": 61
-      },
-      {
-        "id": 5,
-        "numeroCuota": 5,
-        "saldoInicial": 136002.85962687543,
-        "saldoFinal": 132821.75028762332,
-        "interes": 16320.343155225051,
-        "amortizacion": 3181.1093392521107,
-        "cuota": 19501.452494477162,
-        "desgravamen": 60
-      },
-      {
-        "id": 6,
-        "numeroCuota": 6,
-        "saldoInicial": 132821.75028762332,
-        "saldoFinal": 129258.90782766095,
-        "interes": 15938.610034514797,
-        "amortizacion": 3562.842459962365,
-        "cuota": 19501.452494477162,
-        "desgravamen": 58
-      },
-      {
-        "id": 7,
-        "numeroCuota": 7,
-        "saldoInicial": 129258.90782766095,
-        "saldoFinal": 125268.5242725031,
-        "interes": 15511.068939319313,
-        "amortizacion": 3990.3835551578486,
-        "cuota": 19501.452494477162,
-        "desgravamen": 57
-      },
-      {
-        "id": 8,
-        "numeroCuota": 8,
-        "saldoInicial": 125268.5242725031,
-        "saldoFinal": 120799.29469072631,
-        "interes": 15032.222912700372,
-        "amortizacion": 4469.22958177679,
-        "cuota": 19501.452494477162,
-        "desgravamen": 55
-      },
-      {
-        "id": 9,
-        "numeroCuota": 9,
-        "saldoInicial": 120799.29469072631,
-        "saldoFinal": 115793.75755913631,
-        "interes": 14495.915362887157,
-        "amortizacion": 5005.537131590005,
-        "cuota": 19501.452494477162,
-        "desgravamen": 53
-      },
-      {
-        "id": 10,
-        "numeroCuota": 10,
-        "saldoInicial": 115793.75755913631,
-        "saldoFinal": 110187.5559717555,
-        "interes": 13895.250907096357,
-        "amortizacion": 5606.201587380805,
-        "cuota": 19501.452494477162,
-        "desgravamen": 51
-      },
-      {
-        "id": 11,
-        "numeroCuota": 11,
-        "saldoInicial": 110187.5559717555,
-        "saldoFinal": 103908.610193889,
-        "interes": 13222.50671661066,
-        "amortizacion": 6278.945777866502,
-        "cuota": 19501.452494477162,
-        "desgravamen": 48
-      },
-      {
-        "id": 12,
-        "numeroCuota": 12,
-        "saldoInicial": 103908.610193889,
-        "saldoFinal": 96876.19092267852,
-        "interes": 12469.03322326668,
-        "amortizacion": 7032.419271210481,
-        "cuota": 19501.452494477162,
-        "desgravamen": 46
-      },
-      {
-        "id": 13,
-        "numeroCuota": 13,
-        "saldoInicial": 96876.19092267852,
-        "saldoFinal": 88999.88133892279,
-        "interes": 11625.142910721423,
-        "amortizacion": 7876.309583755739,
-        "cuota": 19501.452494477162,
-        "desgravamen": 43
-      },
-      {
-        "id": 14,
-        "numeroCuota": 14,
-        "saldoInicial": 88999.88133892279,
-        "saldoFinal": 80178.41460511636,
-        "interes": 10679.985760670734,
-        "amortizacion": 8821.466733806428,
-        "cuota": 19501.452494477162,
-        "desgravamen": 39
-      },
-      {
-        "id": 15,
-        "numeroCuota": 15,
-        "saldoInicial": 80178.41460511636,
-        "saldoFinal": 70298.37186325315,
-        "interes": 9621.409752613963,
-        "amortizacion": 9880.042741863199,
-        "cuota": 19501.452494477162,
+        "saldoInicial": 79076.55636943104,
+        "saldoFinal": 79076.55636943104,
+        "interes": 9489.186764331724,
+        "amortizacion": 0,
+        "cuota": 0,
         "desgravamen": 35
       },
       {
-        "id": 16,
-        "numeroCuota": 16,
-        "saldoInicial": 70298.37186325315,
-        "saldoFinal": 59232.72399236637,
-        "interes": 8435.804623590378,
-        "amortizacion": 11065.647870886783,
-        "cuota": 19501.452494477162,
-        "desgravamen": 31
-      },
-      {
-        "id": 17,
-        "numeroCuota": 17,
-        "saldoInicial": 59232.72399236637,
-        "saldoFinal": 46839.198376973174,
-        "interes": 7107.926879083964,
-        "amortizacion": 12393.525615393199,
-        "cuota": 19501.452494477162,
-        "desgravamen": 26
-      },
-      {
-        "id": 18,
-        "numeroCuota": 18,
-        "saldoInicial": 46839.198376973174,
-        "saldoFinal": 32958.44968773279,
-        "interes": 5620.703805236781,
-        "amortizacion": 13880.748689240381,
-        "cuota": 19501.452494477162,
-        "desgravamen": 21
-      },
-      {
-        "id": 19,
-        "numeroCuota": 19,
-        "saldoInicial": 32958.44968773279,
-        "saldoFinal": 17412.011155783563,
-        "interes": 3955.013962527935,
-        "amortizacion": 15546.438531949227,
-        "cuota": 19501.452494477162,
-        "desgravamen": 15
-      },
-      {
-        "id": 20,
-        "numeroCuota": 20,
-        "saldoInicial": 17412.011155783563,
-        "saldoFinal": 4.2928149923682213e-10,
-        "interes": 2089.4413386940273,
-        "amortizacion": 17412.011155783133,
-        "cuota": 19501.452494477162,
-        "desgravamen": 8
-      },
-      {
-        "id": 1,
-        "numeroCuota": 1,
-        "saldoInicial": 145665,
-        "saldoFinal": 144064.72407832806,
-        "interes": 20393.100000000002,
-        "amortizacion": 1600.275921671957,
-        "cuota": 21993.37592167196,
-        "desgravamen": 64
-      },
-      {
-        "id": 2,
-        "numeroCuota": 2,
-        "saldoInicial": 144064.72407832806,
-        "saldoFinal": 142240.40952762202,
-        "interes": 20169.06137096593,
-        "amortizacion": 1824.314550706029,
-        "cuota": 21993.37592167196,
-        "desgravamen": 63
-      },
-      {
+        "plazoGracia": "S",
         "id": 3,
         "numeroCuota": 3,
-        "saldoInicial": 142240.40952762202,
-        "saldoFinal": 140160.69093981714,
-        "interes": 19913.657333867086,
-        "amortizacion": 2079.718587804873,
-        "cuota": 21993.37592167196,
-        "desgravamen": 63
-      },
-      {
-        "id": 4,
-        "numeroCuota": 4,
-        "saldoInicial": 140160.69093981714,
-        "saldoFinal": 137789.81174971958,
-        "interes": 19622.496731574403,
-        "amortizacion": 2370.8791900975557,
-        "cuota": 21993.37592167196,
-        "desgravamen": 62
-      },
-      {
-        "id": 5,
-        "numeroCuota": 5,
-        "saldoInicial": 137789.81174971958,
-        "saldoFinal": 135087.00947300837,
-        "interes": 19290.573644960743,
-        "amortizacion": 2702.802276711216,
-        "cuota": 21993.37592167196,
-        "desgravamen": 61
-      },
-      {
-        "id": 6,
-        "numeroCuota": 6,
-        "saldoInicial": 135087.00947300837,
-        "saldoFinal": 132005.81487755757,
-        "interes": 18912.181326221173,
-        "amortizacion": 3081.1945954507864,
-        "cuota": 21993.37592167196,
-        "desgravamen": 59
-      },
-      {
-        "id": 7,
-        "numeroCuota": 7,
-        "saldoInicial": 132005.81487755757,
-        "saldoFinal": 128493.25303874367,
-        "interes": 18480.81408285806,
-        "amortizacion": 3512.5618388138973,
-        "cuota": 21993.37592167196,
-        "desgravamen": 58
-      },
-      {
-        "id": 8,
-        "numeroCuota": 8,
-        "saldoInicial": 128493.25303874367,
-        "saldoFinal": 124488.93254249582,
-        "interes": 17989.055425424114,
-        "amortizacion": 4004.320496247845,
-        "cuota": 21993.37592167196,
-        "desgravamen": 57
-      },
-      {
-        "id": 9,
-        "numeroCuota": 9,
-        "saldoInicial": 124488.93254249582,
-        "saldoFinal": 119924.00717677327,
-        "interes": 17428.450555949417,
-        "amortizacion": 4564.925365722542,
-        "cuota": 21993.37592167196,
-        "desgravamen": 55
-      },
-      {
-        "id": 10,
-        "numeroCuota": 10,
-        "saldoInicial": 119924.00717677327,
-        "saldoFinal": 114719.99225984958,
-        "interes": 16789.36100474826,
-        "amortizacion": 5204.0149169236975,
-        "cuota": 21993.37592167196,
-        "desgravamen": 53
-      },
-      {
-        "id": 11,
-        "numeroCuota": 11,
-        "saldoInicial": 114719.99225984958,
-        "saldoFinal": 108787.41525455656,
-        "interes": 16060.798916378943,
-        "amortizacion": 5932.577005293017,
-        "cuota": 21993.37592167196,
-        "desgravamen": 50
-      },
-      {
-        "id": 12,
-        "numeroCuota": 12,
-        "saldoInicial": 108787.41525455656,
-        "saldoFinal": 102024.27746852252,
-        "interes": 15230.23813563792,
-        "amortizacion": 6763.13778603404,
-        "cuota": 21993.37592167196,
-        "desgravamen": 48
-      },
-      {
-        "id": 13,
-        "numeroCuota": 13,
-        "saldoInicial": 102024.27746852252,
-        "saldoFinal": 94314.3003924437,
-        "interes": 14283.398845593154,
-        "amortizacion": 7709.977076078805,
-        "cuota": 21993.37592167196,
-        "desgravamen": 45
-      },
-      {
-        "id": 14,
-        "numeroCuota": 14,
-        "saldoInicial": 94314.3003924437,
-        "saldoFinal": 85524.92652571388,
-        "interes": 13204.00205494212,
-        "amortizacion": 8789.373866729838,
-        "cuota": 21993.37592167196,
-        "desgravamen": 41
-      },
-      {
-        "id": 15,
-        "numeroCuota": 15,
-        "saldoInicial": 85524.92652571388,
-        "saldoFinal": 75505.04031764186,
-        "interes": 11973.489713599944,
-        "amortizacion": 10019.886208072016,
-        "cuota": 21993.37592167196,
-        "desgravamen": 38
-      },
-      {
-        "id": 16,
-        "numeroCuota": 16,
-        "saldoInicial": 75505.04031764186,
-        "saldoFinal": 64082.37004043977,
-        "interes": 10570.705644469861,
-        "amortizacion": 11422.670277202098,
-        "cuota": 21993.37592167196,
-        "desgravamen": 33
-      },
-      {
-        "id": 17,
-        "numeroCuota": 17,
-        "saldoInicial": 64082.37004043977,
-        "saldoFinal": 51060.52592442938,
-        "interes": 8971.531805661569,
-        "amortizacion": 13021.84411601039,
-        "cuota": 21993.37592167196,
-        "desgravamen": 28
-      },
-      {
-        "id": 18,
-        "numeroCuota": 18,
-        "saldoInicial": 51060.52592442938,
-        "saldoFinal": 36215.623632177536,
-        "interes": 7148.473629420114,
-        "amortizacion": 14844.902292251845,
-        "cuota": 21993.37592167196,
-        "desgravamen": 22
-      },
-      {
-        "id": 19,
-        "numeroCuota": 19,
-        "saldoInicial": 36215.623632177536,
-        "saldoFinal": 19292.43501901043,
-        "interes": 5070.1873085048555,
-        "amortizacion": 16923.188613167105,
-        "cuota": 21993.37592167196,
-        "desgravamen": 16
-      },
-      {
-        "id": 20,
-        "numeroCuota": 20,
-        "saldoInicial": 19292.43501901043,
-        "saldoFinal": -6.912159733474255e-11,
-        "interes": 2700.9409026614603,
-        "amortizacion": 19292.4350190105,
-        "cuota": 21993.37592167196,
-        "desgravamen": 8
-      },
-      {
-        "id": 1,
-        "numeroCuota": 1,
-        "saldoInicial": 145600,
-        "saldoFinal": 142743.9977564963,
-        "interes": 20384.000000000004,
-        "amortizacion": 2856.0022435037026,
-        "cuota": 23240.002243503706,
-        "desgravamen": 64
-      },
-      {
-        "id": 2,
-        "numeroCuota": 2,
-        "saldoInicial": 142743.9977564963,
-        "saldoFinal": 139488.1551989021,
-        "interes": 19984.159685909486,
-        "amortizacion": 3255.84255759422,
-        "cuota": 23240.002243503706,
-        "desgravamen": 63
-      },
-      {
-        "id": 3,
-        "numeroCuota": 3,
-        "saldoInicial": 139488.1551989021,
-        "saldoFinal": 135776.49468324467,
-        "interes": 19528.341727846295,
-        "amortizacion": 3711.6605156574115,
-        "cuota": 23240.002243503706,
-        "desgravamen": 61
-      },
-      {
-        "id": 4,
-        "numeroCuota": 4,
-        "saldoInicial": 135776.49468324467,
-        "saldoFinal": 131545.20169539523,
-        "interes": 19008.709255654256,
-        "amortizacion": 4231.292987849451,
-        "cuota": 23240.002243503706,
-        "desgravamen": 60
-      },
-      {
-        "id": 5,
-        "numeroCuota": 5,
-        "saldoInicial": 131545.20169539523,
-        "saldoFinal": 126721.52768924685,
-        "interes": 18416.328237355334,
-        "amortizacion": 4823.674006148372,
-        "cuota": 23240.002243503706,
-        "desgravamen": 58
-      },
-      {
-        "id": 6,
-        "numeroCuota": 6,
-        "saldoInicial": 126721.52768924685,
-        "saldoFinal": 121222.53932223772,
-        "interes": 17741.013876494562,
-        "amortizacion": 5498.988367009144,
-        "cuota": 23240.002243503706,
-        "desgravamen": 56
-      },
-      {
-        "id": 7,
-        "numeroCuota": 7,
-        "saldoInicial": 121222.53932223772,
-        "saldoFinal": 114953.6925838473,
-        "interes": 16971.155505113282,
-        "amortizacion": 6268.846738390424,
-        "cuota": 23240.002243503706,
-        "desgravamen": 53
-      },
-      {
-        "id": 8,
-        "numeroCuota": 8,
-        "saldoInicial": 114953.6925838473,
-        "saldoFinal": 107807.20730208221,
-        "interes": 16093.516961738624,
-        "amortizacion": 7146.485281765083,
-        "cuota": 23240.002243503706,
-        "desgravamen": 51
-      },
-      {
-        "id": 9,
-        "numeroCuota": 9,
-        "saldoInicial": 107807.20730208221,
-        "saldoFinal": 99660.21408087002,
-        "interes": 15093.009022291511,
-        "amortizacion": 8146.993221212195,
-        "cuota": 23240.002243503706,
-        "desgravamen": 47
-      },
-      {
-        "id": 10,
-        "numeroCuota": 10,
-        "saldoInicial": 99660.21408087002,
-        "saldoFinal": 90372.64180868812,
-        "interes": 13952.429971321804,
-        "amortizacion": 9287.572272181902,
-        "cuota": 23240.002243503706,
-        "desgravamen": 44
-      },
-      {
-        "id": 11,
-        "numeroCuota": 11,
-        "saldoInicial": 90372.64180868812,
-        "saldoFinal": 79784.80941840075,
-        "interes": 12652.169853216337,
-        "amortizacion": 10587.832390287369,
-        "cuota": 23240.002243503706,
-        "desgravamen": 40
-      },
-      {
-        "id": 12,
-        "numeroCuota": 12,
-        "saldoInicial": 79784.80941840075,
-        "saldoFinal": 67714.68049347315,
-        "interes": 11169.873318576107,
-        "amortizacion": 12070.1289249276,
-        "cuota": 23240.002243503706,
-        "desgravamen": 35
-      },
-      {
-        "id": 13,
-        "numeroCuota": 13,
-        "saldoInicial": 67714.68049347315,
-        "saldoFinal": 53954.733519055684,
-        "interes": 9480.055269086242,
-        "amortizacion": 13759.946974417464,
-        "cuota": 23240.002243503706,
-        "desgravamen": 30
-      },
-      {
-        "id": 14,
-        "numeroCuota": 14,
-        "saldoInicial": 53954.733519055684,
-        "saldoFinal": 38268.393968219774,
-        "interes": 7553.662692667796,
-        "amortizacion": 15686.33955083591,
-        "cuota": 23240.002243503706,
+        "saldoInicial": 55642.299503193804,
+        "saldoFinal": 29395.9318130081,
+        "interes": 6677.075940383256,
+        "amortizacion": 26246.367690185703,
+        "cuota": 32923.44363056896,
         "desgravamen": 24
       },
       {
-        "id": 15,
-        "numeroCuota": 15,
-        "saldoInicial": 38268.393968219774,
-        "saldoFinal": 20385.96688026684,
-        "interes": 5357.575155550769,
-        "amortizacion": 17882.427087952936,
-        "cuota": 23240.002243503706,
-        "desgravamen": 17
+        "plazoGracia": "S",
+        "id": 4,
+        "numeroCuota": 4,
+        "saldoInicial": 29395.9318130081,
+        "saldoFinal": 1.127773430198431e-10,
+        "interes": 3527.511817560972,
+        "amortizacion": 29395.93181300799,
+        "cuota": 32923.44363056896,
+        "desgravamen": 13
+      }
+    ],
+    [
+      {
+        "plazoGracia": "S",
+        "id": 1,
+        "numeroCuota": 1,
+        "saldoInicial": 100000,
+        "saldoFinal": 79076.55636943104,
+        "interes": 12000,
+        "amortizacion": 20923.44363056896,
+        "cuota": 32923.44363056896,
+        "desgravamen": 44
       },
       {
-        "id": 16,
-        "numeroCuota": 16,
-        "saldoInicial": 20385.96688026684,
-        "saldoFinal": 4.911271389573812e-10,
-        "interes": 2854.0353632373576,
-        "amortizacion": 20385.966880266347,
-        "cuota": 23240.002243503706,
-        "desgravamen": 9
+        "plazoGracia": "S",
+        "id": 2,
+        "numeroCuota": 2,
+        "saldoInicial": 79076.55636943104,
+        "saldoFinal": 55642.299503193804,
+        "interes": 9489.186764331724,
+        "amortizacion": 23434.256866237236,
+        "cuota": 32923.44363056896,
+        "desgravamen": 35
+      },
+      {
+        "plazoGracia": "S",
+        "id": 3,
+        "numeroCuota": 3,
+        "saldoInicial": 55642.299503193804,
+        "saldoFinal": 29395.9318130081,
+        "interes": 6677.075940383256,
+        "amortizacion": 26246.367690185703,
+        "cuota": 32923.44363056896,
+        "desgravamen": 24
+      },
+      {
+        "plazoGracia": "S",
+        "id": 4,
+        "numeroCuota": 4,
+        "saldoInicial": 29395.9318130081,
+        "saldoFinal": 1.127773430198431e-10,
+        "interes": 3527.511817560972,
+        "amortizacion": 29395.93181300799,
+        "cuota": 32923.44363056896,
+        "desgravamen": 13
+      },
+      {
+        "plazoGracia": "S",
+        "id": 1,
+        "numeroCuota": 1,
+        "saldoInicial": 100000,
+        "saldoFinal": 79076.55636943104,
+        "interes": 12000,
+        "amortizacion": 20923.44363056896,
+        "cuota": 32923.44363056896,
+        "desgravamen": 44
+      },
+      {
+        "plazoGracia": "T",
+        "id": 2,
+        "numeroCuota": 2,
+        "saldoInicial": 79076.55636943104,
+        "saldoFinal": 79076.55636943104,
+        "interes": 9489.186764331724,
+        "amortizacion": 0,
+        "cuota": 0,
+        "desgravamen": 35
+      },
+      {
+        "plazoGracia": "S",
+        "id": 3,
+        "numeroCuota": 3,
+        "saldoInicial": 55642.299503193804,
+        "saldoFinal": 29395.9318130081,
+        "interes": 6677.075940383256,
+        "amortizacion": 26246.367690185703,
+        "cuota": 32923.44363056896,
+        "desgravamen": 24
+      },
+      {
+        "plazoGracia": "S",
+        "id": 4,
+        "numeroCuota": 4,
+        "saldoInicial": 29395.9318130081,
+        "saldoFinal": 1.127773430198431e-10,
+        "interes": 3527.511817560972,
+        "amortizacion": 29395.93181300799,
+        "cuota": 32923.44363056896,
+        "desgravamen": 13
+      },
+      {
+        "plazoGracia": "T",
+        "id": 1,
+        "numeroCuota": 1,
+        "saldoInicial": 100000,
+        "saldoFinal": 100000,
+        "interes": 12000,
+        "amortizacion": 0,
+        "cuota": 0,
+        "desgravamen": 44
+      },
+      {
+        "plazoGracia": "S",
+        "id": 2,
+        "numeroCuota": 2,
+        "saldoInicial": 79076.55636943104,
+        "saldoFinal": 55642.299503193804,
+        "interes": 9489.186764331724,
+        "amortizacion": 23434.256866237236,
+        "cuota": 32923.44363056896,
+        "desgravamen": 35
+      },
+      {
+        "plazoGracia": "S",
+        "id": 3,
+        "numeroCuota": 3,
+        "saldoInicial": 55642.299503193804,
+        "saldoFinal": 29395.9318130081,
+        "interes": 6677.075940383256,
+        "amortizacion": 26246.367690185703,
+        "cuota": 32923.44363056896,
+        "desgravamen": 24
+      },
+      {
+        "plazoGracia": "S",
+        "id": 4,
+        "numeroCuota": 4,
+        "saldoInicial": 29395.9318130081,
+        "saldoFinal": 1.127773430198431e-10,
+        "interes": 3527.511817560972,
+        "amortizacion": 29395.93181300799,
+        "cuota": 32923.44363056896,
+        "desgravamen": 13
+      }
+    ],
+    [
+      {
+        "plazoGracia": "S",
+        "id": 1,
+        "numeroCuota": 1,
+        "saldoInicial": 100000,
+        "saldoFinal": 79076.55636943104,
+        "interes": 12000,
+        "amortizacion": 20923.44363056896,
+        "cuota": 32923.44363056896,
+        "desgravamen": 44
+      },
+      {
+        "plazoGracia": "S",
+        "id": 2,
+        "numeroCuota": 2,
+        "saldoInicial": 79076.55636943104,
+        "saldoFinal": 55642.299503193804,
+        "interes": 9489.186764331724,
+        "amortizacion": 23434.256866237236,
+        "cuota": 32923.44363056896,
+        "desgravamen": 35
+      },
+      {
+        "plazoGracia": "S",
+        "id": 3,
+        "numeroCuota": 3,
+        "saldoInicial": 55642.299503193804,
+        "saldoFinal": 29395.9318130081,
+        "interes": 6677.075940383256,
+        "amortizacion": 26246.367690185703,
+        "cuota": 32923.44363056896,
+        "desgravamen": 24
+      },
+      {
+        "plazoGracia": "S",
+        "id": 4,
+        "numeroCuota": 4,
+        "saldoInicial": 29395.9318130081,
+        "saldoFinal": 1.127773430198431e-10,
+        "interes": 3527.511817560972,
+        "amortizacion": 29395.93181300799,
+        "cuota": 32923.44363056896,
+        "desgravamen": 13
+      },
+      {
+        "plazoGracia": "S",
+        "id": 1,
+        "numeroCuota": 1,
+        "saldoInicial": 100000,
+        "saldoFinal": 79076.55636943104,
+        "interes": 12000,
+        "amortizacion": 20923.44363056896,
+        "cuota": 32923.44363056896,
+        "desgravamen": 44
+      },
+      {
+        "plazoGracia": "T",
+        "id": 2,
+        "numeroCuota": 2,
+        "saldoInicial": 79076.55636943104,
+        "saldoFinal": 79076.55636943104,
+        "interes": 9489.186764331724,
+        "amortizacion": 0,
+        "cuota": 0,
+        "desgravamen": 35
+      },
+      {
+        "plazoGracia": "S",
+        "id": 3,
+        "numeroCuota": 3,
+        "saldoInicial": 55642.299503193804,
+        "saldoFinal": 29395.9318130081,
+        "interes": 6677.075940383256,
+        "amortizacion": 26246.367690185703,
+        "cuota": 32923.44363056896,
+        "desgravamen": 24
+      },
+      {
+        "plazoGracia": "S",
+        "id": 4,
+        "numeroCuota": 4,
+        "saldoInicial": 29395.9318130081,
+        "saldoFinal": 1.127773430198431e-10,
+        "interes": 3527.511817560972,
+        "amortizacion": 29395.93181300799,
+        "cuota": 32923.44363056896,
+        "desgravamen": 13
+      },
+      {
+        "plazoGracia": "T",
+        "id": 1,
+        "numeroCuota": 1,
+        "saldoInicial": 100000,
+        "saldoFinal": 100000,
+        "interes": 12000,
+        "amortizacion": 0,
+        "cuota": 0,
+        "desgravamen": 44
+      },
+      {
+        "plazoGracia": "S",
+        "id": 2,
+        "numeroCuota": 2,
+        "saldoInicial": 79076.55636943104,
+        "saldoFinal": 55642.299503193804,
+        "interes": 9489.186764331724,
+        "amortizacion": 23434.256866237236,
+        "cuota": 32923.44363056896,
+        "desgravamen": 35
+      },
+      {
+        "plazoGracia": "S",
+        "id": 3,
+        "numeroCuota": 3,
+        "saldoInicial": 55642.299503193804,
+        "saldoFinal": 29395.9318130081,
+        "interes": 6677.075940383256,
+        "amortizacion": 26246.367690185703,
+        "cuota": 32923.44363056896,
+        "desgravamen": 24
+      },
+      {
+        "plazoGracia": "S",
+        "id": 4,
+        "numeroCuota": 4,
+        "saldoInicial": 29395.9318130081,
+        "saldoFinal": 1.127773430198431e-10,
+        "interes": 3527.511817560972,
+        "amortizacion": 29395.93181300799,
+        "cuota": 32923.44363056896,
+        "desgravamen": 13
+      },
+      {
+        "plazoGracia": "S",
+        "id": 1,
+        "numeroCuota": 1,
+        "saldoInicial": 100000,
+        "saldoFinal": 79076.55636943104,
+        "interes": 12000,
+        "amortizacion": 20923.44363056896,
+        "cuota": 32923.44363056896,
+        "desgravamen": 44
+      },
+      {
+        "plazoGracia": "T",
+        "id": 2,
+        "numeroCuota": 2,
+        "saldoInicial": 79076.55636943104,
+        "saldoFinal": 79076.55636943104,
+        "interes": 9489.186764331724,
+        "amortizacion": 0,
+        "cuota": 0,
+        "desgravamen": 35
+      },
+      {
+        "plazoGracia": "S",
+        "id": 3,
+        "numeroCuota": 3,
+        "saldoInicial": 55642.299503193804,
+        "saldoFinal": 29395.9318130081,
+        "interes": 6677.075940383256,
+        "amortizacion": 26246.367690185703,
+        "cuota": 32923.44363056896,
+        "desgravamen": 24
+      },
+      {
+        "plazoGracia": "S",
+        "id": 4,
+        "numeroCuota": 4,
+        "saldoInicial": 29395.9318130081,
+        "saldoFinal": 1.127773430198431e-10,
+        "interes": 3527.511817560972,
+        "amortizacion": 29395.93181300799,
+        "cuota": 32923.44363056896,
+        "desgravamen": 13
+      }
+    ],
+    [
+      {
+        "plazoGracia": "S",
+        "id": 1,
+        "numeroCuota": 1,
+        "saldoInicial": 100000,
+        "saldoFinal": 79076.55636943104,
+        "interes": 12000,
+        "amortizacion": 20923.44363056896,
+        "cuota": 32923.44363056896,
+        "desgravamen": 44
+      },
+      {
+        "plazoGracia": "S",
+        "id": 2,
+        "numeroCuota": 2,
+        "saldoInicial": 79076.55636943104,
+        "saldoFinal": 55642.299503193804,
+        "interes": 9489.186764331724,
+        "amortizacion": 23434.256866237236,
+        "cuota": 32923.44363056896,
+        "desgravamen": 35
+      },
+      {
+        "plazoGracia": "S",
+        "id": 3,
+        "numeroCuota": 3,
+        "saldoInicial": 55642.299503193804,
+        "saldoFinal": 29395.9318130081,
+        "interes": 6677.075940383256,
+        "amortizacion": 26246.367690185703,
+        "cuota": 32923.44363056896,
+        "desgravamen": 24
+      },
+      {
+        "plazoGracia": "S",
+        "id": 4,
+        "numeroCuota": 4,
+        "saldoInicial": 29395.9318130081,
+        "saldoFinal": 1.127773430198431e-10,
+        "interes": 3527.511817560972,
+        "amortizacion": 29395.93181300799,
+        "cuota": 32923.44363056896,
+        "desgravamen": 13
+      },
+      {
+        "plazoGracia": "S",
+        "id": 1,
+        "numeroCuota": 1,
+        "saldoInicial": 100000,
+        "saldoFinal": 79076.55636943104,
+        "interes": 12000,
+        "amortizacion": 20923.44363056896,
+        "cuota": 32923.44363056896,
+        "desgravamen": 44
+      },
+      {
+        "plazoGracia": "T",
+        "id": 2,
+        "numeroCuota": 2,
+        "saldoInicial": 79076.55636943104,
+        "saldoFinal": 79076.55636943104,
+        "interes": 9489.186764331724,
+        "amortizacion": 0,
+        "cuota": 0,
+        "desgravamen": 35
+      },
+      {
+        "plazoGracia": "S",
+        "id": 3,
+        "numeroCuota": 3,
+        "saldoInicial": 55642.299503193804,
+        "saldoFinal": 29395.9318130081,
+        "interes": 6677.075940383256,
+        "amortizacion": 26246.367690185703,
+        "cuota": 32923.44363056896,
+        "desgravamen": 24
+      },
+      {
+        "plazoGracia": "S",
+        "id": 4,
+        "numeroCuota": 4,
+        "saldoInicial": 29395.9318130081,
+        "saldoFinal": 1.127773430198431e-10,
+        "interes": 3527.511817560972,
+        "amortizacion": 29395.93181300799,
+        "cuota": 32923.44363056896,
+        "desgravamen": 13
+      },
+      {
+        "plazoGracia": "T",
+        "id": 1,
+        "numeroCuota": 1,
+        "saldoInicial": 100000,
+        "saldoFinal": 100000,
+        "interes": 12000,
+        "amortizacion": 0,
+        "cuota": 0,
+        "desgravamen": 44
+      },
+      {
+        "plazoGracia": "S",
+        "id": 2,
+        "numeroCuota": 2,
+        "saldoInicial": 79076.55636943104,
+        "saldoFinal": 55642.299503193804,
+        "interes": 9489.186764331724,
+        "amortizacion": 23434.256866237236,
+        "cuota": 32923.44363056896,
+        "desgravamen": 35
+      },
+      {
+        "plazoGracia": "S",
+        "id": 3,
+        "numeroCuota": 3,
+        "saldoInicial": 55642.299503193804,
+        "saldoFinal": 29395.9318130081,
+        "interes": 6677.075940383256,
+        "amortizacion": 26246.367690185703,
+        "cuota": 32923.44363056896,
+        "desgravamen": 24
+      },
+      {
+        "plazoGracia": "S",
+        "id": 4,
+        "numeroCuota": 4,
+        "saldoInicial": 29395.9318130081,
+        "saldoFinal": 1.127773430198431e-10,
+        "interes": 3527.511817560972,
+        "amortizacion": 29395.93181300799,
+        "cuota": 32923.44363056896,
+        "desgravamen": 13
+      },
+      {
+        "plazoGracia": "S",
+        "id": 1,
+        "numeroCuota": 1,
+        "saldoInicial": 100000,
+        "saldoFinal": 79076.55636943104,
+        "interes": 12000,
+        "amortizacion": 20923.44363056896,
+        "cuota": 32923.44363056896,
+        "desgravamen": 44
+      },
+      {
+        "plazoGracia": "T",
+        "id": 2,
+        "numeroCuota": 2,
+        "saldoInicial": 79076.55636943104,
+        "saldoFinal": 79076.55636943104,
+        "interes": 9489.186764331724,
+        "amortizacion": 0,
+        "cuota": 0,
+        "desgravamen": 35
+      },
+      {
+        "plazoGracia": "S",
+        "id": 3,
+        "numeroCuota": 3,
+        "saldoInicial": 55642.299503193804,
+        "saldoFinal": 29395.9318130081,
+        "interes": 6677.075940383256,
+        "amortizacion": 26246.367690185703,
+        "cuota": 32923.44363056896,
+        "desgravamen": 24
+      },
+      {
+        "plazoGracia": "S",
+        "id": 4,
+        "numeroCuota": 4,
+        "saldoInicial": 29395.9318130081,
+        "saldoFinal": 1.127773430198431e-10,
+        "interes": 3527.511817560972,
+        "amortizacion": 29395.93181300799,
+        "cuota": 32923.44363056896,
+        "desgravamen": 13
+      },
+      {
+        "plazoGracia": "S",
+        "id": 1,
+        "numeroCuota": 1,
+        "saldoInicial": 100000,
+        "saldoFinal": 79076.55636943104,
+        "interes": 12000,
+        "amortizacion": 20923.44363056896,
+        "cuota": 32923.44363056896,
+        "desgravamen": 44
+      },
+      {
+        "plazoGracia": "S",
+        "id": 2,
+        "numeroCuota": 2,
+        "saldoInicial": 79076.55636943104,
+        "saldoFinal": 55642.299503193804,
+        "interes": 9489.186764331724,
+        "amortizacion": 23434.256866237236,
+        "cuota": 32923.44363056896,
+        "desgravamen": 35
+      },
+      {
+        "plazoGracia": "S",
+        "id": 3,
+        "numeroCuota": 3,
+        "saldoInicial": 55642.299503193804,
+        "saldoFinal": 29395.9318130081,
+        "interes": 6677.075940383256,
+        "amortizacion": 26246.367690185703,
+        "cuota": 32923.44363056896,
+        "desgravamen": 24
+      },
+      {
+        "plazoGracia": "T",
+        "id": 4,
+        "numeroCuota": 4,
+        "saldoInicial": 29395.9318130081,
+        "saldoFinal": 29395.9318130081,
+        "interes": 3527.511817560972,
+        "amortizacion": 0,
+        "cuota": 0,
+        "desgravamen": 13
       }
     ]
   ]

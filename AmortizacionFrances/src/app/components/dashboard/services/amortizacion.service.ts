@@ -42,6 +42,18 @@ export class AmortizacionService {
             catchError(this.handleError));
   }
 
+  createJson(item: any[]): Observable<Cuota> {
+    return this.http.post<Cuota>(
+        this.basePath, item, this.httpOptions ).pipe(
+        retry(2),
+        catchError(this.handleError));
+  }
+
+  crearEntidad(data: any): Observable<any> {
+    return this.http.post<any>(`${this.basePath}/cuotas`, data);
+  }
+
+
   // Get Student by id
   getById(id: any): Observable<Cuota> {
     return this.http.get<Cuota>(

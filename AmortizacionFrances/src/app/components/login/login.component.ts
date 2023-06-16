@@ -40,6 +40,7 @@ export class LoginComponent implements OnInit {
     // console.log(this.users.find(this.users) => users.id === usuario);
 
   }
+
   ingresar() {
     console.log(this.form);
     const email = this.form.value.email;
@@ -59,7 +60,7 @@ export class LoginComponent implements OnInit {
     //   this.error();
     //   this.form.reset();
     // }
-
+    console.log(this.users);
     const user = this.users.find(
         (u: User) => u.email === email && u.password === password
     );

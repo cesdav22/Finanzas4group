@@ -4,6 +4,7 @@ import {MatTableDataSource} from "@angular/material/table";
 import {AmortizacionService} from "../services/amortizacion.service";
 import {Report} from "../../../interfaces/report";
 import {ReportFinal} from "../../../interfaces/report-final";
+import {Cuota} from "../../../interfaces/cuota";
 
 // export interface PeriodicElement {
 //   name: string;
@@ -34,14 +35,14 @@ export class ReportesComponent implements OnInit {
 
   displayedColumns!: string[];
   dataSource: MatTableDataSource<any>;
-  reportData: Report;
+  reportData: Cuota;
   a:any;
   b:any;
   reportId:any;
   array:any[] =[] ;
   constructor(private route: ActivatedRoute, private reportsService: AmortizacionService) {
     this.dataSource = new MatTableDataSource<any>();
-    this.reportData = {} as Report;
+    this.reportData = {} as Cuota;
   }
   columnasTabla: string[] = [
     'id',
