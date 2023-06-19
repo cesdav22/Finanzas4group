@@ -30,6 +30,19 @@ import {Cuota} from "../../../interfaces/cuota";
 export class AmortizacionComponent implements OnInit {
 
 
+
+
+
+
+
+
+
+
+
+
+
+  ///----------........................................----------------------
+
   cuotaData: Cuota ;
   reportData: Report;
   // dataSource: cuota[] = [];
@@ -52,6 +65,9 @@ export class AmortizacionComponent implements OnInit {
   tazaInteres2: number = 0;
 
   plazoGraciaPeriodo:number = 0;
+
+  banco: string = "";
+  banco2: string = "";
 
   interesMensual: number = 0;
   cuotaMensual: number = 0;
@@ -87,6 +103,10 @@ export class AmortizacionComponent implements OnInit {
     this.dataSource2.data = [];
   }
 
+
+
+
+
   ngOnInit() {
     // this.calcular();
     // this.addReport();
@@ -107,16 +127,16 @@ export class AmortizacionComponent implements OnInit {
   }
 
   procesar() {
-    // if (this.validaciones()) {
-    //   return;
-    // } else {
-    //   this.calcular();
-    //   this.mostrarTabla()
-    //   // this.addCuota()
-    // }
+    if (this.validaciones()) {
+      return;
+    } else {
+      this.calcular();
+      this.mostrarTabla()
+      // this.addCuota()
+    }
     //
     //
-    this.calcular();
+    // this.calcular();
     // this.mostrarTabla()
   }
 
@@ -144,6 +164,9 @@ export class AmortizacionComponent implements OnInit {
   reportData2! :[];
   amortizacion!:number
   calcular() {
+    console.log(`BANCO SIN UPPER CASE XD: ${this.banco}`)
+    this.banco2  = this.banco.toUpperCase();
+    console.log(`BANCO CON UPPER CASE XD: ${this.banco2}`)
     this.cerearVariables();
 
 
@@ -210,7 +233,44 @@ export class AmortizacionComponent implements OnInit {
 
       cuota.cuota = this.cuotaMensual;
 
-      cuota.desgravamen = Math.round(cuota.saldoFinal * (0.044/100));
+      //SEGUN BANCOS
+      if(this.banco2 == "BCP"){
+        cuota.desgravamen = Math.round(cuota.saldoFinal * (0.044/100));
+      }else if(this.banco2 == "MAYNAS"){
+        cuota.desgravamen = Math.round(cuota.saldoFinal * (0.00070));
+      }else if(this.banco2 == "ICA"){
+        cuota.desgravamen = Math.round(cuota.saldoFinal * (0.00065/100));
+      }else if(this.banco2 == "TRUJILLO"){
+        cuota.desgravamen = Math.round(cuota.saldoFinal * (0.1080/100));
+      }else if(this.banco2 == "BBVA"){
+        cuota.desgravamen = Math.round(cuota.saldoFinal * (0.04396/100));
+      }else if(this.banco2 == "INTERBANK"){
+        cuota.desgravamen = Math.round(cuota.saldoFinal * (0.028/100));
+      }else if(this.banco2 == "SCOTIABANK"){
+        cuota.desgravamen = Math.round(cuota.saldoFinal * (0.0600/100));
+      }else if(this.banco2 == "PICHINCHA"){
+        cuota.desgravamen = Math.round(cuota.saldoFinal * (0.0800/100));
+      }else if(this.banco2 == "GNB"){
+        cuota.desgravamen = Math.round(cuota.saldoFinal * (0.027/100));
+      }else if(this.banco2 == "COMERCIO"){
+        cuota.desgravamen = Math.round(cuota.saldoFinal * (0.75/100));
+      }else if(this.banco2 == "BANBIF"){
+        cuota.desgravamen = Math.round(cuota.saldoFinal * (0.111/100));
+      }else if(this.banco2 == "HUANCAYO"){
+        cuota.desgravamen = Math.round(cuota.saldoFinal * (0.0800/100));
+      }else if(this.banco2 == "CUSCO"){
+        cuota.desgravamen = Math.round(cuota.saldoFinal * (0.0600/100));
+      }else if(this.banco2 == "AREQUIPA"){
+        cuota.desgravamen = Math.round(cuota.saldoFinal * (0.05/100));
+      }else if(this.banco2 == "EFECTIVA"){
+        cuota.desgravamen = Math.round(cuota.saldoFinal * (0.035/100));
+      }else if(this.banco2  == "CREDISCOTIA"){
+        cuota.desgravamen = Math.round(cuota.saldoFinal * (0.0320/100));
+      }else if(this.banco2 == "MICASITA"){
+        cuota.desgravamen = Math.round(cuota.saldoFinal * (0.0670/100));
+      }
+
+
 
 
 
@@ -232,17 +292,17 @@ export class AmortizacionComponent implements OnInit {
 //TODO prueba
 
 
-      // if(this.plazoGraciaPeriodo == cuotaIndex){
-      //   cuota.plazoGracia ='T';
-      //   cuota.cuota = 0;
-      //   cuota.amortizacion = 0;
-      //   cuota.saldoFinal= cuota.saldoInicial + cuota.interes;
-      // }
-      // else{
-      //   cuota.plazoGracia = 'S';
-      // }
+      if(cuotaIndex == 1){
+        cuota.plazoGracia ='T';
+        cuota.cuota = 0;
+        cuota.amortizacion = 0;
+        cuota.saldoFinal= cuota.saldoInicial + cuota.interes;
+      }
+      else{
+        cuota.plazoGracia = 'S';
+      }
 
-      cuota.plazoGracia = 'S';
+      // cuota.plazoGracia = 'S';
       // if(cuotaIndex==2 || cuotaIndex == 3){
       //   this.plazoGracia ='P';
       // }
