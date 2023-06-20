@@ -1,14 +1,14 @@
 [
     {
-        "nombre":"Home",
-        "redirect":"/dashboard"
+        "nombre":"Inicio",
+        "redirect":"/inicio"
     },
     {
-        "nombre":"Amortizacion",
+        "nombre":"Amortización",
         "redirect":"/amortizacion"
     },
     {
-        "nombre":"Reportes",
+        "nombre":"About",
         "redirect":"/reportes"
     }
 

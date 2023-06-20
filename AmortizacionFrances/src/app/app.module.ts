@@ -8,9 +8,21 @@ import { LoginComponent } from './components/login/login.component';
 import { SharedModule } from './components/shared/shared.module';
 import { RegisterComponent } from './components/register/register.component';
 import {FormsModule} from "@angular/forms";
-import {UsersService} from "./components/dashboard/services/users.service";
-import {AmortizacionService} from "./components/dashboard/services/amortizacion.service";
-import {DashboardModule} from "./components/dashboard/dashboard.module";
+import {UsersService} from "./components/services/users.service";
+import {AmortizacionService} from "./components/services/amortizacion.service";
+
+import {CommonModule} from "@angular/common";
+
+import {MatGridListModule} from "@angular/material/grid-list";
+import {MatCardModule} from "@angular/material/card";
+import {InicioComponent} from "./components/inicio/inicio.component";
+import {NavbarComponent} from "./components/navbar/navbar.component";
+import {AmortizacionComponent} from "./components/amortizacion/amortizacion.component";
+import {ReportesComponent} from "./components/reportes/reportes.component";
+import {SeparadorMilesPipe} from "./components/amortizacion/separador-miles-pipe.pipe";
+import {DesgravamenComponent} from "./components/desgravamen/desgravamen.component";
+import {ObjToArrayPipe} from "./components/reportes/objToArray";
+import {MatCheckboxModule} from "@angular/material/checkbox";
 
 
 
@@ -19,7 +31,14 @@ import {DashboardModule} from "./components/dashboard/dashboard.module";
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+      InicioComponent,
+      NavbarComponent,
+      AmortizacionComponent,
+      ReportesComponent,
+      SeparadorMilesPipe,
+      DesgravamenComponent,
+      ObjToArrayPipe
   ],
     imports: [
         BrowserModule,
@@ -27,7 +46,12 @@ import {DashboardModule} from "./components/dashboard/dashboard.module";
         BrowserAnimationsModule,
         SharedModule,
         FormsModule,
-        DashboardModule
+        CommonModule,
+        SharedModule,
+        MatGridListModule,
+        FormsModule,
+        MatCardModule,
+        MatCheckboxModule
     ],
   providers: [UsersService, AmortizacionService],
   bootstrap: [AppComponent]

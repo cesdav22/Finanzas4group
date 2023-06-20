@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms'
 import { MatSnackBar } from '@angular/material/snack-bar'
 import { Router } from '@angular/router';
-import {UsersService} from "../dashboard/services/users.service";
+import {UsersService} from "../services/users.service";
 import {User} from "../../interfaces/user";
 import {MatTableDataSource} from "@angular/material/table";
 @Component({
@@ -11,6 +11,10 @@ import {MatTableDataSource} from "@angular/material/table";
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  // password!: string;
+  showPassword: boolean = false;
+
+
   form: FormGroup
   loading = false;
   newUser!: User;
@@ -85,7 +89,7 @@ export class LoginComponent implements OnInit {
   fakeLoading() {
     this.loading = true;
     setTimeout(() => {
-      this.router.navigate(['dashboard']);
+      this.router.navigate(['inicio']);
     }, 1500);
 
   }
@@ -102,7 +106,7 @@ export class LoginComponent implements OnInit {
 
   getAllUsers() {
     this.loginService.getAll().subscribe((response: any) => {
-      this.users = response;
+      this.users = response.content;
     });
   }
 

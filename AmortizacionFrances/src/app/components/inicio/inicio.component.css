@@ -1,0 +1,88 @@
+
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.navbar img {
+    height: 50px;
+    width: 140px;
+    margin-right: 10px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.content .logo {
+    margin-right: 20px;
+
+}
+img{
+    width: 80%;
+}
+.content .divider {
+    border-left: 1px solid #ccc;
+    height: 80%;
+    margin: 0 20px;
+}
+
+.content .text {
+    text-align: center;
+    width: 50%;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.3);
+    font-family: "Arial", sans-serif; /* Cambia "Arial" por la fuente que desees */
+}
+
+p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    line-height: 1.5;
+    text-shadow: 2px 2px 4px rgba(35, 40, 33, 0.3);
+    font-family: "Cascadia Code", sans-serif; /* Cambia "Arial" por la fuente que desees */
+}
+
+/*.content .text h1 {*/
+/*    color: white;*/
+/*    font-weight: bold;*/
+/*}*/
+/*.content .text p {*/
+/*    text-align: center;*/
+/*    font-weight: bold;*/
+
+/*}*/
+
+
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+
+    z-index: -1;
+}
+
+.background-image:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.66) 22%, rgba(0, 0, 0, 0.53) 43%, rgba(0, 0, 0, 0.53) 62%, rgba(0, 0, 0, 0.42) 88%);
+}

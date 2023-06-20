@@ -1,0 +1,290 @@
+<!--<div class="container">-->
+<!--    <mat-toolbar>-->
+<!--        <span>Amortizacion</span>-->
+<!--      </mat-toolbar>-->
+<!--    </div>-->
+
+
+<!--<app-navbar></app-navbar>-->
+
+
+
+<!--<mat-toolbar class="toolbar" style="background-color: #BC3687" color="warn">-->
+<!--    <div class="container-center">-->
+<!--        <span class="titulo-toolbar">Calculadora de cuotas - Sistema francés</span>-->
+<!--    </div>-->
+<!--</mat-toolbar>-->
+
+
+<!--    <div class="body" style="background-image: url(assets/img/FONDO_MIVIVIENDA.jpg)" role="img"-->
+<!--         aria-label="Specialist doctor in dermatology"></div>-->
+
+
+<app-navbar></app-navbar>
+<div class="background-image" style="background-image: url(assets/img/economia.jpg)" role="img"
+     aria-label="Specialist doctor in dermatology"></div>
+<div class="content" role="main">
+
+
+
+    <form class="example-form">
+        <h3 class="centrado-texto">Ingrese el monto, plazo (cuotas) y la tasa</h3>
+        <!-- <mat-grid-list cols="2" rowHeight="3:1"> -->
+        <!-- <mat-grid-tile> -->
+        <div class="container-center">
+            <mat-form-field class="example-full-width field-capital" appearance="fill" >
+                <mat-label style="color: white;">Precio de venta</mat-label>
+                <input type="number" name="capital" matInput [(ngModel)]="capital" style="color: white;" />
+            </mat-form-field>
+            <div class="separation"></div>
+            <mat-form-field class="example-full-width field-capital" appearance="fill">
+                <mat-label style="color: white;">Cuota Inicial</mat-label>
+                <input type="number" name="capital" matInput [(ngModel)]="cuotaInicial" style="color: white;" />
+            </mat-form-field>
+            <div class="separation"></div>
+            <mat-form-field class="example-full-width field-capital" appearance="fill" >
+                <mat-label style="color: white;">Frecuencia</mat-label>
+                <input type="text" name="capital"  matInput [(ngModel)]="frecuencia" style="color: white;" />
+            </mat-form-field>
+
+
+        </div>
+
+        <mat-grid-list cols="5" rowHeight="1:1">
+
+            <mat-grid-tile>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label style="color: white;">N° de años</mat-label>
+                    <input type="number" name="plazo" matInput maxlength="5" [(ngModel)]="plazo" style="color: white;" />
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile></mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label style="color: white;">Tasa</mat-label>
+                    <input type="number" name="tasa" matInput maxlength="50" [(ngModel)]="tazaInteres"style="color: white;" />
+                </mat-form-field>
+            </mat-grid-tile>
+<!--            TODO: hacer mas input datos de entrada-->
+<!--            <mat-grid-tile></mat-grid-tile>-->
+<!--            <mat-grid-tile>-->
+<!--                <mat-form-field class="example-full-width" appearance="fill">-->
+<!--                    <mat-label style="color: white;">Plazo de gracia(En que periodo quiere el plazo de gracia)</mat-label>-->
+<!--                    <input name="Plazo de gracia periodo"  matInput maxlength="50" [(ngModel)]="plazoGraciaPeriodo"style="color: white;"  />-->
+<!--                </mat-form-field>-->
+<!--            </mat-grid-tile>-->
+
+            <mat-grid-tile></mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label style="color: white;">Banco</mat-label>
+                    <input type="text" name="Banco"  matInput maxlength="50" [(ngModel)]="banco"style="color: white;"  />
+                </mat-form-field>
+            </mat-grid-tile>
+
+<!--            <mat-grid-tile></mat-grid-tile>-->
+<!--            <mat-grid-tile>-->
+<!--                <mat-form-field class="example-full-width" appearance="fill">-->
+<!--                    <mat-label style="color: white;">Cuota Inicial</mat-label>-->
+<!--                    <input name="tasa" matInput maxlength="50" [(ngModel)]="tazaInteres"style="color: white;" />-->
+<!--                </mat-form-field>-->
+<!--            </mat-grid-tile>-->
+
+<!--            <mat-grid-tile>-->
+<!--                <mat-form-field class="example-full-width" appearance="fill">-->
+<!--                    <mat-label style="color: white;">Tasa</mat-label>-->
+<!--                    <input name="tasa" matInput maxlength="50" [(ngModel)]="tazaInteres"style="color: white;" />-->
+<!--                </mat-form-field>-->
+<!--            </mat-grid-tile>-->
+        </mat-grid-list>
+        <div class="input-container">
+            <input type="text" id="myInput">
+            <label for="myInput">Texto descriptivo:</label>
+        </div>
+        <div class="container-button">
+            <button mat-raised-button (click)="procesar()" class = "my-button">Generar</button>
+            <button mat-raised-button  (click)="migrarTabla()" class = "my-button">Migrar tabla</button>
+        </div>
+
+    </form>
+
+
+<div #contentToExport>
+
+    <!-- Coloca aquí el contenido HTML que deseas exportar a PDF -->
+
+    <div class="responsive">
+        <div class="divider"></div>
+
+        <h1 style="color: #000000" *ngIf="mostrarBoton">Su plan de pagos es: </h1>
+
+        <div class="tabla-container">
+        <table
+                mat-table
+                [dataSource]="dataSource"
+                class="mat-elevation-z8 tabla-cuotas"
+                *ngIf="this.cuotas.length"
+        >
+            <ng-container matColumnDef="numero-cuota">
+                <th mat-header-cell *matHeaderCellDef><b>Nro. Cuota</b></th>
+                <td mat-cell *matCellDef="let element">{{ element.numeroCuota }}</td>
+                <td mat-footer-cell *matFooterCellDef>Total</td>
+            </ng-container>
+
+            <ng-container matColumnDef="TEA">
+                <th mat-header-cell *matHeaderCellDef><b>TEA</b></th>
+                <td mat-cell *matCellDef="let element">{{ tazaInteres | number: '1.2-2'}}%</td>
+                <td mat-footer-cell *matFooterCellDef>Total</td>
+            </ng-container>
+
+            <ng-container matColumnDef="TES">
+                <th mat-header-cell *matHeaderCellDef><b>TES</b></th>
+                <td mat-cell *matCellDef="let element">{{ interesMensual | number: '1.2-7'}}%</td>
+                <td mat-footer-cell *matFooterCellDef>Total</td>
+            </ng-container>
+
+
+            <ng-container matColumnDef="plazo-gracia">
+                <th mat-header-cell *matHeaderCellDef><b>Plazo Gracia</b></th>
+                <td mat-cell *matCellDef="let element">
+                    {{ element.plazoGracia }}
+                </td>
+                <!--                <td mat-footer-cell *matFooterCellDef>-->
+                <!--                    {{ totalAmortizacion  }}-->
+                <!--                </td>-->
+            </ng-container>
+
+            <ng-container matColumnDef="saldo-inicial">
+                <th mat-header-cell *matHeaderCellDef><b>Saldo Inicial</b></th>
+                <td mat-cell *matCellDef="let element">
+                    {{ element.saldoInicial  | number: '1.2-2' }}
+                </td>
+                <td mat-footer-cell *matFooterCellDef></td>
+            </ng-container>
+
+
+            <ng-container matColumnDef="interes">
+                <th mat-header-cell *matHeaderCellDef><b>Interés</b></th>
+                <td mat-cell *matCellDef="let element">
+                    {{ element.interes | number: '1.2-2'  }}
+                </td>
+                <td mat-footer-cell *matFooterCellDef>
+                    {{ totalInteres  }}
+                </td>
+            </ng-container>
+
+
+            <ng-container matColumnDef="cuota">
+                <th mat-header-cell *matHeaderCellDef><b>Cuota</b></th>
+                <td mat-cell *matCellDef="let element">
+                    {{ element.cuota | number: '1.2-2'  }}
+                </td>
+                <td mat-footer-cell *matFooterCellDef>
+                    {{ totalCuotas  }}
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="amortizacion">
+                <th mat-header-cell *matHeaderCellDef><b>Amortizacion</b></th>
+                <td mat-cell *matCellDef="let element">
+                    {{ element.amortizacion  | number: '1.2-2'   }}
+                </td>
+                <td mat-footer-cell *matFooterCellDef>
+                    {{ totalAmortizacion  }}
+                </td>
+            </ng-container>
+
+
+            <ng-container matColumnDef="saldo-final">
+                <th mat-header-cell *matHeaderCellDef><b>Saldo Final</b></th>
+                <td mat-cell *matCellDef="let element">
+                    {{ element.saldoFinal | number: '1.2-2'  }}
+                </td>
+                <td mat-footer-cell *matFooterCellDef></td>
+            </ng-container>
+
+
+
+            <ng-container matColumnDef="desgravamen">
+                <th mat-header-cell *matHeaderCellDef><b>Desgravamen</b></th>
+                <td mat-cell *matCellDef="let element">
+                    {{ element.desgravamen | number: '1.2-2' }}
+                </td>
+                <td mat-footer-cell *matFooterCellDef></td>
+            </ng-container>
+
+
+
+
+<!--            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>-->
+<!--            <tr mat-row *matRowDef="let row; columns: displayedColumns"-->
+<!--                [ngClass]="{'editable-row': reportData.id === row.id}"></tr>-->
+<!--            <tr mat-footer-row *matFooterRowDef="columnasTabla"></tr>-->
+
+            <tr mat-header-row *matHeaderRowDef="columnasTabla"></tr>
+            <tr mat-row *matRowDef="let row; columns: columnasTabla"></tr>
+<!--            <tr mat-footer-row *matFooterRowDef="columnasTabla"></tr>-->
+        </table>
+    </div>
+
+    <br />
+    <br />
+    <br />
+</div>
+
+</div>
+
+
+
+
+<!--<table mat-table [dataSource]="dataSource" class="mat-elevation-z0">-->
+<!--    <ng-container matColumnDef="id">-->
+<!--        <th mat-header-cell *matHeaderCellDef >#Id</th>-->
+<!--        <td mat-cell *matCellDef="let element">{{ element.id }}</td>-->
+<!--    </ng-container>-->
+<!--    <ng-container matColumnDef="nroCuota">-->
+<!--        <th mat-header-cell *matHeaderCellDef>Nro Cuota</th>-->
+<!--        <td mat-cell *matCellDef="let element">{{ element.nroCuota }}</td>-->
+<!--    </ng-container>-->
+<!--    <ng-container matColumnDef="amortizacion">-->
+<!--        <th mat-header-cell *matHeaderCellDef >Amortizacion</th>-->
+<!--        <td mat-cell *matCellDef="let element">{{ element.amortizacion }}</td>-->
+<!--    </ng-container>-->
+<!--    <ng-container matColumnDef="interes">-->
+<!--        <th mat-header-cell *matHeaderCellDef>Interes</th>-->
+<!--        <td mat-cell *matCellDef="let element">{{ element.interes }}</td>-->
+<!--    </ng-container>-->
+<!--    <ng-container matColumnDef="saldo">-->
+<!--        <th mat-header-cell *matHeaderCellDef>Saldo</th>-->
+<!--        <td mat-cell *matCellDef="let element">{{ element.saldo}}</td>-->
+<!--    </ng-container>-->
+<!--    <ng-container matColumnDef="cuota">-->
+<!--        <th mat-header-cell *matHeaderCellDef>Cuota</th>-->
+<!--        <td mat-cell *matCellDef="let element">{{ element.cuota}}</td>-->
+<!--    </ng-container>-->
+<!--    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>-->
+<!--    <tr mat-row *matRowDef="let row; columns: displayedColumns"-->
+<!--        [ngClass]="{'editable-row': reportData.id === row.id}"></tr>-->
+<!--</table>-->
+
+
+<div class="footer">
+    <mat-toolbar class="transparent-toolbar">
+        <div class="container-center">
+            <!--            <a href="https://github.com/ArielAyala/calculador-cuotas-sistema-frances" target="_blank">-->
+            <!--                <img src="assets/logo-github.svg" alt="logo github" class="logo-github">-->
+            <!--            </a>-->
+
+            <div class="button-container">
+<!--                <button mat-raised-button (click)="navigateTo()" class="my-button">Acceder al Seguro de desgravamen</button>-->
+                <button mat-raised-button *ngIf="mostrarBoton"  (click)="downloadAsPDF()" class="my-button">Descargar PDF</button>
+            </div>
+
+
+
+        </div>
+    </mat-toolbar>
+</div>
+</div>
+
+<router-outlet></router-outlet>

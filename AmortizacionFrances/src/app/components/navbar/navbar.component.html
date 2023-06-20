@@ -1,0 +1,12 @@
+<mat-toolbar>
+    <div class="navbar">
+        <img src="../../../assets/img/fondo_mivivienda.png" alt="Logo">
+    </div>
+        <div class="mat-spacer"></div>
+      <a mat-button *ngFor="let item of menu" [routerLink]="item.redirect">{{item.nombre}}</a>
+<!--        <div class="mat-spacer"></div>-->
+      <a routerLink="/logout" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>logout</mat-icon>
+      </a>
+</mat-toolbar>
+

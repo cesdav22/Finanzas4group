@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {UsersService} from "../dashboard/services/users.service";
+import {UsersService} from "../services/users.service";
 import {User} from "../../interfaces/user";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
@@ -10,6 +10,9 @@ import {Router} from "@angular/router";
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+  // password2!: string;
+  showPassword: boolean = false;
+
   loading = false;
   userData!: User;
   newUser!: User;
@@ -55,7 +58,10 @@ export class RegisterComponent implements OnInit {
     }, 1500);
 
   }
-
+  isChecked: boolean = false;
+  toggleChecked() {
+    this.isChecked = !this.isChecked;
+  }
   addUser(){
     this.newUser.id=0;
     this.newUser.email = this.registerForm.value.email;
@@ -67,7 +73,7 @@ export class RegisterComponent implements OnInit {
     this.newUser.address = this.registerForm.value.address;
     this.newUser.number_telephone = this.registerForm.value.number_telephone;
     this.newUser.nationality = this.registerForm.value.nationality;
-    this.newUser.bonus_good_payer = Boolean(this.registerForm.value.bonus_good_payer);
+    this.newUser.bonus_good_payer = this.isChecked;
 
     //data missing
     // this.newUser.email = this.registerForm.value.email;

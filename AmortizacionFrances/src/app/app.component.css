@@ -1,0 +1,153 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.navbar img {
+    height: 50px;
+    width: 140px;
+    margin-right: 10px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 50%;
+
+
+}
+
+.content .logo {
+    margin-right: 20px;
+}
+
+.content .divider {
+    border-left: 1px solid #ccc;
+
+    height: 80%;
+    margin: 0 20px;
+}
+
+.content .text {
+    text-align: center;
+}
+
+
+
+/*.hero h1 {*/
+/*    align-items: center;*/
+/*    width: 100%;*/
+/*    font: bold 50px 'Open Sans', sans-serif;*/
+
+/*}*/
+
+/*.hero p{*/
+/*    font: normal 15px 'Open Sans', sans-serif;*/
+/*    width: 95%;*/
+
+/*}*/
+/*.hero{*/
+/*    text-align: center;*/
+/*    display: flex;*/
+/*    justify-content: end;*/
+/*    height: 80%;*/
+/*}*/
+/*.hero .phrase{*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    width: 50%;*/
+/*    justify-content: center;*/
+/*    !*text-align: center;*!*/
+/*    !*justify-content: space-around;*!*/
+/*    !*margin: 200px 80px;*!*/
+/*}*/
+/*!*.phrase button{*!*/
+/*!*    margin-top: 10px;*!*/
+/*!*    font-size: large;*!*/
+/*!*    background-color: #B49587;*!*/
+/*!*}*!*/
+
+/*.phrase{*/
+/*    color: white;*/
+/*}*/
+
+
+/* Hero Section */
+
+.hero {
+    position: relative;
+    justify-content: center;
+    min-height: 100vh;
+    color: #fff;
+    text-align: center;
+
+}
+
+
+.hero .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-color: #2196F3;
+    z-index: -1;
+}
+
+.hero .background-image:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #414a4f;
+    opacity: 0.75;
+}
+
+.hero h1 {
+    font: bold 60px 'Open Sans', sans-serif;
+    margin-bottom: 40px;
+}
+
+.hero h3 {
+    font: normal 28px 'Open Sans', sans-serif;
+    margin-bottom: 40px;
+}
+
+.hero a.btn {
+    padding: 20px 46px;
+}
+
+@media (max-width: 800px) {
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero h3 {
+        font-size: 24px;
+    }
+
+    .hero a.btn {
+        padding: 15px 40px;
+    }
+
+}
