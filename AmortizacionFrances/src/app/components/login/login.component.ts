@@ -70,6 +70,7 @@ export class LoginComponent implements OnInit {
     );
 
     if (user) {
+      sessionStorage.setItem("user", user.id)
       this.fakeLoading();
       console.log('Inicio de sesión exitoso');
     } else {

@@ -10,4 +10,5 @@ export interface Cuota {
     saldoFinal: number;
 
     plazoGracia:string;
+    cronograma?: number;
 }

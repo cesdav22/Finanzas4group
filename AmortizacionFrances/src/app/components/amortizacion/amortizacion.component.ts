@@ -107,6 +107,8 @@ export class AmortizacionComponent implements OnInit {
     this.currentUser = Number(sessionStorage.getItem("typeId"));
   }
   users: User[]=[];
+  reports: Cuota[] = [];
+  lastReport: Cuota[] = []
   getAllUsers() {
     this.loginService.getAll().subscribe((response: any) => {
       this.users = response.content;
@@ -119,6 +121,19 @@ export class AmortizacionComponent implements OnInit {
     // this.calcular();
     // this.addReport();
     // this.getAllReports();
+    this.loginService.getReportByIdFromUser(Number(sessionStorage.getItem("user"))).subscribe((response: any) => {
+      this.reports = response.content;
+    });
+
+    //ultima tabla
+    for (let i = 0; i < this.reports.length; i++) {
+      if(this.reports.at(i)!.cronograma == this.reports.at(this.reports.length - 1)!.cronograma) {
+        this.lastReport.push(this.reports.at(i)!);
+      }
+    }
+
+
+
 
   }
 
@@ -336,12 +351,21 @@ export class AmortizacionComponent implements OnInit {
       //   this.plazoGracia ='S';
       // }
       //
+      //
+      // const myList: Cuota[] = [
+      //   this.loginService.getReportByIdFromUser(Number(sessionStorage.getItem("user")))
+      // ];
+      //cuota.cronograma = myList.at(myList.length -1).cronograma + 1;
 
+      this.loginService.getReportByIdFromUser(Number(sessionStorage.getItem("user"))).subscribe((response: any) => {
+        this.reports = response.content;
+      });
 
+      cuota.cronograma = this.reports.at(this.reports.length - 1)!.cronograma! + 1
 
       this.cuotas.push(cuota);
       cuota.saldoFinal = cuota.saldoFinal - cuota.amortizacion;
-
+      this.loginService.createReportByUserId(cuota, Number(sessionStorage.getItem("user"))).subscribe(response =>{})
 
 
       // this.desgravamen = 0.2;
@@ -390,7 +414,7 @@ export class AmortizacionComponent implements OnInit {
     //   this.dataSource2.data.push({...response});
     //   this.dataSource2.data = this.dataSource2.data.map((o: any) => { return o});
     // });
-    this.addCuota()
+    // this.addCuota()
   }
 
 
