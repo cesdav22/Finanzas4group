@@ -41,7 +41,7 @@ h1 {
     font-size: 2.5rem;
     color: white;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(82, 54, 149, 0.8);
     font-family: "Arial", sans-serif; /* Cambia "Arial" por la fuente que desees */
 }
 
@@ -51,6 +51,16 @@ p {
     line-height: 1.5;
     text-shadow: 2px 2px 4px rgba(35, 40, 33, 0.3);
     font-family: "Cascadia Code", sans-serif; /* Cambia "Arial" por la fuente que desees */
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 /*.content .text h1 {*/

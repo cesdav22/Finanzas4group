@@ -97,10 +97,10 @@
 <!--                </mat-form-field>-->
 <!--            </mat-grid-tile>-->
         </mat-grid-list>
-        <div class="input-container">
-            <input type="text" id="myInput">
-            <label for="myInput">Texto descriptivo:</label>
-        </div>
+<!--        <div class="input-container">-->
+<!--            <input type="text" id="myInput">-->
+<!--            <label for="myInput">Texto descriptivo:</label>-->
+<!--        </div>-->
         <div class="container-button">
             <button mat-raised-button (click)="procesar()" class = "my-button">Generar</button>
             <button mat-raised-button  (click)="migrarTabla()" class = "my-button">Migrar tabla</button>
@@ -230,7 +230,7 @@
     <br />
     <br />
     <br />
-</div>
+    </div>
 
 </div>
 
@@ -278,6 +278,7 @@
             <div class="button-container">
 <!--                <button mat-raised-button (click)="navigateTo()" class="my-button">Acceder al Seguro de desgravamen</button>-->
                 <button mat-raised-button *ngIf="mostrarBoton"  (click)="downloadAsPDF()" class="my-button">Descargar PDF</button>
+                <button mat-raised-button *ngIf="mostrarBoton"  (click)="calculateVAN()" class="my-button">CALCULAR VAN DEL PROYECTO</button>
             </div>
 
 

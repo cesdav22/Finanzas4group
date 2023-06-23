@@ -1,0 +1,109 @@
+
+<app-navbar></app-navbar>
+<div class="background-image" style="background-image: url(assets/img/vantir.jpg)" role="img"
+     aria-label="Specialist doctor in dermatology"></div>
+
+<!--<mat-dialog-content class="mat-typography" style="width: 1000px">-->
+
+
+<!--    &lt;!&ndash;    table&ndash;&gt;-->
+<!--    <div class="responsive">-->
+<!--        <div class="divider"></div>-->
+
+<!--        <div class="tabla-container">-->
+<!--            <table mat-table (click)="traerData()" [dataSource]="dataSource" class="mat-elevation-z8 tabla-cuotas" *ngIf="this.dataSource.data.length " style="width: 100%">-->
+<!--                <ng-container matColumnDef="numero-cuota">-->
+<!--                    <th mat-header-cell *matHeaderCellDef><b>Nro. Cuota</b></th>-->
+<!--                    <td mat-cell *matCellDef="let element">{{ element.numeroCuota }}</td>-->
+<!--                    <td mat-footer-cell *matFooterCellDef>Total</td>-->
+<!--                </ng-container>-->
+
+
+
+<!--                <ng-container matColumnDef="plazo-gracia">-->
+<!--                    <th mat-header-cell *matHeaderCellDef><b>Plazo Gracia</b></th>-->
+<!--                    <td mat-cell *matCellDef="let element">-->
+<!--                        {{ element.plazoGracia }}-->
+<!--                    </td>-->
+<!--                    <td mat-footer-cell *matFooterCellDef></td>-->
+<!--                </ng-container>-->
+
+<!--                <ng-container matColumnDef="saldo-inicial">-->
+<!--                    <th mat-header-cell *matHeaderCellDef><b>Saldo Inicial</b></th>-->
+<!--                    <td mat-cell *matCellDef="let element">-->
+<!--                        {{ element.saldoInicial  | number: '1.2-2' }}-->
+<!--                    </td>-->
+<!--                    <td mat-footer-cell *matFooterCellDef></td>-->
+<!--                </ng-container>-->
+
+
+<!--                <ng-container matColumnDef="interes">-->
+<!--                    <th mat-header-cell *matHeaderCellDef><b>Interés</b></th>-->
+<!--                    <td mat-cell *matCellDef="let element">-->
+<!--                        {{ element.interes | number: '1.2-2'  }}-->
+<!--                    </td>-->
+
+<!--                </ng-container>-->
+
+
+<!--                <ng-container matColumnDef="cuota">-->
+<!--                    <th mat-header-cell *matHeaderCellDef><b>Cuota</b></th>-->
+<!--                    <td mat-cell *matCellDef="let element">-->
+<!--                        {{ element.cuota | number: '1.2-2'  }}-->
+<!--                    </td>-->
+
+<!--                </ng-container>-->
+
+<!--                <ng-container matColumnDef="amortizacion">-->
+<!--                    <th mat-header-cell *matHeaderCellDef><b>Amortizacion</b></th>-->
+<!--                    <td mat-cell *matCellDef="let element">-->
+<!--                        {{ element.amortizacion  | number: '1.2-2'   }}-->
+<!--                    </td>-->
+
+<!--                </ng-container>-->
+
+
+<!--                <ng-container matColumnDef="saldo-final">-->
+<!--                    <th mat-header-cell *matHeaderCellDef><b>Saldo Final</b></th>-->
+<!--                    <td mat-cell *matCellDef="let element">-->
+<!--                        {{ element.saldoFinal | number: '1.2-2'  }}-->
+<!--                    </td>-->
+<!--                    <td mat-footer-cell *matFooterCellDef></td>-->
+<!--                </ng-container>-->
+
+
+
+<!--                <ng-container matColumnDef="desgravamen">-->
+<!--                    <th mat-header-cell *matHeaderCellDef><b>Desgravamen</b></th>-->
+<!--                    <td mat-cell *matCellDef="let element">-->
+<!--                        {{ element.desgravamen | number: '1.2-2' }}-->
+<!--                    </td>-->
+<!--                    <td mat-footer-cell *matFooterCellDef></td>-->
+<!--                </ng-container>-->
+
+
+
+
+<!--                &lt;!&ndash;            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>&ndash;&gt;-->
+<!--                &lt;!&ndash;            <tr mat-row *matRowDef="let row; columns: displayedColumns"&ndash;&gt;-->
+<!--                &lt;!&ndash;                [ngClass]="{'editable-row': reportData.id === row.id}"></tr>&ndash;&gt;-->
+<!--                &lt;!&ndash;            <tr mat-footer-row *matFooterRowDef="columnasTabla"></tr>&ndash;&gt;-->
+
+<!--                <tr mat-header-row *matHeaderRowDef="columnasTabla"></tr>-->
+<!--                <tr mat-row *matRowDef="let row; columns: columnasTabla"></tr>-->
+<!--                &lt;!&ndash;            <tr mat-footer-row *matFooterRowDef="columnasTabla"></tr>&ndash;&gt;-->
+<!--            </table>-->
+<!--        </div>-->
+
+<!--        <br />-->
+<!--        <br />-->
+<!--        <br />-->
+<!--    </div>-->
+
+<!--</mat-dialog-content>-->
+<!--<mat-dialog-actions align="end">-->
+<!--    <button mat-button mat-dialog-close>Cancel</button>-->
+<!--    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button>-->
+<!--</mat-dialog-actions>-->
+
+<button mat-button (click)="openDialog()">Open dialog</button>

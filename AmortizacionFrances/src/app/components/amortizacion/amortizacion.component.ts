@@ -11,6 +11,7 @@ import * as fs from "fs";
 import {Cuota} from "../../interfaces/cuota";
 import {UsersService} from "../services/users.service";
 import {User} from "../../interfaces/user";
+import {ReportFinal} from "../../interfaces/report-final";
 
 
 // export interface Cuota {
@@ -47,6 +48,8 @@ export class AmortizacionComponent implements OnInit {
 
   cuotaData: Cuota ;
   reportData: Report;
+
+  reportDataFinal: ReportFinal;
   // dataSource: cuota[] = [];
 
   dataSource: MatTableDataSource<any>;
@@ -102,6 +105,7 @@ export class AmortizacionComponent implements OnInit {
   constructor(private _snackBar: MatSnackBar, private router: Router, private reportsService: AmortizacionService, private loginService : UsersService) {
     this.reportData = {} as Report;
     this.cuotaData = {} as Cuota;
+    this.reportDataFinal = {} as ReportFinal;
     this.dataSource = new MatTableDataSource<any>();
     this.dataSource2.data = [];
     this.currentUser = Number(sessionStorage.getItem("typeId"));
@@ -123,14 +127,18 @@ export class AmortizacionComponent implements OnInit {
     // this.getAllReports();
     this.loginService.getReportByIdFromUser(Number(sessionStorage.getItem("user"))).subscribe((response: any) => {
       this.reports = response.content;
+      console.log(`Imprimiendo Reports: ${JSON.stringify(this.reports)}`);
     });
 
+
+
+
     //ultima tabla
-    for (let i = 0; i < this.reports.length; i++) {
-      if(this.reports.at(i)!.cronograma == this.reports.at(this.reports.length - 1)!.cronograma) {
-        this.lastReport.push(this.reports.at(i)!);
-      }
-    }
+    // for (let i = 0; i < this.reports.length; i++) {
+    //   if(this.reports.at(i)!.cronograma == this.reports.at(this.reports.length - 1)!.cronograma) {
+    //     this.lastReport.push(this.reports.at(i)!);
+    //   }
+    // }
 
 
 
@@ -155,10 +163,11 @@ export class AmortizacionComponent implements OnInit {
     } else {
       this.calcular();
       this.mostrarTabla()
+      console.log(`This is a reports of user: "  ${JSON.stringify(this.reports)}`);
       // this.addCuota()
     }
-    //
-    //
+
+
     // this.calcular();
     // this.mostrarTabla()
   }
@@ -182,6 +191,14 @@ export class AmortizacionComponent implements OnInit {
 
 
   jsonData:any[] = [];
+
+  valorCuota: number = 0;
+  valorCuotaIndex: number = 0;
+  sumaDeValoresCuotaIndex: number = 0;
+  resultadoVAN: number = 0;
+
+
+
 
 
   reportData2! :[];
@@ -237,8 +254,10 @@ export class AmortizacionComponent implements OnInit {
 
       let cuota: Cuota = {
 
-        plazoGracia: "",
-        id:cuotaIndex,
+        // cronograma: 0,
+        //
+        // plazoGracia: "",
+        // id:cuotaIndex,
         numeroCuota: cuotaIndex,
         saldoInicial: this.saldoInicial,
         saldoFinal: this.saldoFinal
@@ -295,7 +314,14 @@ export class AmortizacionComponent implements OnInit {
       }
 
 
+      // console.log(this.datos.at(1));
 
+      // this.valorCuota = cuota.amortizacion + cuota.interes
+      this.valorCuota = cuota.cuota;
+      this.valorCuotaIndex = (this.valorCuota)/Math.pow(1 + (this.interesMensual/100), cuotaIndex);
+      console.log(`VALOR CUOTA INDEX ${this.valorCuotaIndex}`);
+      this.sumaDeValoresCuotaIndex += this.valorCuotaIndex
+      console.log(`SUMA DE VALORES INDEX: ${this.sumaDeValoresCuotaIndex}`);
 
 
       // if (cuotaIndex == this.plazo) {
@@ -316,17 +342,17 @@ export class AmortizacionComponent implements OnInit {
 //TODO prueba
 
 
-      if(cuotaIndex == 1){
-        cuota.plazoGracia ='T';
-        cuota.cuota = 0;
-        cuota.amortizacion = 0;
-        cuota.saldoFinal= cuota.saldoInicial + cuota.interes;
-      }
-      else{
-        cuota.plazoGracia = 'S';
-      }
+      // if(cuotaIndex == 1){
+      //   cuota.plazoGracia ='T';
+      //   cuota.cuota = 0;
+      //   cuota.amortizacion = 0;
+      //   cuota.saldoFinal= cuota.saldoInicial + cuota.interes;
+      // }
+      // else{
+      //   cuota.plazoGracia = 'S';
+      // }
 
-      // cuota.plazoGracia = 'S';
+      cuota.plazoGracia = 'S';
       // if(cuotaIndex==2 || cuotaIndex == 3){
       //   this.plazoGracia ='P';
       // }
@@ -357,15 +383,19 @@ export class AmortizacionComponent implements OnInit {
       // ];
       //cuota.cronograma = myList.at(myList.length -1).cronograma + 1;
 
-      this.loginService.getReportByIdFromUser(Number(sessionStorage.getItem("user"))).subscribe((response: any) => {
-        this.reports = response.content;
-      });
+      // this.loginService.getReportByIdFromUser(Number(sessionStorage.getItem("user"))).subscribe((response: any) => {
+      //   this.reports = response.content;
+      // });
 
-      cuota.cronograma = this.reports.at(this.reports.length - 1)!.cronograma! + 1
+      // if(cuotaIndex == this.plazo){
+      //   cuota.cronograma = 1;
+      //   // cuota.cronograma = this.reports.at(this.reports.length - 1)!.cronograma! + 1;
+      //   console.log(`CRONOGRAMA + ${cuota.cronograma}`);
+      // }
 
       this.cuotas.push(cuota);
       cuota.saldoFinal = cuota.saldoFinal - cuota.amortizacion;
-      this.loginService.createReportByUserId(cuota, Number(sessionStorage.getItem("user"))).subscribe(response =>{})
+      // this.loginService.createReportByUserId(cuota, Number(sessionStorage.getItem("user"))).subscribe(response =>{})
 
 
       // this.desgravamen = 0.2;
@@ -384,6 +414,19 @@ export class AmortizacionComponent implements OnInit {
 
 
       this.jsonData.push(cuota);
+
+      this.reportDataFinal.id = cuotaIndex;
+      this.reportDataFinal.numeroCuota = cuotaIndex;
+      this.reportDataFinal.amortizacion =  cuota.amortizacion;
+      this.reportDataFinal.interes = cuota.interes;
+      // @ts-ignore
+      this.reportDataFinal.desgravamen =  cuota.desgravamen;
+      this.reportDataFinal.cuota = cuota.cuota;
+      this.reportDataFinal.saldoInicial = cuota.saldoInicial;
+      this.reportDataFinal.saldoFinal = cuota.saldoFinal;
+
+      this.loginService.createReportByUserId(cuota, Number(sessionStorage.getItem("user"))).subscribe(response =>{})
+
       // this.jsonData.push({ id: cuotaIndex, cuota });
       console.log(this.reportData.amortizacion );
       console.log(this.reportData.interes);
@@ -392,6 +435,8 @@ export class AmortizacionComponent implements OnInit {
 
 
     }
+
+
 
     // this.reportData = jsonData;
     console.log(JSON.stringify(this.jsonData));
@@ -417,6 +462,17 @@ export class AmortizacionComponent implements OnInit {
     // this.addCuota()
   }
 
+  calculateVAN(){
+
+    console.log(`SUMA DE VALORES INDEX: ${this.sumaDeValoresCuotaIndex}`);
+    console.log(`CUOTA MENSUAL: ${this.capital2}`);
+    this.resultadoVAN = this.sumaDeValoresCuotaIndex - this.capital2;
+    if(this.resultadoVAN < 0){
+      console.log(`EL PROYECTO NO ES RENTABLE, VALOR DEL VAN ${this.resultadoVAN}`);
+    }else{
+      console.log(`EL PROYECTO ES RENTABLE, VALOR DEL VAN ${this.resultadoVAN}`);
+    }
+  }
 
   // guardarEnDB() {
   //   const jsonDataString = JSON.stringify(this.jsonData, null, 2);
@@ -474,6 +530,14 @@ export class AmortizacionComponent implements OnInit {
 
     if (this.tazaInteres <= 0) {
       this.openSnackBar('Tasa no válida !');
+      return true;
+    }
+    if (this.plazo <0) {
+      this.openSnackBar('Plazo no válida !');
+      return true;
+    }
+    if (this.cuotaInicial <0) {
+      this.openSnackBar('Cuota Inicial no válida !');
       return true;
     }
 

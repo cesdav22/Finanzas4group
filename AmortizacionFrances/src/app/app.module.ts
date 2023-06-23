@@ -23,6 +23,10 @@ import {SeparadorMilesPipe} from "./components/amortizacion/separador-miles-pipe
 import {DesgravamenComponent} from "./components/desgravamen/desgravamen.component";
 import {ObjToArrayPipe} from "./components/reportes/objToArray";
 import {MatCheckboxModule} from "@angular/material/checkbox";
+import {VANTIRComponent} from "./components/vantir/vantir.component";
+import {MatDialogModule} from "@angular/material/dialog";
+import {DataSharingServiceService} from "./components/services/data-sharing-service.service";
+
 
 
 
@@ -38,7 +42,9 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
       ReportesComponent,
       SeparadorMilesPipe,
       DesgravamenComponent,
-      ObjToArrayPipe
+      ObjToArrayPipe,
+      VANTIRComponent,
+
   ],
     imports: [
         BrowserModule,
@@ -51,9 +57,10 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
         MatGridListModule,
         FormsModule,
         MatCardModule,
-        MatCheckboxModule
+        MatCheckboxModule,
+        MatDialogModule
     ],
-  providers: [UsersService, AmortizacionService],
+  providers: [UsersService, AmortizacionService, DataSharingServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,9 +1,14 @@
 export interface ReportFinal {
-    id: number,
+    id: number;
+    userId?:number;
+    numeroCuota?: number;
     amortizacion: number,
-    interes: number,
+    interes: number;
     desgravamen: number;
-    saldo: number,
-    cuota: number
+    cuota: number;
+    saldoInicial: number;
+    saldoFinal: number;
+    plazoGracia:string;
+    cronograma: number;
 
 }

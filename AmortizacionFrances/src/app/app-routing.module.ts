@@ -6,6 +6,7 @@ import {AmortizacionComponent} from "./components/amortizacion/amortizacion.comp
 import {DesgravamenComponent} from "./components/desgravamen/desgravamen.component";
 import {RegisterComponent} from "./components/register/register.component";
 import {InicioComponent} from "./components/inicio/inicio.component";
+import {VANTIRComponent} from "./components/vantir/vantir.component";
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path:'reportes',component: ReportesComponent},
   {path:'login',component:LoginComponent, },
   {path:'desgravamen',component: DesgravamenComponent},
+  {path:'vantir',component: VANTIRComponent},
   // {path:'login',component: LoginComponent},
   // {path:'dashboard',loadChildren:()=>import('./components/dashboard/dashboard.module').then(x=>x.DashboardModule)},
   {path:'logout',component: LoginComponent},
