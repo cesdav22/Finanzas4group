@@ -14,7 +14,7 @@ import {User} from "../../interfaces/user";
 import {ReportFinal} from "../../interfaces/report-final";
 import {DataSharingServiceService} from "../services/data-sharing-service.service";
 import {FormControl} from "@angular/forms";
-
+import {irr } from 'financial';
 
 // export interface Cuota {
 //   id:number;
@@ -92,7 +92,7 @@ export class AmortizacionComponent implements OnInit {
 
   desgravamen: number = 0;
 
-
+  saldoInicial2: number = 0;
 
   columnasTabla: string[] = [
     'numero-cuota',
@@ -109,6 +109,10 @@ export class AmortizacionComponent implements OnInit {
   ];
 
   currentUser: number;
+  //esto ya esta solo falta mandarlo al otro componente, pero verifica si asi se aya el TIR
+  tir: number = 0;
+  saldoInicialPrueba: number = 0;
+  cuotasPrueba: number[] = [];
   constructor(private _snackBar: MatSnackBar, private router: Router, private reportsService: AmortizacionService, private loginService : UsersService, private dataSharingService: DataSharingServiceService ) {
     this.reportData = {} as Report;
     this.cuotaData = {} as Cuota;
@@ -283,13 +287,14 @@ export class AmortizacionComponent implements OnInit {
 
 
 
-
+  flujosEfectivo: number[] = [];
 
   calcular() {
     console.log(`BANCO SIN UPPER CASE XD: ${this.banco}`)
     this.banco2  = this.banco.toUpperCase();
     console.log(`BANCO CON UPPER CASE XD: ${this.banco2}`)
     this.cerearVariables();
+    this.cuotasPrueba.push(-this.capital);
 
   if(this.userByIdBBP && this.cuotaInicial2>=7.5 && (this.userByIdNationality == 'peruano'
       || this.userByIdNationality== 'PERUANO')){
@@ -363,6 +368,9 @@ export class AmortizacionComponent implements OnInit {
 
       };
 
+      //this.flujosEfectivo.push(this.saldoInicial);
+      //this.saldoInicial = cuota.saldoFinal;
+
       // Interes de la cuota
       console.log(`cuota saldo: ${cuota.saldoFinal}`)
       // cuota.interes = Math.round((cuota.saldo / 100) * this.interesMensual);
@@ -373,6 +381,11 @@ export class AmortizacionComponent implements OnInit {
       console.log(`AMORTIZACION: ${cuota.amortizacion}`)
 
       cuota.cuota = this.cuotaMensual;
+
+
+      //PUSHEANDO VALORES AL ARREGLO
+      this.cuotasPrueba.push(cuota.saldoInicial);
+      console.log(`ARREGLO CUOTAS PRUEBA ${this.cuotasPrueba}`);
 
       //SEGUN BANCOS
       if(this.banco2 == "BCP"){
@@ -555,6 +568,12 @@ export class AmortizacionComponent implements OnInit {
     }
 
 
+     //this.saldoInicialPrueba = -65200;
+     //this.cuotasPrueba = [-(this.capital), this.capital, 55469.44, 45310.43, 34704.12, 23630.80, 12069.92];
+
+    // this.tir = this.calcularTIR(this.cuotasPrueba);
+    this.tir = irr(this.cuotasPrueba);
+    console.log('TIR:', this.tir);
 
     // this.reportData = jsonData;
     console.log(JSON.stringify(this.jsonData));
