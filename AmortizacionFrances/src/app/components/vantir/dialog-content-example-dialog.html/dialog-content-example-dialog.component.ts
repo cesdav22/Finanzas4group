@@ -24,6 +24,8 @@ export class DialogContentExampleDialog implements OnInit {
   datos!: any[];
 
   cuotaxD: ReportFinal
+
+  vanResult: number = 0;
   constructor(private loginService: UsersService, private dataSharingService: DataSharingServiceService) {
     this.dataSource = new MatTableDataSource<any>();
     this.cuotaxD = {} as ReportFinal;
@@ -43,6 +45,7 @@ export class DialogContentExampleDialog implements OnInit {
   ngOnInit(): void {
     // this.traerData();
     this.xd();
+    this.recibirVAN();
   }
 
   xd(){
@@ -50,6 +53,11 @@ export class DialogContentExampleDialog implements OnInit {
     this.dataSource.data = this.datos;
     console.log(`Los Datos desde la vista Van tir: ${JSON.stringify(this.datos)}`);
   }
+
+  recibirVAN(){
+    this.vanResult =this.dataSharingService.getVAN();
+  }
+
 
   // traerData(){
   //   this.loginService.getReportByIdFromUser(Number(sessionStorage.getItem("user"))).subscribe((response: any) => {

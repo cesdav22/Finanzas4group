@@ -26,6 +26,7 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
 import {VANTIRComponent} from "./components/vantir/vantir.component";
 import {MatDialogModule} from "@angular/material/dialog";
 import {DataSharingServiceService} from "./components/services/data-sharing-service.service";
+import {MatSelectModule} from "@angular/material/select";
 
 
 
@@ -58,7 +59,8 @@ import {DataSharingServiceService} from "./components/services/data-sharing-serv
         FormsModule,
         MatCardModule,
         MatCheckboxModule,
-        MatDialogModule
+        MatDialogModule,
+        MatSelectModule
     ],
   providers: [UsersService, AmortizacionService, DataSharingServiceService],
   bootstrap: [AppComponent]

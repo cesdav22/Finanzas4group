@@ -28,7 +28,7 @@ export class RegisterComponent implements OnInit {
     address: ['', {validators: [Validators.required], updatedOn: 'change'}],
     number_telephone: ['', {validators: [Validators.required], updatedOn: 'change'}],
     nationality: ['', {validators: [Validators.required], updatedOn: 'change'}],
-    bonus_good_payer: ['', {validators: [Validators.required], updatedOn: 'change'}],
+    bonus_good_payer: [''],
   })
 
 
@@ -61,9 +61,10 @@ export class RegisterComponent implements OnInit {
   isChecked: boolean = false;
   toggleChecked() {
     this.isChecked = !this.isChecked;
+
   }
   addUser(){
-    this.newUser.id=0;
+    this.newUser.id = 0;
     this.newUser.email = this.registerForm.value.email;
     this.newUser.password = this.registerForm.value.password;
     this.newUser.name = this.registerForm.value.name;

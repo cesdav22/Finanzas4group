@@ -66,6 +66,11 @@ form {
     min-width: 650px;
 }
 
+.example-additional-selection {
+    opacity: 0.75;
+    font-size: 0.75em;
+}
+
 .mat-column-demo-position {
     width: 32px;
     border-right: 1px solid currentColor;

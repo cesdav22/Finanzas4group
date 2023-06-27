@@ -12,6 +12,8 @@ import {Cuota} from "../../interfaces/cuota";
 import {UsersService} from "../services/users.service";
 import {User} from "../../interfaces/user";
 import {ReportFinal} from "../../interfaces/report-final";
+import {DataSharingServiceService} from "../services/data-sharing-service.service";
+import {FormControl} from "@angular/forms";
 
 
 // export interface Cuota {
@@ -46,6 +48,7 @@ export class AmortizacionComponent implements OnInit {
 
   ///----------........................................----------------------
 
+
   cuotaData: Cuota ;
   reportData: Report;
 
@@ -60,9 +63,11 @@ export class AmortizacionComponent implements OnInit {
 
   // capital: string = '';
   capital: number = 0;
+  BBP: number = 0;
   capital2: number = 0;
   plazo: number = 0;
 
+  cuotaInicial2: number = 0;
   cuotaInicial: number = 0;
   frecuencia: string = '';
 
@@ -87,6 +92,8 @@ export class AmortizacionComponent implements OnInit {
 
   desgravamen: number = 0;
 
+
+
   columnasTabla: string[] = [
     'numero-cuota',
     'TEA',
@@ -102,7 +109,7 @@ export class AmortizacionComponent implements OnInit {
   ];
 
   currentUser: number;
-  constructor(private _snackBar: MatSnackBar, private router: Router, private reportsService: AmortizacionService, private loginService : UsersService) {
+  constructor(private _snackBar: MatSnackBar, private router: Router, private reportsService: AmortizacionService, private loginService : UsersService, private dataSharingService: DataSharingServiceService ) {
     this.reportData = {} as Report;
     this.cuotaData = {} as Cuota;
     this.reportDataFinal = {} as ReportFinal;
@@ -113,13 +120,38 @@ export class AmortizacionComponent implements OnInit {
   users: User[]=[];
   reports: Cuota[] = [];
   lastReport: Cuota[] = []
+  userById!: any[];
+  userByIdBBP!: boolean;
+  userByIdNationality:string = '';
   getAllUsers() {
     this.loginService.getAll().subscribe((response: any) => {
       this.users = response.content;
     });
   }
 
+  // getUserById(){
+  //   this.loginService.getById(Number(sessionStorage.getItem("user"))).subscribe((response: any) => {
+  //     this.user = response.content;
+  //   });
+  // }
 
+
+
+
+  toppings = new FormControl('');
+
+  toppingList: string[] = ['BCP', 'MAYNAS', 'ICA', 'TRUJILLO', 'BBVA', 'INTERBANK', 'SCOTIABANK', 'PICHINCHA', 'COMERCIO', 'BANBIF', 'HUANCAYO', 'CUSCO'
+  , 'AREQUIPA', 'EFECTIVA', 'CREDISCOTIA', 'MICASITA'];
+
+  validateForm() {
+    if (!this.banco) {
+      // Realiza la acción de validación necesaria
+      console.log('Debe seleccionar un banco.');
+    } else {
+      // La selección es válida, puedes proceder con los datos
+      console.log('Dato válido:', this.banco);
+    }
+  }
 
   ngOnInit() {
     // this.calcular();
@@ -131,7 +163,12 @@ export class AmortizacionComponent implements OnInit {
     });
 
 
-
+    this.loginService.getById(Number(sessionStorage.getItem("user"))).subscribe((response: any) => {
+      // this.userById = response.content;
+      this.userByIdBBP = response.bonus_good_payer;
+      this.userByIdNationality = response.nationality;
+      console.log(`El userByIdBBP es: ${this.userByIdBBP} nationality : ${this.userByIdNationality}`);
+    });
 
     //ultima tabla
     // for (let i = 0; i < this.reports.length; i++) {
@@ -140,8 +177,7 @@ export class AmortizacionComponent implements OnInit {
     //   }
     // }
 
-
-
+    // console.log('TIR PRUEBA:', this.tirprueba);
 
   }
 
@@ -193,9 +229,11 @@ export class AmortizacionComponent implements OnInit {
   jsonData:any[] = [];
 
   valorCuota: number = 0;
+  valorCuota2: number = 0;
   valorCuotaIndex: number = 0;
   sumaDeValoresCuotaIndex: number = 0;
   resultadoVAN: number = 0;
+  resultadoTIR: number = 0;
 
 
 
@@ -203,18 +241,78 @@ export class AmortizacionComponent implements OnInit {
 
   reportData2! :[];
   amortizacion!:number
+
+  // saldoInicialprueba:number = -65200;
+  // cuotasprueba = [65200, 55469.44, 45310.43, 34704.12, 23630.80, 12069.92];
+  //
+  //  tirprueba = this.calcularTIR(this.saldoInicialprueba, this.cuotasprueba);
+  //
+  //
+  //
+  //
+  // calcularTIR(saldoInicial: number, cuotas: number[]): number {
+  //   const TOLERANCIA = 0.0001;
+  //   const MAX_ITERACIONES = 100;
+  //   let tasaAproximada = 0.1;
+  //   let tir = 0;
+  //
+  //   for (let iteracion = 0; iteracion < MAX_ITERACIONES; iteracion++) {
+  //     let valorActual = -saldoInicial;
+  //     let denominador = 0;
+  //
+  //     for (let cuotaIndex = 1; cuotaIndex <= this.plazo; cuotaIndex++) {
+  //       valorActual += cuotas[cuotaIndex] / Math.pow(1 + tasaAproximada, cuotaIndex + 1);
+  //       denominador += 1 / Math.pow(1 + tasaAproximada, cuotaIndex + 1);
+  //     }
+  //
+  //     const tasaNueva = tasaAproximada - valorActual / denominador;
+  //
+  //     if (Math.abs(tasaNueva - tasaAproximada) < TOLERANCIA) {
+  //       tir = tasaNueva;
+  //       break;
+  //     }
+  //
+  //     tasaAproximada = tasaNueva;
+  //   }
+  //
+  //   return tir;
+  // }
+  //
+
+
+
+
+
+
+
   calcular() {
     console.log(`BANCO SIN UPPER CASE XD: ${this.banco}`)
     this.banco2  = this.banco.toUpperCase();
     console.log(`BANCO CON UPPER CASE XD: ${this.banco2}`)
     this.cerearVariables();
 
+  if(this.userByIdBBP && this.cuotaInicial2>=7.5 && (this.userByIdNationality == 'peruano'
+      || this.userByIdNationality== 'PERUANO')){
+    if(this.capital >= 65200 && this.capital <= 93100){
+      this.BBP = 25700;
+    }else if(this.capital > 93100 && this.capital <= 139400){
+      this.BBP = 21400;
+    }else if(this.capital > 139400 && this.capital <= 232200){
+      this.BBP = 19600;
+    }else if(this.capital > 232200 && this.capital <= 343900){
+      this.BBP = 10800 + 3500;
+    }
+  }else{
+    this.BBP = 0;
+  }
+
 
 
     // this.capital2 = Number(this.capital)*((100-(this.cuotaInicial))/100);
-    this.cuotaInicial = (this.cuotaInicial/100) * Number(this.capital);
+    this.cuotaInicial = (this.cuotaInicial2/100) * Number(this.capital);
     console.log(`CUOTA INICIAL: ${this.cuotaInicial}`)
-    this.capital2 = this.capital - this.cuotaInicial;
+
+    this.capital2 = this.capital - (this.cuotaInicial + this.BBP);
 
     console.log(`CAPITAL 2: ${this.capital2}`)
 
@@ -318,7 +416,24 @@ export class AmortizacionComponent implements OnInit {
 
       // this.valorCuota = cuota.amortizacion + cuota.interes
       this.valorCuota = cuota.cuota;
-      this.valorCuotaIndex = (this.valorCuota)/Math.pow(1 + (this.interesMensual/100), cuotaIndex);
+      this.valorCuotaIndex = (cuota.saldoInicial)/Math.pow(1 + (this.interesMensual/100), cuotaIndex);
+
+      if(cuotaIndex>1) {
+        this.valorCuota2 = cuota.cuota;
+      }
+
+      this.resultadoTIR = ((Math.pow((cuota.saldoInicial*(this.plazo-1)/this.capital), (1/this.plazo))) - 1) * 100;
+
+
+
+      console.log(`RESULTADO TIR: ${this.resultadoTIR}`);
+
+
+
+
+
+
+
       console.log(`VALOR CUOTA INDEX ${this.valorCuotaIndex}`);
       this.sumaDeValoresCuotaIndex += this.valorCuotaIndex
       console.log(`SUMA DE VALORES INDEX: ${this.sumaDeValoresCuotaIndex}`);
@@ -342,17 +457,20 @@ export class AmortizacionComponent implements OnInit {
 //TODO prueba
 
 
-      // if(cuotaIndex == 1){
-      //   cuota.plazoGracia ='T';
-      //   cuota.cuota = 0;
-      //   cuota.amortizacion = 0;
-      //   cuota.saldoFinal= cuota.saldoInicial + cuota.interes;
-      // }
-      // else{
-      //   cuota.plazoGracia = 'S';
-      // }
+      if(cuotaIndex == 1){
+        cuota.plazoGracia ='T';
+        cuota.cuota = 0;
+        cuota.amortizacion = 0;
+        cuota.interes = 0;
+        console.log(`Saldo final perido 0: ${cuota.saldoFinal}`);
+        cuota.saldoFinal = cuota.saldoFinal - cuota.amortizacion + (this.interesMensual/100)*cuota.saldoFinal;
+        //cuota.saldoFinal= cuota.saldoInicial + cuota.interes;
+      }
+      else{
+        cuota.plazoGracia = 'S';
+      }
 
-      cuota.plazoGracia = 'S';
+      // &&cuota.plazoGracia = 'S';
       // if(cuotaIndex==2 || cuotaIndex == 3){
       //   this.plazoGracia ='P';
       // }
@@ -462,16 +580,35 @@ export class AmortizacionComponent implements OnInit {
     // this.addCuota()
   }
 
+  enviarDataVAN() {
+    this.dataSharingService.setVAN(this.resultadoVAN);
+  }
+
+
   calculateVAN(){
 
     console.log(`SUMA DE VALORES INDEX: ${this.sumaDeValoresCuotaIndex}`);
-    console.log(`CUOTA MENSUAL: ${this.capital2}`);
-    this.resultadoVAN = this.sumaDeValoresCuotaIndex - this.capital2;
+    console.log(`CUOTA MENSUAL: ${this.capital}`);
+    // puede ser capital 1 nose xd
+    this.resultadoVAN = this.sumaDeValoresCuotaIndex - this.capital;
+    this.enviarDataVAN();
     if(this.resultadoVAN < 0){
       console.log(`EL PROYECTO NO ES RENTABLE, VALOR DEL VAN ${this.resultadoVAN}`);
-    }else{
+
+    }else if(this.resultadoVAN == 0){
+      console.log(`EL PROYECTO ES INDIFERENTE, VALOR DEL VAN ${this.resultadoVAN}`);
+    }
+    else{
       console.log(`EL PROYECTO ES RENTABLE, VALOR DEL VAN ${this.resultadoVAN}`);
     }
+    this.router.navigate(['/vantir']);
+  }
+
+
+
+  navigateToVANTIR() {
+    // Aquí puedes definir la ruta a la que deseas navegar
+    this.router.navigate(['/desgravamen']);
   }
 
   // guardarEnDB() {
