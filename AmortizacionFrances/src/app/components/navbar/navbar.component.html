@@ -1,6 +1,7 @@
 <mat-toolbar>
     <div class="navbar">
-        <img src="assets/img/logo-senda.svg" alt="Logo">
+        <a href="https://senda.pe/" target="_blank"><img src="assets/img/logo-senda.svg" alt="Logo" ></a>
+
     </div>
         <div class="mat-spacer"></div>
       <a mat-button *ngFor="let item of menu" [routerLink]="item.redirect">{{item.nombre}}</a>

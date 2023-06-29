@@ -682,17 +682,23 @@ export class AmortizacionComponent implements OnInit {
   //   return parseInt(numString.replaceAll('.', ''));
   // }
 
+  openSnackBar(mensaje: string) {
+    this._snackBar.open(mensaje, '', {
+      duration: 2000,
+    });
+  }
+
   validaciones() {
     const capital = Number(this.capital);
     var regExp = /[a-zA-Z]/g;
     var testString = capital.toString();
 
     if (regExp.test(testString)) {
-      this.openSnackBar('Monto no válido !');
+      this.openSnackBar('Precio de venta no válido !');
       return true;
     }
     if(capital<64200 || capital> 464200){
-      this.openSnackBar('Monto no válido !');
+      this.openSnackBar('Precio de venta no válido !');
       return true;
     }
 
@@ -705,27 +711,23 @@ export class AmortizacionComponent implements OnInit {
       this.openSnackBar('Tasa no válida !');
       return true;
     }
-    if (this.plazo <0) {
-      this.openSnackBar('Plazo no válida !');
+    if (this.plazo < 3 || this.plazo > 12) {
+      this.openSnackBar('Plazo no válida, es un minimo de 3 y nu maximo de 12 !');
       return true;
     }
-    if (this.cuotaInicial <0) {
-      this.openSnackBar('Cuota Inicial no válida !');
-      return true;
-    }
-    if (this.cuotaInicial > 31) {
-      this.openSnackBar('Cuota Inicial no válida, es un maximo de 30%!');
+    // if (this.cuotaInicial <0) {
+    //   this.openSnackBar('Cuota Inicial no válida !');
+    //   return true;
+    // }
+    if (this.cuotaInicial < 7 || this.cuotaInicial > 30) {
+      this.openSnackBar('Cuota Inicial no válida, es un minimo de 7% y un maximo de 30%!');
       return true;
     }
 
     return false;
   }
 
-  openSnackBar(mensaje: string) {
-    this._snackBar.open(mensaje, '', {
-      duration: 2000,
-    });
-  }
+
 
 
   //service
@@ -742,12 +744,12 @@ export class AmortizacionComponent implements OnInit {
   //   this.cuotaData.id = 0;
   //   this.reportsService.create(this.cuotaData).subscribe(response=> {});
   // }
-  addCuota() {
-    // if (this.dataSource2.data?.push) {
-      this.cuotaData.id = 0;
-      this.reportsService.create(this.jsonData).subscribe(response => {});
-    // }
-  }
+  // addCuota() {
+  //   // if (this.dataSource2.data?.push) {
+  //     this.cuotaData.id = 0;
+  //     this.reportsService.create(this.jsonData).subscribe(response => {});
+  //   // }
+  // }
 
 
   // getAllReports() {
@@ -762,9 +764,6 @@ export class AmortizacionComponent implements OnInit {
   // @ts-ignore
   @ViewChild('contentToExport') contentToExport: ElementRef;
 
-
-
-
   public downloadAsPDF(): void {
     const options = {
       filename: 'archivo.pdf',
@@ -778,19 +777,6 @@ export class AmortizacionComponent implements OnInit {
         .set(options)
         .save();
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

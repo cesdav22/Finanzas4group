@@ -96,3 +96,14 @@ p {
     background: rgb(0,0,0);
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.66) 22%, rgba(0, 0, 0, 0.53) 43%, rgba(0, 0, 0, 0.53) 62%, rgba(0, 0, 0, 0.42) 88%);
 }
+
+.global__social-icons {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 10;
+}

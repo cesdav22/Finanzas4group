@@ -228,7 +228,7 @@ tr.editable-row {
 }
 
 .card {
-    background-color: rgba(42, 113, 130, 0.19);
+    background-color: rgba(1, 173, 110, 0.06);
     color: white;
     padding: 40px;
 }
@@ -241,4 +241,8 @@ tr.editable-row {
 .center{
     font-weight: bold;
     text-align: center;
+}
+
+.example-pizza-party {
+    color: hotpink;
 }
