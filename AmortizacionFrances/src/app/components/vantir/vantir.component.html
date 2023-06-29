@@ -106,4 +106,14 @@
 <!--    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button>-->
 <!--</mat-dialog-actions>-->
 
-<button mat-button (click)="openDialog()">Open dialog</button>
+<div class="card-container">
+<mat-card class="card">
+    <mat-card-content>El valor del Van es: {{vanResult}}</mat-card-content>
+</mat-card>
+
+<mat-card class="card">
+    <mat-card-content>El valor del Tir es: {{tirResult}}</mat-card-content>
+</mat-card>
+</div>
+
+<!--<button mat-button (click)="openDialog()" style="color: white">Open dialog</button>-->

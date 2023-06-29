@@ -18,6 +18,9 @@ export class VANTIRComponent implements OnInit {
   reports: Cuota[] = [];
   reportsVANTIR: Cuota[] = [];
   dataSource: MatTableDataSource<any>;
+  vanResult: number = 0;
+  tirResult: number = 0;
+
   constructor(private loginService: UsersService, public dialog: MatDialog, private dataSharingService: DataSharingServiceService) {
     this.dataSource = new MatTableDataSource<any>();
   }
@@ -39,11 +42,16 @@ export class VANTIRComponent implements OnInit {
       this.reports = response.content;
     });
     console.log(`Los Datos desde la vista Van tir: ${this.reports}`);
+    this.recibirVAN();
+    this.recibirTIR();
   }
 
-  // calculoVan(){
-  //
-  // }
+  recibirVAN(){
+    this.vanResult =this.dataSharingService.getVAN();
+  }
+  recibirTIR(){
+    this.tirResult =this.dataSharingService.getTIR();
+  }
 
   openDialog() {
     // const dialogConfig = new MatDialogConfig();

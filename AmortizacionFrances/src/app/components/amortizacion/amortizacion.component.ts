@@ -140,22 +140,32 @@ export class AmortizacionComponent implements OnInit {
   // }
 
 
+  bancoOptions: string[] = [
+    'BCP', 'MAYNAS', 'ICA', 'TRUJILLO', 'BBVA', 'INTERBANK', 'SCOTIABANK', 'PICHINCHA', 'COMERCIO', 'BANBIF', 'HUANCAYO', 'CUSCO'
+    , 'AREQUIPA', 'EFECTIVA', 'CREDISCOTIA', 'MICASITA',
+    // Agrega más opciones según sea necesario
+  ];
 
 
-  toppings = new FormControl('');
-
-  toppingList: string[] = ['BCP', 'MAYNAS', 'ICA', 'TRUJILLO', 'BBVA', 'INTERBANK', 'SCOTIABANK', 'PICHINCHA', 'COMERCIO', 'BANBIF', 'HUANCAYO', 'CUSCO'
-  , 'AREQUIPA', 'EFECTIVA', 'CREDISCOTIA', 'MICASITA'];
-
-  validateForm() {
-    if (!this.banco) {
-      // Realiza la acción de validación necesaria
-      console.log('Debe seleccionar un banco.');
-    } else {
-      // La selección es válida, puedes proceder con los datos
-      console.log('Dato válido:', this.banco);
-    }
+  onBancoSelectionChange(selectedValue: string) {
+    this.banco2 = selectedValue;
+    console.log('Banco seleccionado:', this.banco2);
   }
+
+  // toppings = new FormControl('');
+  //
+  // toppingList: string[] = ['BCP', 'MAYNAS', 'ICA', 'TRUJILLO', 'BBVA', 'INTERBANK', 'SCOTIABANK', 'PICHINCHA', 'COMERCIO', 'BANBIF', 'HUANCAYO', 'CUSCO'
+  // , 'AREQUIPA', 'EFECTIVA', 'CREDISCOTIA', 'MICASITA'];
+  //
+  // validateForm() {
+  //   if (!this.banco) {
+  //     // Realiza la acción de validación necesaria
+  //     console.log('Debe seleccionar un banco.');
+  //   } else {
+  //     // La selección es válida, puedes proceder con los datos
+  //     console.log('Dato válido:', this.banco);
+  //   }
+  // }
 
   ngOnInit() {
     // this.calcular();
@@ -290,8 +300,10 @@ export class AmortizacionComponent implements OnInit {
   flujosEfectivo: number[] = [];
 
   calcular() {
+
+    console.log('Banco seleccionado:', this.banco);
     console.log(`BANCO SIN UPPER CASE XD: ${this.banco}`)
-    this.banco2  = this.banco.toUpperCase();
+    //this.banco2  = this.banco.toUpperCase();
     console.log(`BANCO CON UPPER CASE XD: ${this.banco2}`)
     this.cerearVariables();
     this.cuotasPrueba.push(-this.capital);
@@ -387,40 +399,42 @@ export class AmortizacionComponent implements OnInit {
       this.cuotasPrueba.push(cuota.saldoInicial);
       console.log(`ARREGLO CUOTAS PRUEBA ${this.cuotasPrueba}`);
 
+
+
       //SEGUN BANCOS
       if(this.banco2 == "BCP"){
         cuota.desgravamen = Math.round(cuota.saldoFinal * (0.044/100));
-      }else if(this.banco2 == "MAYNAS"){
+      }else if(this.banco2 == 'MAYNAS'){
         cuota.desgravamen = Math.round(cuota.saldoFinal * (0.00070));
-      }else if(this.banco2 == "ICA"){
-        cuota.desgravamen = Math.round(cuota.saldoFinal * (0.00065/100));
-      }else if(this.banco2 == "TRUJILLO"){
+      }else if(this.banco2 == 'ICA'){
+        cuota.desgravamen = cuota.saldoFinal * (0.00065/100);
+      }else if(this.banco2 == 'TRUJILLO'){
         cuota.desgravamen = Math.round(cuota.saldoFinal * (0.1080/100));
-      }else if(this.banco2 == "BBVA"){
+      }else if(this.banco2 == 'BBVA'){
         cuota.desgravamen = Math.round(cuota.saldoFinal * (0.04396/100));
-      }else if(this.banco2 == "INTERBANK"){
+      }else if(this.banco2 == 'INTERBANK'){
         cuota.desgravamen = Math.round(cuota.saldoFinal * (0.028/100));
-      }else if(this.banco2 == "SCOTIABANK"){
+      }else if(this.banco2 == 'SCOTIABANK'){
         cuota.desgravamen = Math.round(cuota.saldoFinal * (0.0600/100));
-      }else if(this.banco2 == "PICHINCHA"){
+      }else if(this.banco2 == 'PICHINCHA'){
         cuota.desgravamen = Math.round(cuota.saldoFinal * (0.0800/100));
-      }else if(this.banco2 == "GNB"){
+      }else if(this.banco2 == 'GNB'){
         cuota.desgravamen = Math.round(cuota.saldoFinal * (0.027/100));
-      }else if(this.banco2 == "COMERCIO"){
+      }else if(this.banco2 == 'COMERCIO'){
         cuota.desgravamen = Math.round(cuota.saldoFinal * (0.75/100));
-      }else if(this.banco2 == "BANBIF"){
+      }else if(this.banco2 == 'BANBIF'){
         cuota.desgravamen = Math.round(cuota.saldoFinal * (0.111/100));
-      }else if(this.banco2 == "HUANCAYO"){
+      }else if(this.banco2 == 'HUANCAYO'){
         cuota.desgravamen = Math.round(cuota.saldoFinal * (0.0800/100));
-      }else if(this.banco2 == "CUSCO"){
+      }else if(this.banco2 == 'CUSCO'){
         cuota.desgravamen = Math.round(cuota.saldoFinal * (0.0600/100));
-      }else if(this.banco2 == "AREQUIPA"){
+      }else if(this.banco2 == 'AREQUIPA'){
         cuota.desgravamen = Math.round(cuota.saldoFinal * (0.05/100));
-      }else if(this.banco2 == "EFECTIVA"){
+      }else if(this.banco2 == 'EFECTIVA'){
         cuota.desgravamen = Math.round(cuota.saldoFinal * (0.035/100));
-      }else if(this.banco2  == "CREDISCOTIA"){
+      }else if(this.banco2  == 'CREDISCOTIA'){
         cuota.desgravamen = Math.round(cuota.saldoFinal * (0.0320/100));
-      }else if(this.banco2 == "MICASITA"){
+      }else if(this.banco2 == 'MICASITA'){
         cuota.desgravamen = Math.round(cuota.saldoFinal * (0.0670/100));
       }
 
@@ -602,15 +616,18 @@ export class AmortizacionComponent implements OnInit {
   enviarDataVAN() {
     this.dataSharingService.setVAN(this.resultadoVAN);
   }
+  enviarDataTIR() {
+    this.dataSharingService.setTIR(this.tir);
+  }
 
-
-  calculateVAN(){
+  calculateVANYTIR(){
 
     console.log(`SUMA DE VALORES INDEX: ${this.sumaDeValoresCuotaIndex}`);
     console.log(`CUOTA MENSUAL: ${this.capital}`);
     // puede ser capital 1 nose xd
     this.resultadoVAN = this.sumaDeValoresCuotaIndex - this.capital;
     this.enviarDataVAN();
+    this.enviarDataTIR();
     if(this.resultadoVAN < 0){
       console.log(`EL PROYECTO NO ES RENTABLE, VALOR DEL VAN ${this.resultadoVAN}`);
 
@@ -740,6 +757,9 @@ export class AmortizacionComponent implements OnInit {
   //download pdf
   // @ts-ignore
   @ViewChild('contentToExport') contentToExport: ElementRef;
+
+
+
 
   public downloadAsPDF(): void {
     const options = {

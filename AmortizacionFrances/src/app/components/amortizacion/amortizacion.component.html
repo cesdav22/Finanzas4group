@@ -27,7 +27,7 @@
 
 
 
-    <form class="example-form" (ngSubmit)="validateForm()">
+    <form class="example-form">
         <h3 class="centrado-texto">Ingrese el monto, plazo (cuotas) y la tasa</h3>
         <!-- <mat-grid-list cols="2" rowHeight="3:1"> -->
         <!-- <mat-grid-tile> -->
@@ -54,7 +54,7 @@
 
             <mat-grid-tile>
                 <mat-form-field class="example-full-width" appearance="fill">
-                    <mat-label style="color: white;">N° de años</mat-label>
+                    <mat-label style="color: white;">Plazo</mat-label>
                     <input type="number" name="plazo" matInput maxlength="5" [(ngModel)]="plazo" style="color: white;" />
                 </mat-form-field>
             </mat-grid-tile>
@@ -75,10 +75,20 @@
 <!--            </mat-grid-tile>-->
 
             <mat-grid-tile></mat-grid-tile>
+<!--            <mat-grid-tile>-->
+<!--                <mat-form-field class="example-full-width" appearance="fill">-->
+<!--                    <mat-label style="color: white;">Banco</mat-label>-->
+<!--                    <input type="text" name="Banco"  matInput maxlength="50" [(ngModel)]="banco"style="color: white;"  />-->
+<!--                </mat-form-field>-->
+<!--            </mat-grid-tile>-->
+
+
             <mat-grid-tile>
                 <mat-form-field class="example-full-width" appearance="fill">
                     <mat-label style="color: white;">Banco</mat-label>
-                    <input type="text" name="Banco"  matInput maxlength="50" [(ngModel)]="banco"style="color: white;"  />
+                    <mat-select name="Banco" [(ngModel)]="banco2" (selectionChange)="onBancoSelectionChange($event.value)" >
+                        <mat-option *ngFor="let option of bancoOptions" [value]="option" >{{ option }}</mat-option>
+                    </mat-select>
                 </mat-form-field>
             </mat-grid-tile>
 
@@ -296,7 +306,7 @@
             <div class="button-container">
 <!--                <button mat-raised-button (click)="navigateTo()" class="my-button">Acceder al Seguro de desgravamen</button>-->
                 <button mat-raised-button *ngIf="mostrarBoton"  (click)="downloadAsPDF()" class="my-button">Descargar PDF</button>
-                <button mat-raised-button *ngIf="mostrarBoton"  (click)="calculateVAN()" class="my-button">CALCULAR VAN DEL PROYECTO</button>
+                <button mat-raised-button *ngIf="mostrarBoton"  (click)="calculateVANYTIR()" class="my-button">CALCULAR VAN Y TIR DEL PROYECTO</button>
             </div>
 
 

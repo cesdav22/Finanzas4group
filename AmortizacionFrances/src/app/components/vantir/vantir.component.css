@@ -30,3 +30,18 @@
     background-size: cover;
 }
 
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Opcional: ajusta la altura del contenedor según tus necesidades */
+}
+
+.card {
+    width: 60%;
+    margin-bottom: 20px;
+    /* Otros estilos de diseño para las tarjetas */
+}
+

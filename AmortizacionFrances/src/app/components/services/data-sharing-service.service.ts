@@ -7,7 +7,7 @@ export class DataSharingServiceService {
 
   private data!: any[];
   private VAN: number = 0;
-
+  private TIR: number = 0;
   setData(data: any[]) {
     this.data = data;
   }
@@ -20,6 +20,15 @@ export class DataSharingServiceService {
 
   getData(): any[] {
     return this.data;
+  }
+
+
+  setTIR(TIR: number) {
+    this.TIR = TIR;
+  }
+
+  getTIR():number{
+    return this.TIR;
   }
 
 }
