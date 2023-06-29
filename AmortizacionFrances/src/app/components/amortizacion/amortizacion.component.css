@@ -226,3 +226,19 @@ tr.editable-row {
     background: rgb(0,0,0);
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.66) 22%, rgba(0, 0, 0, 0.53) 43%, rgba(0, 0, 0, 0.53) 62%, rgba(0, 0, 0, 0.42) 88%);
 }
+
+.card {
+    background-color: rgba(42, 113, 130, 0.19);
+    color: white;
+    padding: 40px;
+}
+
+.custom-header-row {
+    color: white;
+    background: #333333;
+}
+
+.center{
+    font-weight: bold;
+    text-align: center;
+}

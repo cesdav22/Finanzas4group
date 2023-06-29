@@ -305,11 +305,11 @@ export class AmortizacionComponent implements OnInit {
     console.log(`BANCO SIN UPPER CASE XD: ${this.banco}`)
     //this.banco2  = this.banco.toUpperCase();
     console.log(`BANCO CON UPPER CASE XD: ${this.banco2}`)
-    this.cerearVariables();
+    this.crearVariables();
     this.cuotasPrueba.push(-this.capital);
 
-  if(this.userByIdBBP && this.cuotaInicial2>=7.5 && (this.userByIdNationality == 'peruano'
-      || this.userByIdNationality== 'PERUANO')){
+  if((this.userByIdBBP && this.cuotaInicial2 >= 7.5) && (this.userByIdNationality == 'peruano'
+      || this.userByIdNationality == 'PERUANO')){
     if(this.capital >= 65200 && this.capital <= 93100){
       this.BBP = 25700;
     }else if(this.capital > 93100 && this.capital <= 139400){
@@ -654,7 +654,7 @@ export class AmortizacionComponent implements OnInit {
 
 
 
-  cerearVariables() {
+  crearVariables() {
     this.cuotaMensual = 0;
     this.saldoFinal = 0;
     this.cuotas = [];
@@ -711,6 +711,10 @@ export class AmortizacionComponent implements OnInit {
     }
     if (this.cuotaInicial <0) {
       this.openSnackBar('Cuota Inicial no válida !');
+      return true;
+    }
+    if (this.cuotaInicial > 31) {
+      this.openSnackBar('Cuota Inicial no válida, es un maximo de 30%!');
       return true;
     }
 

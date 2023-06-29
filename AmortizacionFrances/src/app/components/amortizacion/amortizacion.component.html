@@ -26,9 +26,16 @@
 <div class="content" role="main">
 
 
+    <mat-card class="card">
+        <mat-card-content>
+
+
+
+
+
 
     <form class="example-form">
-        <h3 class="centrado-texto">Ingrese el monto, plazo (cuotas) y la tasa</h3>
+        <h3 class="centrado-texto">Ingrese el precio de venta de la vivienda, cuota inicial, plazo(cuotas) y la tasa de interes y el banco</h3>
         <!-- <mat-grid-list cols="2" rowHeight="3:1"> -->
         <!-- <mat-grid-tile> -->
         <div class="container-center">
@@ -41,11 +48,11 @@
                 <mat-label style="color: white;">Cuota Inicial</mat-label>
                 <input type="number" name="capital" matInput [(ngModel)]="cuotaInicial" style="color: white;" />
             </mat-form-field>
-            <div class="separation"></div>
-            <mat-form-field class="example-full-width field-capital" appearance="fill" >
-                <mat-label style="color: white;">Frecuencia</mat-label>
-                <input type="text" name="capital"  matInput [(ngModel)]="frecuencia" style="color: white;" />
-            </mat-form-field>
+<!--            <div class="separation"></div>-->
+<!--            <mat-form-field class="example-full-width field-capital" appearance="fill" >-->
+<!--                <mat-label style="color: white;">Frecuencia</mat-label>-->
+<!--                <input type="text" name="capital"  matInput [(ngModel)]="frecuencia" style="color: white;" />-->
+<!--            </mat-form-field>-->
 
 
         </div>
@@ -131,10 +138,12 @@
 <!--        </div>-->
         <div class="container-button">
             <button mat-raised-button (click)="procesar()" class = "my-button">Generar</button>
-            <button mat-raised-button  (click)="migrarTabla()" class = "my-button">Migrar tabla</button>
+<!--            <button mat-raised-button  (click)="migrarTabla()" class = "my-button">Migrar tabla</button>-->
         </div>
 
     </form>
+        </mat-card-content>
+    </mat-card>
 
 
 <div #contentToExport>
@@ -143,38 +152,37 @@
 
     <div class="responsive">
         <div class="divider"></div>
-
-        <h1 style="color: #000000" *ngIf="mostrarBoton">Su plan de pagos es: </h1>
-
+        <h1 style="color: #523695" *ngIf="mostrarBoton" class="center">Su plan de pagos es: </h1>
         <div class="tabla-container">
         <table
                 mat-table
                 [dataSource]="dataSource"
                 class="mat-elevation-z8 tabla-cuotas"
                 *ngIf="this.cuotas.length"
+
         >
             <ng-container matColumnDef="numero-cuota">
-                <th mat-header-cell *matHeaderCellDef><b>Nro. Cuota</b></th>
-                <td mat-cell *matCellDef="let element">{{ element.numeroCuota }}</td>
+                <th mat-header-cell *matHeaderCellDef style="color: #523695"><b>Nro. Cuota</b></th>
+                <td mat-cell *matCellDef="let element" style="color: red">{{ element.numeroCuota }}</td>
                 <td mat-footer-cell *matFooterCellDef>Total</td>
             </ng-container>
 
             <ng-container matColumnDef="TEA">
-                <th mat-header-cell *matHeaderCellDef><b>TEA</b></th>
-                <td mat-cell *matCellDef="let element">{{ tazaInteres | number: '1.2-2'}}%</td>
+                <th mat-header-cell *matHeaderCellDef style="color: #523695"><b>TEA</b></th>
+                <td mat-cell *matCellDef="let element" style="color: #229E73">{{ tazaInteres | number: '1.2-2'}}%</td>
                 <td mat-footer-cell *matFooterCellDef>Total</td>
             </ng-container>
 
             <ng-container matColumnDef="TES">
-                <th mat-header-cell *matHeaderCellDef><b>TES</b></th>
-                <td mat-cell *matCellDef="let element">{{ interesMensual | number: '1.2-7'}}%</td>
+                <th mat-header-cell *matHeaderCellDef style="color: #523695"><b>TES</b></th>
+                <td mat-cell *matCellDef="let element" style="color: #229E73">{{ interesMensual | number: '1.2-7'}}%</td>
                 <td mat-footer-cell *matFooterCellDef>Total</td>
             </ng-container>
 
 
             <ng-container matColumnDef="plazo-gracia">
-                <th mat-header-cell *matHeaderCellDef><b>Plazo Gracia</b></th>
-                <td mat-cell *matCellDef="let element">
+                <th mat-header-cell *matHeaderCellDef style="color: #523695"><b>Plazo Gracia</b></th>
+                <td mat-cell *matCellDef="let element" style="color: #229E73">
                     {{ element.plazoGracia }}
                 </td>
                 <!--                <td mat-footer-cell *matFooterCellDef>-->
@@ -183,8 +191,8 @@
             </ng-container>
 
             <ng-container matColumnDef="saldo-inicial">
-                <th mat-header-cell *matHeaderCellDef><b>Saldo Inicial</b></th>
-                <td mat-cell *matCellDef="let element">
+                <th mat-header-cell *matHeaderCellDef style="color: #523695"><b>Saldo Inicial</b></th>
+                <td mat-cell *matCellDef="let element" style="color: #229E73">
                     {{ element.saldoInicial  | number: '1.2-2' }}
                 </td>
                 <td mat-footer-cell *matFooterCellDef></td>
@@ -192,8 +200,8 @@
 
 
             <ng-container matColumnDef="interes">
-                <th mat-header-cell *matHeaderCellDef><b>Interés</b></th>
-                <td mat-cell *matCellDef="let element">
+                <th mat-header-cell *matHeaderCellDef style="color: #523695"><b>Interés</b></th>
+                <td mat-cell *matCellDef="let element" style="color: #229E73">
                     {{ element.interes | number: '1.2-2'  }}
                 </td>
                 <td mat-footer-cell *matFooterCellDef>
@@ -203,8 +211,8 @@
 
 
             <ng-container matColumnDef="cuota">
-                <th mat-header-cell *matHeaderCellDef><b>Cuota</b></th>
-                <td mat-cell *matCellDef="let element">
+                <th mat-header-cell *matHeaderCellDef style="color: #523695"><b>Cuota</b></th>
+                <td mat-cell *matCellDef="let element" style="color: #229E73">
                     {{ element.cuota | number: '1.2-2'  }}
                 </td>
                 <td mat-footer-cell *matFooterCellDef>
@@ -213,8 +221,8 @@
             </ng-container>
 
             <ng-container matColumnDef="amortizacion">
-                <th mat-header-cell *matHeaderCellDef><b>Amortizacion</b></th>
-                <td mat-cell *matCellDef="let element">
+                <th mat-header-cell *matHeaderCellDef style="color: #523695"><b>Amortizacion</b></th>
+                <td mat-cell *matCellDef="let element" style="color: #229E73">
                     {{ element.amortizacion  | number: '1.2-2'   }}
                 </td>
                 <td mat-footer-cell *matFooterCellDef>
@@ -224,8 +232,8 @@
 
 
             <ng-container matColumnDef="saldo-final">
-                <th mat-header-cell *matHeaderCellDef><b>Saldo Final</b></th>
-                <td mat-cell *matCellDef="let element">
+                <th mat-header-cell *matHeaderCellDef style="color: #523695"><b>Saldo Final</b></th>
+                <td mat-cell *matCellDef="let element" style="color: #229E73">
                     {{ element.saldoFinal | number: '1.2-2'  }}
                 </td>
                 <td mat-footer-cell *matFooterCellDef></td>
@@ -234,8 +242,8 @@
 
 
             <ng-container matColumnDef="desgravamen">
-                <th mat-header-cell *matHeaderCellDef><b>Desgravamen</b></th>
-                <td mat-cell *matCellDef="let element">
+                <th mat-header-cell *matHeaderCellDef style="color: #523695"><b>Desgravamen</b></th>
+                <td mat-cell *matCellDef="let element" style="color: #229E73">
                     {{ element.desgravamen | number: '1.2-2' }}
                 </td>
                 <td mat-footer-cell *matFooterCellDef></td>

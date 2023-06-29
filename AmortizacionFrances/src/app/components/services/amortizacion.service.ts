@@ -11,7 +11,7 @@ import {User} from "../../interfaces/user";
 export class AmortizacionService {
 
   // Reports Endpoint
-  basePath = 'http://localhost:8080/api/v1/cuota';
+  basePath = 'https://myapp-production-7a8e.up.railway.app/api/v1/cuota';
 
   httpOptions = {
     headers: new HttpHeaders({

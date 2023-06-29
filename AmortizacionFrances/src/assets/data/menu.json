@@ -8,13 +8,11 @@
         "redirect":"/amortizacion"
     },
     {
-        "nombre":"About",
-        "redirect":"/reportes"
-    },
-    {
         "nombre": "VAN Y TIR",
         "redirect": "/vantir"
+    },
+    {
+    "nombre":"About",
+    "redirect":"/reportes"
     }
-
-
 ]
